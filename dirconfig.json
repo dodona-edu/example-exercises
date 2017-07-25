@@ -1,0 +1,17 @@
+{
+    "visibility": "private",
+    "description": {
+        "handler": "default",
+        "difficulty": 1.0
+    },
+    "submission": {
+        "handler": "default",
+        "supported_programming_languages": "python-3"
+    },
+    "evaluation": {
+        "handler": "pythia",
+        "time_limit": 15,
+        "memory_limit": 500000000
+    },
+    "programming_language": "python"
+}
