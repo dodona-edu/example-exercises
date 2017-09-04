@@ -4,7 +4,7 @@ die bestaat uit 10 cijfers. De eerste 9 daarvan geven informatie over
 het boek zelf, terwijl het laatste louter een controlecijfer is dat
 dient om foutieve ISBN-10 codes te detecteren.
 
-![ISBN](media/ISBN.gif "ISBN"){height="140"}
+![ISBN](media/ISBN.gif "ISBN"){:height="140"}
 
 
 Indien \$\$x\_1, \\ldots, x\_9\$\$ de eerste 9 cijfers van een ISBN-10
@@ -52,8 +52,9 @@ Bekijk de video als opstapje naar het oplossen van de oefeningen over
 [variabelen, expressies en
 statements](https://dodona.ugent.be/nl/exercises/?filter=opgaven/reeks01).
 
+<iframe src="https://www.youtube.com/embed/Ne35kBQNLXg" allowfullscreen="" frameborder="0" height="315" width="560"></iframe>
 
 ### Epiloog
 
 ![evolution into
-barcode](media/evaluation_barcode.jpg "evolution into barcode"){height="320px"}
+barcode](media/evaluation_barcode.jpg "evolution into barcode"){:height="320px"}
