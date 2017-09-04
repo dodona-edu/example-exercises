@@ -1,0 +1,15 @@
+{
+  "description": {
+    "difficulty": 1.0,
+    "names": {
+      "en": "ISBN-MD",
+      "nl": "ISBN-MD"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "output"
+  },
+  "pythia_id": "PROG0011",
+  "spoj_id": 9162,
+  "visibility": "open"
+}
