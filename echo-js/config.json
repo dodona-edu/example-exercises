@@ -1,0 +1,15 @@
+{
+  "description": {
+    "difficulty": 1.0,
+    "names": {
+      "nl": "Echo JS",
+      "en": "Echo JS"
+    }
+  },
+  "evaluation": {
+      "handler": "javascript"
+  },
+  "access": "public",
+  "labels": [
+  ]
+}
