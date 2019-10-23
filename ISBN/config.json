@@ -1,6 +1,5 @@
 {
   "description": {
-    "difficulty": 1.0,
     "names": {
       "en": "ISBN",
       "nl": "ISBN"
@@ -9,7 +8,5 @@
   "evaluation": {
     "pythia_judge": "output"
   },
-  "pythia_id": "PROG0011",
-  "spoj_id": 9162,
-  "visibility": "open"
+  "visibility": "public"
 }
