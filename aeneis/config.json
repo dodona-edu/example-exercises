@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Aeneid",
+      "nl": "Aeneis"
+    }
+  },
+  "type": "content",
+  "visibility": "public"
+}
