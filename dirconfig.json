@@ -1,5 +1,6 @@
 {
     "visibility": "private",
+    "contact": "dodona@ugent.be",
     "evaluation": {
         "handler": "python",
         "time_limit": 15,
