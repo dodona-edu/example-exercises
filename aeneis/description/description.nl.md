@@ -15,19 +15,23 @@ insignem pietate virum, tot adire labores
 impulerit. Tantaene animis caelestibus irae?
 ```
 
-Ofwel, in het Nederlands ([bron](https://benbijnsdorp.nl/VergAen1a.html#001)):
+Ofwel, in het Nederlands:
 
 ```
-De wapenfeiten bezing ik en de man die als eerste vanaf de kusten van Troje,
-onder drang van het Noodlot naar Italia kwam en de Lavinische
-kusten. Veel overkwam hem, zowel te land als ter zee,
-onder druk van de hemelingen; om de wrok van de woedende Iuno
-leed hij veel ook door oorlog, totdat hem vergund werd een stad te stichten
-en zijn goden Latium binnen te voeren. Daaruit kwam het Latijnse volk voort
-en de Albaanse voorvaderen en de muren van het verheven Rome.
+Ik bezing de wapenfeiten en de man, 
+die - op de vlucht voor het lot - als eerste
+van de kusten van Troje naar Italië kwam,
+naar de kusten van Lavinium. 
+Hij die veel rondgezworven heeft, zowel op land als op zee,
+door de kracht van de woeste hemelgoden en de niet aflatende woede van Juno.
+Hij heeft ook veel oorlogen doorstaan,
+totdat hij zijn stad stichtte en de goden naar Latium bracht,
+vanwaar het Latijnse volk, de voorvaderen van de Alba Longa,
+en de stadsmuren van het hoge Rome zijn ontstaan.
 
-Muze, vertel mij de reden, door welke kwetsing van de godheid
-of welke grief, de koningin van de goden deze plichtsgetrouwe man
-zoveel ellende liet ondergaan, zoveel rampen liet trotseren;
-koesteren hemelingen dan zo grote toorn?
+Muze, vertel mij welke goddelijke macht er geschonden werd,
+welk leed de koningin van de goden ertoe bracht een man,
+zo plichtsgetrouw, zoveel ellende te laten ondergaan,
+zoveel rampen te laten meemaken, zoveel leed te laten doorstaan.
+Zijn de hemelgoden dan écht zo woedend?
 ```
