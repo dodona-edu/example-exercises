@@ -9,5 +9,6 @@
     "handler": "javascript"
   },
   "access": "public",
-  "labels": []
+  "labels": [],
+  "programming_language": "javascript"
 }
