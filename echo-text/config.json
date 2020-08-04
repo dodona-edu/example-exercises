@@ -1,0 +1,14 @@
+{
+  "description": {
+    "names": {
+      "nl": "Echo text",
+      "en": "Echo text"
+    }
+  },
+  "evaluation": {
+    "handler": "javascript"
+  },
+  "access": "public",
+  "labels": [],
+  "programming_language": "text"
+}
