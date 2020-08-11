@@ -6,5 +6,6 @@
     }
   },
   "type": "content",
-  "visibility": "public"
+  "visibility": "public",
+  "labels": ["test", "intro"]
 }

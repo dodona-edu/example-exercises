@@ -9,6 +9,6 @@
     "handler": "javascript"
   },
   "access": "public",
-  "labels": [],
-  "programming_language": "bash"
+  "programming_language": "bash",
+  "labels": ["test", "warm up"]
 }

@@ -8,5 +8,6 @@
   "evaluation": {
     "pythia_judge": "output"
   },
-  "visibility": "public"
+  "visibility": "public",
+  "labels": ["test", "warm up"]
 }
