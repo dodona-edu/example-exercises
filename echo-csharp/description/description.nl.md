@@ -1,10 +1,10 @@
-Schrijf een functie `echo` die een string als argument neemt en diezelfde string teruggeeft.
+Schrijf een functie `echo` die een object als argument neemt en datzelfde object teruggeeft.
 
 ### voorbeeld
 
 ```csharp
->> echo("5"); 
-"5"
+>> echo(5); 
+5
 >> echo("ok");
 "ok"
 ```

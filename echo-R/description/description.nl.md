@@ -2,9 +2,9 @@ Schrijf een functie `echo` die steeds teruggeeft wat als argument aan de functie
 
 ### voorbeeld
 
-```javascript
->> echo(5); 
+```R
+>> echo(5)
 5
->> echo("ok");
+>> echo("ok")
 "ok"
 ```

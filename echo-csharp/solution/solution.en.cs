@@ -1,3 +1,3 @@
-public string echo(string in){
-    return in;
+public T echo<T>(T input){
+    return input;
 }
