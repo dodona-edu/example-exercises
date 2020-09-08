@@ -1,0 +1,5 @@
+{
+    "evaluation": {
+        "handler": "java12"
+    }
+}

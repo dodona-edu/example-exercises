@@ -1,10 +1,1 @@
-Schrijf een functie `echo` die steeds teruggeeft wat als argument aan de functie wordt doorgegeven.
-
-### voorbeeld
-
-```java
->> echo(5); 
-5
->> echo("ok");
-"ok"
-```
+Schrijf een klasse `Echo` met een `main`-methode die een lijn inleest en terug uitschrijft.

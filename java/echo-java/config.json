@@ -1,14 +1,13 @@
 {
   "description": {
     "names": {
-      "nl": "Echo Java",
-      "en": "Echo Java"
+      "nl": "Echo",
+      "en": "Echo"
     }
   },
   "evaluation": {
-    "handler": "javascript"
+      "filename": "Echo.java"
   },
-  "access": "public",
-  "labels": ["test", "warm up"],
+  "labels": [],
   "programming_language": "java"
 }
