@@ -1,0 +1,8 @@
+-------------------------------------------------
+tab name: inHouse
+<LANGUAGE code="nl">
+    <function from="inHouse" to="binnenhuis" />
+    <function from="validPositions" to="geldigePosities" />
+    <token from="Y" to="G" />
+    <fixed from="invalid stone positions" to="ongeldige posities van stenen" />
+</LANGUAGE>

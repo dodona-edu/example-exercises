@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <p>Sinds 1998 is <b>curling</b> officieel een olympische wintersport. Aan
+      de vooravond van de Olymische Winterspelen wordt het dus hoog tijd om deze
+      sport &#8212; die wat weg heeft van <i><a href="https://nl.wikipedia.org/wiki/Petanque"
+          target="_blank">petanque</a> op ijs</i> &#8212; wat beter te leren
+      kennen.</p>
+    <div class="dodona-centered-group"> <img alt="curling logo" data-caption="Logo van curling."
+        src="media/curling.png" title="curling logo" height="180"><img alt="curling"
+        data-caption="Speler die een steen schuift tijdens een curlingwedstrijd."
+        src="media/RikkuPakkala.jpg" title="curling" height="180"> </div>
+    <p>In curling schuiven twee teams van vier spelers (team rood en team geel)
+      om beurt zware, gepolijste granieten <b>stenen</b> op een ijsvlak naar
+      het <b>huis</b>: een doelgebied dat onderverdeeld is in vier
+      concentrische ringen. Elk team heeft acht stenen die ze om beurt mogen
+      schuiven. De bedoeling is om tijdens een wedstrijd zoveel mogelijk punten
+      te scoren. Een wedstrijd bestaat meestal uit acht of tien <b><i>ends</i></b>,
+      die voltooid worden nadat beide teams al hun stenen gespeeld hebben. </p>
+    <p>Bij het be&#235;indigen van een <i>end</i> worden punten gescoord voor
+      stenen die het dichtst bij de <b><i>dolly</i></b> (het middelpunt van het
+      huis) liggen. Voor elke steen die dichter bij de <i>dolly</i> ligt dan de
+      dichtst bij de <i>dolly</i> liggende steen van de tegenpartij scoort men
+      &#233;&#233;n punt. Enkel stenen die <b><i>in het huis</i></b> liggen,
+      worden in rekening gebracht bij het bepalen van de score. Een steen ligt <i>in
+        het huis</i> als hij &#8212; ook al is het maar een fractie &#8212;
+      overlapt met de cirkel die gevormd wordt door de buitenste rand van de
+      buitenste ring van het huis. Hieronder zie je enkele voorbeelden van
+      scores bij het be&#235;indigen van een <i>end</i>.</p>
+    <div class="dodona-centered-group"> <img alt="curling scores" data-caption="Enkele voorbeelden van scores die behaald worden in een curlingwedstrijd na het be&#235;indigen van een &lt;i&gt;end&lt;/i&gt;."
+        src="media/voorbeeldscores.png" title="curling scores" width="90%"> </div>
+    <p>De kleuren van de ringen hebben geen betekenis. Ze worden alleen gebruikt
+      om makkelijker te kunnen inschatten hoe de stenen zich ten opzichte van de
+      <i>dolly</i> en van elkaar bevinden. In curling komt het immers vaak op
+      fracties aan en is het met het blote oog niet altijd makkelijk om te
+      bepalen welke stenen dichter bij de <i>dolly</i> liggen. Het gebeurt dan
+      ook vaak dat teams tijdens een <i>end</i> strategische beslissingen nemen
+      die gebaseerd zijn op verkeerde inschattingen van de onderlinge posities
+      van de stenen. Er bestaan zeer nauwkeurige en zeer gespecialiseerde
+      apparaten om de afstand van de stenen tot de <i>dolly</i> te bepalen,
+      maar die mogen enkel gebruikt worden als een <i>end</i> be&#235;indigd
+      is. Hierdoor eindigt een <i>end</i> ook nooit op een gelijkspel, behalve
+      als er geen enkele steen in het huis ligt.</p>
+    <h3>Opgave</h3>
+    <p>Bepaal de score van de twee teams, gegeven de <b>posities van de stenen</b>
+      op het einde van een <i>end</i> in een curlingwedstrijd. De posities van
+      de stenen worden voorgesteld als een reeks (een lijst of een tuple) met
+      beschrijvingen van $$r + g$$ stenen, waarbij $$r$$ staat voor het aantal
+      rode stenen ($$0 \leq r \leq 8$$) en $$g$$ voor het aantal gele stenen
+      ($$0 \leq g \leq 8$$).</p>
+    <p>Elke steen wordt beschreven door een tuple $$(x, y, t)$$, waarbij $$(x,
+      y)$$ de co&#246;rdinaten zijn van het middelpunt van de steen in een
+      assenstelsel met oorsprong in de <i>dolly</i> ($$x, y \in \mathbb{R}$$)
+      en $$t$$ een string is die de kleur van de steen aangeeft (<samp>R</samp>
+      voor rood en <samp>G</samp> voor geel).</p>
+    <div class="dodona-centered-group"> <img alt="afmetingen en cirkelmaten" data-caption="In de curlingsport draait alles om cirkels."
+        src="media/circle.png" title="afmetingen en cirkelmaten" height="260"> </div>
+    <p>In curling draait alles om cirkels: om de score te bepalen moet je weten
+      of een cirkelvormige steen al dan niet in het cirkelvormige huis ligt en
+      moet je ook de afstand van een steen tot de <i>dolly</i> kunnen bepalen.
+      We helpen je op weg door wat afmetingen uit de curlingsport op te lijsten,
+      en brengen meteen ook nog wat cirkelmaten in herinnering (zie bovenstaande
+      figuur als referentie):</p>
+    <ul>
+      <li>
+        <p>het huis is een cirkel (buitenste rand van buitenste ring) met een
+          straal $$r$$ van 6 voet</p>
+      </li>
+      <li>
+        <p>de stenen zijn cirkels met een omtrek $$c$$ van 36 inch</p>
+      </li>
+      <li>
+        <p>voor de omtrek $$c$$ van een cirkel met straal $$r$$ geldt dat $$c =
+          2\pi r$$</p>
+      </li>
+      <li>
+        <p>de afstand $$d$$ van de <i>dolly</i> tot een steen met middelpunt op
+          positie $$(x, y)$$ is $$\sqrt{x^2 + y^2}$$</p>
+      </li>
+      <li>
+        <p>1 voet = 12 inch<br>
+        </p>
+      </li>
+      <li>
+        <p>1 inch = 0.0254 meter</p>
+      </li>
+    </ul>
+    <p>Gevraagd wordt:</p>
+    <ul>
+      <li>
+        <p>Schrijf een functie <samp>binnenhuis</samp> waaraan de $$x$$- en de
+          $$y$$-co&#246;rdinaat van het middelpunt van een steen moeten
+          doorgegeven worden in een assenstelsel met oorsprong in de <i>dolly</i>
+          ($$x, y \in \mathbb{R}$$). De functie heeft ook nog een optionele
+          derde parameter <samp>inch</samp> waaraan een Booleaanse waarde kan
+          doorgegeven worden (standaardwaarde: <samp>True</samp>). De parameter
+          <samp>inch</samp> geeft aan of de co&#246;rdinaten van de steen worden
+          uitgedrukt in inch (<samp>True</samp>) of in meter (<samp>False</samp>).
+          De functie moet een Booleaanse waarde teruggeven die aangeeft of de
+          steen <i>in het huis</i> ligt.</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>geldigePosities</samp> waaraan de posities
+          van de stenen op het einde van een <i>end</i> moeten doorgegeven
+          worden. De functie heeft ook nog een optionele tweede parameter <samp>inch</samp>,
+          die dezelfde betekenis heeft als bij de functie <samp>binnenhuis</samp>.
+          De functie <samp>geldigeStenen</samp> moet een Booleaanse waarde
+          teruggeven, die aangeeft of de gegeven posities van de stenen geldig
+          is. Dat is het geval als er niet meer dan acht stenen zijn van elke
+          kleur en als er geen stenen zijn die overlappen (wat fysisch gezien
+          niet kan).</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>score</samp> waaraan de posities van de
+          stenen op het einde van een <i>end</i> moeten doorgegeven worden. De
+          functie heeft ook nog een optionele tweede parameter <samp>inch</samp>,
+          die dezelfde betekenis heeft als bij de functie <samp>binnenhuis</samp>.
+          De functie <samp>score</samp> moet de score op het einde van die <i>end</i>
+          teruggeven onder de vorm van een tuple $$(s_r, s_g)$$. Hierbij is
+          $$s_r$$ de score van team rood en $$s_g$$ de score van team geel. Als
+          de gegeven posities van de stenen niet geldig zijn (in de betekenis
+          van de functie <samp>geldigePosities</samp>), dan moet een <samp>AssertionError</samp>
+          opgeworpen worden met de boodschap <samp>ongeldige posities van
+            stenen</samp>.</p>
+      </li>
+    </ul>
+    <h3>Voorbeeld</h3>
+    <div class="highlighter-rouge language-python">
+      <div class="syntax">
+        <pre><span class="gp">&gt;&gt;&gt; </span><span class="n">binnenhuis</span><span
+class="p">(</span><span class="mf">70.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binnenhuis</span><span class="p">(</span><span
+class="mf">70.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">,</span> <span class="n">inch</span><span class="o">=</span><span class="bp">False</span><span
+class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binnenhuis</span><span class="p">(</span><span
+class="mf">78.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">)</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">geldigePosities</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">geldigePosities</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">)])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">geldigePosities</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">)])</span>
+<span class="go">(2, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">(3, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)],</span> <span class="bp">False</span><span
+class="p">)</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'G'</span><span class="p">)],</span> <span class="n">inch</span><span
+class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="go">(2, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)],</span> <span class="bp">False</span><span
+class="p">)</span>
+<span class="go">(3, 0)</span>
+</pre></div>
+    </div>
+    <p>Alle voorbeelden voor de functie <samp>score</samp> gebruiken stenen op
+      dezelfde posities (de eerste drie uitgedrukt in inch de laatste drie in
+      meter), maar met een verschillende kleur. Hieronder hebben we deze
+      posities van de stenen grafisch voorgesteld, met hun co&#246;rdinaten
+      uitgedrukt in inch.</p>
+    <div class="dodona-centered-group"> <img alt="voorbeeldscores" data-caption="Grafische voorstelling van de posities van de stenen die als voorbeeld gebruikt worden (co&#246;rdinaten in inch)."
+        src="media/voorbeeldscores2.png" title="voorbeeldscores" width="90%"> </div>
+  </body>
+</html>

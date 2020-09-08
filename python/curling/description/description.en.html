@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <p>Curling has been an official sport in the Winter Olympic Games since the
+      1998 Winter Olympics in Nagano, Japan. In the run-up to this year's Winter
+      Olympics it's about time we get to know this sport &#8212; which somewhat
+      resembles bowls on ice &#8212; a little better.</p>
+    <div class="dodona-centered-group"> <img alt="curling logo" data-caption="Logo of curling."
+        src="media/curling.png" title="curling logo" height="180"><img alt="curling"
+        data-caption="Player delivering a stone during a curling competition." src="media/RikkuPakkala.jpg"
+        title="curling" height="180"> </div>
+    <p>Two four-player teams &#8212; team red and team yellow &#8212; take turns
+      sliding heavy, polished granite <i><b>stones</b></i> across a <i><b>curling
+          sheet</b></i> towards the <i><b>house</b></i>: a circular target area
+      marked on the ice which is segmented into four concentric <i><b>rings</b></i>.
+      Each team has eight stones. The purpose is to accumulate the highest score
+      for a <i><b>game</b></i>. A game usually consists of eight to ten <i><b>ends</b></i>,
+      which are completed when both teams have thrown all of their stones.</p>
+    <p>Points are scored for the stones resting closest to <b><i>dolly</i></b>
+      (the center of the house) at the conclusion of each <i>end</i>. The team
+      with the <i>stone</i> closest to the <i>dolly</i> wins that <i>end</i>.
+      The winning team is then awarded one point for each of its <i>stones</i>
+      lying closer to the <i>dolly</i> than the opponent's closest <i>stone</i>.
+      Only <i>stones</i> that are <b><i>in the house</i></b> are considered in
+      scoring. A stone is <i>in the house</i> if it overlaps &#8212; even if
+      it's only a tiny fraction &#8212; with the circle formed by the outer edge
+      of the outer <i>ring</i> of the <i>house</i>. Below you can see some
+      example scores at the conclusion of an <i>end</i>.</p>
+    <div class="dodona-centered-group"> <img alt="curling scores" data-caption="Some example scores at the conclusion of an &lt;i&gt;end&lt;/i&gt; in a curling game."
+        src="media/example_scores.png" title="curling scores" width="90%"> </div>
+    <p>The colors of the <i>rings</i> have no special meaning. They are only
+      used to make it easier to estimate how the <i>stones</i> are in position
+      to the <i>dolly</i> and to each other. After all, curling is a game of
+      fractions and it may not be obvious to the eye which of two <i>stones</i>
+      is closer to the <i>dolly</i> or if a <i>stone</i> is actually in the
+      house or not. There are specialized devices to make these determinations,
+      but these cannot be brought out until after an end is completed.
+      Therefore, a team may make strategic decisions during an <i>end</i> based
+      on assumptions of stone positions that turn out to be incorrect. In
+      addition, the specialized measuring devices are so accurate that an <i>end</i>
+      can never result in a tie, except if there are no stones in the house.</p>
+    <h3>Assignment</h3>
+    <p>Determine the score of the two teams, given the <b>positions of the <i>stones</i></b>
+      after an <i>end</i> in a game of curling has completed. The positions of
+      the stones are represented as a sequence (a list or a tuple) containing
+      descriptions of $$r + y$$ stones, where $$r$$ indicates the number of red
+      stones ($$0 \leq r \leq 8$$) and $$y$$ the number of yellow stones ($$0
+      \leq y \leq 8$$).</p>
+    <p>Each stone is described as a tuples $$(x, y, t)$$, with $$(x, y)$$ the
+      coordinates of the center of the stone in a coordinate system that has its
+      origin in the <i>dolly</i> ($$x, y \in \mathbb{R}$$) and $$t$$ a string
+      that indicates the color of the stone (<samp>R</samp> for red and <samp>Y</samp>
+      for yellow).</p>
+    <div class="dodona-centered-group"> <img alt="distances and circle measures"
+        data-caption="Curling is all about circles." src="media/circle.png" title="distances and circle measures"
+        height="260"> </div>
+    <p>Curling is all about circles: to determine the score you have to know if
+      a circular <i>stone</i> is in the circular <i>house</i> and you must
+      also determine the distance from the center of the circular <i>stones</i>
+      to the <i>dolly</i> (the center of the circular <i>house</i>). We help
+      you out in listing some measures used in curling and also remind you about
+      some circle measures (see figure above as a reference):</p>
+    <ul>
+      <li>
+        <p>the house is a circle (outer edge of outer ring) with a radius $$r$$
+          of 6 feet</p>
+      </li>
+      <li>
+        <p>the stones are circles with a circumference $$c$$ of 36 inches</p>
+      </li>
+      <li>
+        <p>relationship between circumference $$c$$ of a circle and its radius
+          $$r$$: $$c = 2\pi r$$</p>
+      </li>
+      <li>
+        <p>distance $$d$$ between the <i>dolly</i> and a stone with center in
+          position $$(x, y)$$ is $$\sqrt{x^2 + y^2}$$</p>
+      </li>
+      <li>
+        <p>1 feet = 12 inch<br>
+        </p>
+      </li>
+      <li>
+        <p>1 inch = 0.0254 meter</p>
+      </li>
+    </ul>
+    <p>Your task:</p>
+    <ul>
+      <li>
+        <p>Write a function <samp>inHouse</samp> that takes the $$x$$ and the
+          $$y$$ coordinate of the center of a <i>stone</i> in a coordinate
+          system that has its origin in the <i>dolly</i> ($$x, y \in
+          \mathbb{R}$$). The function also has an optional third parameter <samp>inch</samp>
+          that may take a Boolean value (default value: <samp>True</samp>). The
+          parameter <samp>inch</samp> indicates if the coordinates of the <i>stone</i>
+          are expressed in inch (<samp>True</samp>) or in meter (<samp>False</samp>).
+          The function must return a Boolean value that indicates if the <i>stone</i>
+          is <i>in the house</i>.</p>
+      </li>
+      <li>
+        <p>Write a function <samp>validPositions</samp> that takes the
+          positions of the <i> stones</i> after an <i>end</i> in a game of
+          curling has completed. The function also has an optional second
+          parameter <samp>inch</samp> that has the same meaning as with the
+          function <samp>inHouse</samp>. The function <samp>validStones</samp>
+          must return a Boolean value that indicates if the given positions of
+          the <i>stones</i> are valid. This is the case if there are no more
+          than eight <i>stones</i> of each color and if there are no
+          overlapping <i>stones</i> (which is physically impossible).</p>
+      </li>
+      <li>
+        <p>Write a function <samp>score</samp> that takes the positions of the
+          <i>stones</i> after an <i>end</i> in a game of curling has completed.
+          The function also has an optional second parameter <samp>inch</samp>
+          that has the same meaning as with the function <samp>inHouse</samp>.
+          The function <samp>score</samp> must return the score at the
+          conclusion of the <i>end</i> as a tuple $$(s_r, s_y)$$, with $$s_r$$
+          the score of team red and $$s_y$$ the score of team yellow. If the
+          given positions of the stones are invalid (as defined by the function
+          <samp>validPositions</samp>), an <samp>AssertionError</samp> must be
+          raised with the message <samp>invalid stone positions</samp>.</p>
+      </li>
+    </ul>
+    <h3>Example</h3>
+    <div class="highlighter-rouge language-python">
+      <div class="syntax">
+        <pre><span class="gp">&gt;&gt;&gt; </span><span class="n">inHouse</span><span
+class="p">(</span><span class="mf">70.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inHouse</span><span class="p">(</span><span
+class="mf">70.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">,</span> <span class="n">inch</span><span class="o">=</span><span class="bp">False</span><span
+class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inHouse</span><span class="p">(</span><span
+class="mf">78.0</span><span class="p">,</span> <span class="mf">0.0</span><span
+class="p">)</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">validPositions</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">validPositions</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">)])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">validPositions</span><span
+class="p">([(</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">)])</span>
+<span class="go">(2, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">20.0</span><span class="p">,</span> <span class="mf">10.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">25.0</span><span class="p">,</span> <span class="mf">22.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">42.0</span><span class="p">,</span> <span class="mf">37.0</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)])</span>
+<span class="go">(3, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)],</span> <span class="bp">False</span><span
+class="p">)</span>
+<span class="go">(1, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'Y'</span><span class="p">)],</span> <span class="n">inch</span><span
+class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="go">(2, 0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">score</span><span class="p">([(</span><span
+class="mf">0.508</span><span class="p">,</span> <span class="mf">0.254</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">0.635</span><span class="p">,</span> <span class="mf">0.5588</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">),</span> <span class="p">(</span><span
+class="mf">1.0668</span><span class="p">,</span> <span class="mf">0.9398</span><span
+class="p">,</span> <span class="s1">'R'</span><span class="p">)],</span> <span class="bp">False</span><span
+class="p">)</span>
+<span class="go">(3, 0)</span>
+</pre></div>
+    </div>
+    <p>All examples for the function <samp>score</samp> take a sequence of
+      stones at the same positions (the first three example express them in
+      inch, the last three examples in meter), but with different colors. Here's
+      a graphical representation of the positions and colors of these stones,
+      with coordinates expressed in inch.</p>
+    <div class="dodona-centered-group"> <img alt="example scores" data-caption="Graphical representation of the stone positions and colors used in the interactive session, with coordinates expressed in inch."
+        src="media/example_scores2.png" title="example scores" width="90%"> </div>
+  </body>
+</html>
