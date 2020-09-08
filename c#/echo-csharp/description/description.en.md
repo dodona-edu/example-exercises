@@ -1,10 +1,1 @@
-Write a function `echo` that takes any object as argument and returns that same object.
-
-### example
-
-```csharp
->> echo(5); 
-5
->> echo("ok");
-"ok"
-```
+Write a class  `ExampleExercises.Echo` with a `Main` function that reads a line and prints it back out.

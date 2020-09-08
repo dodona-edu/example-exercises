@@ -1,10 +1,1 @@
-Schrijf een functie `echo` die een object als argument neemt en datzelfde object teruggeeft.
-
-### voorbeeld
-
-```csharp
->> echo(5); 
-5
->> echo("ok");
-"ok"
-```
+Schrijf een klasse `ExampleExercises.Echo` met een `Main` methode die een lijn inleest en die dan weer uitschrijft.

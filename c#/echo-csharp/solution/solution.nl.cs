@@ -1,3 +1,15 @@
-public T echo<T>(T input){
-    return input;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ExampleExercises
+{
+    class Echo
+    {
+        public static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            Console.WriteLine(input);
+        }
+    }
 }
