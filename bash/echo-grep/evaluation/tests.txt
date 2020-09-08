@@ -1,0 +1,26 @@
+solutionfile=solution.txt
+tabname=echo
+
+exec <<~
+mv output /tmp/  # move solution file to tmp
+~
+
+parenttest <<---
+workdirfiles <<###
+input
+###
+---
+
+parse <<~~~~~~
+template <<~
+### command 1 ###
+{cmd:command 1:bash}
+~
+source=solution.txt
+~~~~~~
+
+test <<---
+key=cmd
+stdout_file=/tmp/output
+handler=diff
+---
