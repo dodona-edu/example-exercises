@@ -1,10 +1,4 @@
 {
-    "visibility": "private",
-    "contact": "dodona@ugent.be",
-    "evaluation": {
-        "handler": "python",
-        "time_limit": 15,
-        "memory_limit": 500000000
-    },
-    "programming_language": "python"
+    "access": "private",
+    "contact": "Team Dodona <dodona@ugent.be>",
 }
