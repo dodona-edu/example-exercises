@@ -1,1 +1,3 @@
-echo
+#!/bin/bash
+
+echo $@

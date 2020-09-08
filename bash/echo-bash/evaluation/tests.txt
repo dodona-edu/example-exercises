@@ -1,0 +1,24 @@
+solutionfile=echo
+
+test <<---
+cmd=echo
+stdout<<###
+###
+exitcode=0
+---
+
+test<<---
+cmd=echo arg1
+stdout<<###
+arg1
+###
+exitcode=0
+---
+
+test<<---
+cmd=echo arg1 arg2
+stdout<<###
+arg1 arg2
+###
+exitcode=0
+---
