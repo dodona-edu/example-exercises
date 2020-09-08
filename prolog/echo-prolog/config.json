@@ -1,14 +1,9 @@
 {
   "description": {
     "names": {
-      "nl": "Echo Prolog",
-      "en": "Echo Prolog"
+      "nl": "Echo",
+      "en": "Echo"
     }
   },
-  "evaluation": {
-    "handler": "javascript"
-  },
-  "access": "public",
-  "labels": ["test", "warm up"],
-  "programming_language": "prolog"
+  "labels": []
 }

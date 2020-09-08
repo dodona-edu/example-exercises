@@ -1,9 +1,9 @@
 Schrijf een functie `echo` die steeds teruggeeft wat als argument aan de functie wordt doorgegeven.
 
-### voorbeeld
+### Voorbeeld
 
 ```javascript
->> echo(5); 
+>> echo(5);
 5
 >> echo("ok");
 "ok"
