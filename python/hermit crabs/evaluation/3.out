@@ -1,0 +1,9 @@
+--------------------------------------------------
+tab name: move2
+independent examples: false
+<LANGUAGE code="nl">
+    <function from="consecutive" to="opeenvolgend" />
+    <function from="goldilocks" to="goudlokje" />
+    <function from="move1" to="verhuizen1" />
+    <function from="move2" to="verhuizen2" />
+</LANGUAGE>

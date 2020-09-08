@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+</meta></head>
+<body>
+<p>The Manhattan peninsula is one of the five
+      boroughs of New York City. The borough is famous for its skyscrapers,
+      broad avenues, the financial center Wall Street and the many yellow taxis
+      that drive around the district. The streets of Manhattan are laid out in a
+      rectangular grid by the Commissioners' Plan of 1811. The area is
+      intersected by avenues (running north and south) and streets (running east
+      and west).</p>
+<div class="dodona-centered-group"><img alt="Manhattan Commissioner's Plan" data-caption="Manhattan Commissioners' Plan" height="200" src="media/manhattan.png" title="Manhattan Commissioner's Plan"/>
+
+</div>
+<p>Consider a rectangular $$s \times a$$ grid
+      that represent part of Manhattan covering $$s$$ streets and $$a$$ avenues.
+      Taxis can refuel at a number of petrol stations located at various
+      intersections. Whenever a taxi is close to running out of gasoline, its
+      driver can read the coordinates of the closest petrol station from his
+      GPS. Due to bad programming, however, there is a bug in the GPS devices of
+      the taxis. If there are multiple "closest" petrol stations at a given
+      intersection, the GPS gets lost, which panics the driver who then causes a
+      car crash. Such intersections are therefore called <span style="font-weight: bold;">critical
+        points</span>.</p>
+<h3>Assignment</h3>
+<p>In Manhattan, an intersection on a
+      rectangular $$s \times a$$ grid is always represented as a tuple $$(x, y)$$,
+      where $$x, y \in \mathbb{N}$$, $$0 \leq x &lt; s$$ and $$0 \leq y &lt; a$$. The
+      intersection at the top left corner of the grid therefore is at position
+      $$(0, 0)$$, and the intersection at the bottom right corner is at position
+      $$(s-1, a-1)$$. This is also the representation of the intersections as they
+      are used in this exercise.</p>
+<ul>
+<li><p>In Manhattan, the distance between two intersections $$(x_1, y_1)$$ and
+        $$(x_2, y_2)$$ is computed as \[|x_1 - x_2| + |y_1 - y_2|\,,\] where $$|x|$$
+        represents the absolute value of $$x$$. This distance is called Manhattan
+        distance (or <em>city block distance</em>) in literature. Write a
+        function <samp>manhattanDistance</samp>
+        that <span style="font-weight: bold;">returns</span> the Manhattan
+        distance between two given intersections. The coordinates of both
+        intersections must be passed as arguments to the function.</p></li>
+<li><p>Use the function <samp>manhattanDistance</samp>
+        to write a function <samp>critical</samp>
+        that <span style="font-weight: bold;">returns</span> a Boolean value
+        indicating whether or not a given intersection is at a critical point.
+        Two arguments must be passed to this function: the coordinates of the
+        intersection that must be evaluated, and a list of intersections at
+        which the petrol stations are located on the $$s \times a$$ grid.</p></li>
+<li><p>Write a function <samp>manhattan</samp>
+        that takes three arguments: <i>i</i>)
+        the number of streets $$s$$, <i>ii</i>)
+        the number of avenues $$a$$, and <i>iii</i>)
+        a list of intersections at which the petrol stations are located on the
+        $$s \times a$$ grid. The function must <span style="font-weight: bold;">print</span>
+        a representation of the rectangular grid, in which all intersections are
+        by default represented with an asterisk (<samp>*</samp>).
+        Intersections having a petrol station are represented with the letter <samp>P</samp>, and intersections that are
+        at critical points are represented with the letter <samp>D</samp>.</p></li>
+</ul>
+<h3>Example</h3>
+<p>In the example $$10\times 10$$ grid that is
+      represented in the following interactive Python session, the intersection
+      at position $$(5,0)$$ is an example of a <em>critical point</em>, since
+      there are two petrol stations at Fourth Avenue that are both at distance 4
+      from the intersection $$(5,0)$$.</p>
+<div class="highlighter-rouge language-python">
+<pre class="highlight">
+<code><span class="gp">&gt;&gt;&gt; </span><span class="n">manhattanDistance</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">manhattanDistance</span><span class="p">((</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="go">20</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">critical</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">critical</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">True</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">manhattan</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">****D*****</span>
+<span class="go">****D***P*</span>
+<span class="go">*****D****</span>
+<span class="go">*****DD***</span>
+<span class="go">***P*DDD**</span>
+<span class="go">DDDDD***DD</span>
+<span class="go">***PDP****</span>
+<span class="go">****D*****</span>
+<span class="go">****D*****</span>
+<span class="go">****D*****</span></code></pre>
+</div>
+</body>
+</html>

@@ -1,12 +1,12 @@
 {
   "description": {
     "names": {
-      "en": "ISBN",
-      "nl": "ISBN"
+      "en": "Polka Dot",
+      "nl": "Polka Dot"
     }
   },
   "evaluation": {
-    "pythia_judge": "output"
+    "pythia_judge": "doctest"
   },
   "labels": []
 }

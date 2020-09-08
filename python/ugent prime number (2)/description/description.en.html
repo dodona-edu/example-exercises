@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <p>Ghent University (UGent) was founded on October 9, 1817 in the city hall
+      of Ghent, Belgium. Many activities were organized in 2017 to celebrate the
+      200<sup>th</sup> anniversary of the UGent. On this occasion, we have
+      designed a prime number dedicated to Ghent University.</p>
+    <div class="dodona-centered-group"> <img alt="the Ghent University prime number"
+        data-caption="The Ghent University prime number (9000 digits)." src="media/ugent_prime.thumb.png"
+        data-large="media/ugent_prime.png" title="the Ghent University prime number"
+        width="90%"> </div>
+    <p>The prime number only contains the digits <samp>1</samp> and <samp>8</samp>
+      &#8212; 9000 in total, as a reference to the postal code of Ghent, Belgium
+      &#8212; but if you look carefully you'll also notice a single occurrence
+      of the digit <samp>2</samp> in the prime number (marked in yellow in the
+      figure above).</p>
+    <h3>Input</h3>
+    <p>The input describes a rectangular image that has at least three rows and
+      at least three columns. The image is constructed using three different
+      characters: two of these characters each occur at least twice in the image
+      and the other character occurs just once in the image.</p>
+    <p>The first line of input contains the two characters that each occur at
+      least twice in the image. This is followed by lines that represent the
+      rows of the image. Each row contains the same number of characters
+      (corresponding to the number of columns of the image).</p>
+    <h3>Output</h3>
+    <p>A line containing the text</p>
+    <blockquote><samp>character '<i>s</i>' only occurs at row <i>r</i> and
+        column <i>c</i></samp></blockquote>
+    <p>with the character that occurs just once in the image filling up the
+      placeholder <i><samp>s</samp></i>. The index of the row (resp. column)
+      where this character occurs in the image must replace the placeholder <i><samp></samp></i><i><samp>r</samp></i>
+      (resp. <span style="font-family: monospace;">c</span><i><samp></samp></i>).
+      Rows are indexed from top to bottom, and columns are indexed from left to
+      right, starting at 1 in both cases.</p>
+    <h3>Example</h3>
+    <p>In the sample input below, the character that occurs just once has been
+      marked in yellow.</p>
+    <p><strong>Input:</strong></p>
+    <pre>.8
+...........................................
+...........................................
+....................88.....................
+.................88888888..................
+...............888888888888................
+............888888......888888.............
+.........888888............888888..........
+......888888..................888888.......
+....888888......................888888.....
+....888............................888.....
+...........................................
+......888888888888888888888888888888.......
+........88888888888888888888888888.........
+...........................................
+...........................................
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..8<span style="background-color:yellow"><b>2</b></span>..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+........88..88..88..88..88..88..88.........
+...........................................
+...........................................
+......888888888888888888888888888888.......
+......888888888888888888888888888888.......
+...........................................
+....8888888888888888888888888888888888.....
+....8888888888888888888888888888888888.....
+...........................................
+...........................................
+</pre>
+    <p><strong>Output:</strong></p>
+    <pre>character '2' only occurs at row 21 and column 30
+</pre>
+    <div class="hidden-print">
+      <h3>Epilogue</h3>
+      <p>The design of the Ghent University prime number has been inspired by
+        this video published by <a href="http://numberphile.com/" target="_blank">Numberphile</a>.</p>
+      <div class="dodona-centered-group hidden-print"><iframe src="https://www.youtube.com/embed/fQQ8IiTWHhg"
+          allowfullscreen="" height="315" frameborder="0" width="560"></iframe></div>
+      <p>The video features a startling wall hanging in the Senior Combination
+        Room at <a href="https://en.wikipedia.org/wiki/Trinity_College,_Cambridge"
+          target="_blank">Trinity Hall</a>, Cambridge. Junior research fellow
+        James McKee devised a 1350-digit prime number whose image forms a
+        likeness of the college's coat of arms. The number of digits is
+        significant, as it's the year that Bishop <a href="https://en.wikipedia.org/wiki/William_Bateman"
+          target="_blank">William Bateman</a> founded the college.</p>
+      <div class="dodona-centered-group"> <img alt="the Trinity Hall prime" data-caption="The Trinity Hall prime (1350 digits) resembles the coat of arms of the University of Cambridge."
+          src="media/trinity_hall_prime.jpg" title="the Trinity Hall prime" width="90%">
+      </div>
+      <p>It turns out that finding such "prime" images is easier than one might
+        think. In the video description, McKee explains:</p>
+      <blockquote><i>Most of the digits of </i><i><i>$$p$$</i> were fixed so
+          that i) the top two thirds made the desired pattern and ii) the bottom
+          third ensured that </i><i><i>$$p - 1$$</i> had a nice large
+          (composite) factor </i><i><i>$$F$$</i> with the factorisation of </i><i><i>$$F$$</i>
+          known. Numbers of this shape can easily be checked for primality. A
+          small number of digits (you can see which!) were looped over until </i><i><i>$$p$$</i>
+          was found that was prime.</i></blockquote>
+      <p>This inspired Cambridge math student Jack Hodkinson to publish his own
+        prime number, this one presenting an <a href="https://upload.wikimedia.org/wikipedia/commons/0/0f/Corpus_Christi_College_New_Court%2C_Cambridge%2C_UK_-_Diliff.jpg"
+          target="_blank">image</a> of <a href="https://en.wikipedia.org/wiki/Corpus_Christi_College,_Cambridge"
+          target="_blank">Corpus Christi College</a> and including his initials
+        and date of birth.</p>
+      <div class="dodona-centered-group"> <img alt="the Corpus Christi College prime"
+          data-caption="The Corpus Christi College prime (2688 digits) shows and image of the college, and includes the initials (top left) and date of birth (bottom right) of its designer Jack Hodkinson."
+          src="media/corpus_christi_college_prime.png" title="the Corpus Christi College prime"
+          width="90%"> </div>
+      <p>To design the Ghent University prime number, we started from the logo
+        that was used to celebrate the 200<sup>th</sup> anniversary of Ghent
+        University.</p>
+      <div class="dodona-centered-group"> <img alt="200th anniversary of Ghent University"
+          data-caption="Logo used to celebrate the 200&lt;sup&gt;th&lt;/sup&gt; anniversary of Ghent University, Belgium. (2017)."
+          src="media/200_years_ugent.png" title="200th anniversary of Ghent University"
+          height="160"> </div>
+      <p>This logo has then been converted into an ASCII image containing 9000
+        digits (as a reference to the postal code of the city of Ghent,
+        Belgium), split over 75 rows containing 120 ones and eights each. We
+        selected Bimini as a font to represent the prime number, because it gave
+        good contract between the "heavy" eights (representing the blue pixels)
+        and the "light" ones (representing the white pixels). Luckily, the
+        bottom right pixel was white, because the prime number we had in mind
+        could impossibly be even.</p>
+      <p>We then wrote a Python program to convert this initial number &#8212;
+        which showed the pattern we had in mind, but wasn't a prime number yet
+        &#8212; into a prime number. To do so, the program systematically
+        iterated over all eights in the initial number, replaced the eight by
+        another digit (not 1 or 8), and checked if the resulting number was
+        prime. To quickly check if a 9000-digit number is prime, we used the <a
+          href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test"
+          target="_blank">Miller-Rabin primality test</a>. This algorithm is
+        always correct in saying that a given number is not prime, but it can
+        only state with (very) high probability that a given number is prime. To
+        finally check that a candidate prime number was indeed prime, we used <a
+          href="https://www.alpertron.com.ar/ECM.HTM" target="_blank">Dario
+          Alpern's fantastic tool</a> to give ourselves absolute certainty.</p>
+      <p><b>How were we so confident that this would work?</b> Well, <a href="https://en.wikipedia.org/wiki/Prime_number_theorem"
+          target="_blank">the prime number theorem</a> tells us that there are
+        approximately $$\frac{n}{\log{n}}$$ primes less than $$n$$. So there are
+        approximately \[ \frac{10^{9000}}{\log{10^{9000}}} -
+        \frac{10^{8999}}{\log{10^{8999}}} \approx &#160; 4.34 \times 10^{8995}
+        \] 9000-digit primes. So, approximately one in every 21.000 9000-digit
+        numbers is prime. Of course, we haven't calculated these estimates at
+        the back of an envelope, as we also had Python to the rescue here (the
+        module <samp>Decimal</samp> provides support for fast correctly-rounded
+        decimal floating point arithmetic).</p>
+      <div class="highlighter-rouge language-python">
+        <div class="syntax">
+          <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span
+class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span
+class="n">Decimal</span><span class="p">(</span><span class="mi">10</span> <span
+class="o">**</span> <span class="mi">9000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span
+class="n">Decimal</span><span class="p">(</span><span class="mi">10</span> <span
+class="o">**</span> <span class="mi">8999</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimate</span> <span class="o">=</span> <span
+class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span
+class="n">x</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span
+class="n">ln</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">primes_with_9000_digits</span> <span
+class="o">=</span> <span class="n">estimate</span><span class="p">(</span><span
+class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">estimate</span><span
+class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">primes_with_9000_digits</span>
+<span class="go">Decimal('4.342891196471751863968210190E+8995')</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers_with_9000_digits</span> <span
+class="o">=</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">m</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numbers_with_9000_digits</span> <span
+class="o">/</span> <span class="n">primes_with_9000_digits</span>
+<span class="go">Decimal('20723.52171132395093158056936')</span>
+</pre></div>
+      </div>
+      <p>The even numbers were left out of consideration in advance, reducing
+        half of the search space. We could also skip the digits 0, 3, 6 and 9 as
+        replacements for one of the eights, since the combination with 7660 ones
+        and 1339 eights would always result in a multiple of three. This only
+        left us with the digits 2, 4, 5 and 7 that needed to be considered as
+        replacements for one of the eights.</p>
+      <p>Searching our prime number would definitely not be as time consuming as
+        looking for the proverbial needle in a haystack. But if you take into
+        account that it takes a couple of minutes to figure out if a 9000-digit
+        number is prime, it could have easily taken us more than a month to find
+        our prime number. Luckily, we also had <a href="https://www.ugent.be/hpc/en"
+          target="_blank">the Ghent University supercomputer</a> at our disposal
+        (thanks to the collaboration with the <a href="https://www.vscentrum.be/"
+          target="_blank">Flemish Supercomputer Centre</a>) to check many
+        numbers at the same time. In the end, the 2942<sup>nd</sup> number
+        checked turned out to be prime, so that our rudimentary prediction from
+        above even proved to be a slight overestimation.</p>
+    </div>
+  </body>
+</html>

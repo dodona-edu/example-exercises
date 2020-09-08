@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  </head>
+  <body>
+    <p> Heremietkreeften gebruiken voor hun eigen bescherming schelpen die
+      andere dieren hebben weggegooid. Naarmate ze groeien, moeten de kreeften
+      steeds op zoek naar grotere schelpen. Dit levert een merkwaardig
+      verschijnsel op: als een kreeft een verlaten schelp vindt die te groot
+      voor hem is, dan blijft hij gewoon naast die schelp wachten tot er zich
+      andere kreeften rond de schelp beginnen te verzamelen. Hierdoor vormt zich
+      een polonaise van ontevreden schelpbewoners. Als er uiteindelijk een
+      "Goudlokjes"-kreeft bij de groep aansluit &#8212; een kreeft die groot
+      genoeg is om in de verlaten schelp in te trekken &#8212; dan kan elke
+      wachtende kreeft verhuizen naar de schelp die zijn grotere buur net heeft
+      verlaten. Zo haalt de hele soort haar voordeel uit de
+      samenwerking om schaarse goederen te delen.</p>
+    <div class="dodona-centered-group hidden-print"><iframe allowfullscreen="" mozallowfullscreen=""
+        src="https://player.vimeo.com/video/117375257" webkitallowfullscreen=""
+        frameborder="0" height="281" width="500"></iframe> </div>
+    <p>Hetzelfde fenomeen doet zich ook voor bij mensen &#8212; wanneer
+      &#233;&#233;n persoon een nieuw appartement, een nieuwe wagen of een
+      nieuwe job vindt, dan laat hij een oude achter die aan een opvolger in de
+      maatschappij wordt doorgegeven, totdat wat laatst overblijft uiteindelijk
+      wordt weggegooid of vernietigd. In de sociologie wordt dit aangeduid met
+      de Engelse term <i>vacancy chain</i>. </p>
+    <h3>Opgave</h3>
+    <p>In deze opgave werken we met reeksen getallen die de groottes van
+      schelpen voorstellen. Een <span style="font-weight: bold;"> reeks
+        opeenvolgende gehele getallen</span> is een reeks van $$n$$ gehele
+      getallen $$a_1, a_2, \ldots, a_n$$ waarvoor geldt dat $$a_i + 1 = a_{i +
+      1} ( i = 1, \ldots, n - 1)$$. Gevraagd wordt: </p>
+    <ul>
+      <li>
+        <p>Schrijf een functie <samp>opeenvolgend</samp> waaraan een <span style="font-weight: bold;">reeks</span>
+          (een lijst of een tuple) van gehele getallen moet doorgegeven worden.
+          De functie moet een Booleaanse waarde teruggeven, die aangeeft of de
+          gegeven reeks een reeks opeenvolgende gehele getallen vormt als ze in
+          oplopende volgorde gesorteerd wordt.</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>goudlokje</samp> waaraan een <span style="font-weight: bold;">reeks</span>
+          (een lijst of een tuple) van gehele getallen moet doorgegeven worden.
+          Indien met de gegeven reeks geen opeenvolgende reeks gehele getallen
+          kan gevormd worden, maar indien dit wel kan als er juist &#233;&#233;n
+          geheel getal aan de reeks wordt toegevoegd, dan moet dit "ontbrekend"
+          getal door de functie als resultaat teruggegeven worden. Anders moet
+          de functie de waarde <samp>None</samp> als resultaat teruggeven.</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>verhuizen1</samp> waaraan een <span style="font-weight: bold;">reeks</span>
+          (een lijst of een tuple) van gehele getallen moet doorgegeven worden.
+          De functie moet een lijst teruggeven die een kopie van de gegeven
+          reeks getallen bevat, in de gegeven volgorde. Indien met de gegeven
+          reeks geen reeks opeenvolgende gehele getallen kan gevormd worden,
+          maar indien dit wel kan als er juist &#233;&#233;n geheel getal aan de
+          reeks wordt toegevoegd, dan moet achteraan de lijst die door de
+          functie wordt teruggegeven nog dit extra "ontbrekend" getal toegevoegd
+          worden.</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>verhuizen2</samp> waaraan een <span style="font-weight: bold;">lijst</span>
+          van gehele getallen moet doorgegeven worden. De functie mag geen
+          waarde teruggeven (lees: de functie moet de waarde <samp>None</samp>
+          teruggeven), maar indien met de gegeven getallen geen reeks
+          opeenvolgende gehele getallen kan gevormd worden, maar dit wel kan als
+          er juist &#233;&#233;n geheel getal aan de lijst wordt toegevoegd, dan
+          moet achteraan de gegeven lijst dit extra "ontbrekend" getal
+          toegevoegd worden.</p>
+      </li>
+    </ul>
+    <h3>Voorbeeld</h3>
+    <div class="highlighter-rouge language-python">
+      <pre class="highlight"><code><span class="gp">&gt;&gt;&gt; </span><span class="n">opeenvolgend</span><span
+class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">opeenvolgend</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">opeenvolgend</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goudlokje</span><span class="p">([</span><span
+class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goudlokje</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">19</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goudlokje</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen1</span><span class="p">([</span><span
+class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">])</span>
+<span class="go">[7, 5, 4, 9, 6, 3, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen1</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">[16, 13, 18, 17, 15, 14, 20, 19]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen1</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="go">[3, 4, 1, 6, 8, 7]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen2</span><span class="p">(</span><span
+class="n">schelpen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span>
+<span class="go">[7, 5, 4, 9, 6, 3, 8]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span
+class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span
+class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span
+class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen2</span><span class="p">(</span><span
+class="n">schelpen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span>
+<span class="go">[16, 13, 18, 17, 15, 14, 20, 19]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span
+class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span
+class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">verhuizen2</span><span class="p">(</span><span
+class="n">schelpen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schelpen</span>
+<span class="go">[3, 4, 1, 6, 8, 7]</span></code></pre>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,12 @@
 {
   "description": {
     "names": {
-      "en": "ISBN",
-      "nl": "ISBN"
+      "en": "Manhattan",
+      "nl": "Manhattan"
     }
   },
   "evaluation": {
-    "pythia_judge": "output"
+    "pythia_judge": "doctest"
   },
   "labels": []
 }

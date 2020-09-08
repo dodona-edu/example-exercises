@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    $(function(){
+        $('div.exercise-description').css('background', 'url("media/polka-dot-background.png")');
+    });
+    </script>
+    <p><b>Polka Dot</b> is een puzzel waarvoor je elf kaarten nodig hebt die
+      genummerd zijn van 0 tot en met 10. Alle kaarten hebben dezelfde
+      achterkant, waardoor ze niet van elkaar kunnen onderscheiden worden.
+      Rangschik de kaarten met hun achterkant naar boven op een stapel. Deel
+      vervolgens de bovenste kaart door hem omgedraaid op tafel te leggen (zodat
+      je het nummer op de kaart kan lezen), verplaats de volgende kaart naar de
+      onderkant van de stapel, deel de volgende kaart, verplaatst de volgende
+      kaart naar de onderkant van de stapel, enzoverder. Blijf dit proces
+      herhalen totdat je alle kaarten gedeeld hebt. </p>
+    <p>Kan je de kaarten in de oorspronkelijke stapel zo rangschikken dat ze in
+      oplopende volgorde gedeeld worden: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10?
+      <span class="hidden-print">Onderstaande video toont alvast hoe de kaarten in de juiste
+        volgorde moeten gedeeld worden.</span></p>
+    <div class="hidden-print">
+    <div class="dodona-centered-group"><iframe src="https://www.youtube.com/embed/F4uD3pUCUy8"
+        allowfullscreen="" width="560" height="315" frameborder="0"></iframe></div>
+    </div>
+    <p>Dit is een klassieke puzzel die gebruikt wordt om kinderen op een
+      probleemoplossende manier te leren denken. Als initieel blijkt dat elf
+      kaarten te moeilijk zijn, dan kunnen ze eerst beginnen met drie, vijf of
+      zeven kaarten om zo de uitdaging steeds groter te maken, totdat er zich
+      een vast oplossingspatroon begint af te tekenen. </p>
+    <p>Er bestaan heel wat verschillende manieren om dit probleem aan te pakken,
+      maar dit is wellicht de meeste elegante oplossingsmethode. Zet evenveel
+      stippen naast elkaar als er kaarten zijn. Plaats een nul op de eerste
+      stip. Vertrekkend vanaf de stip waarop je laatst een getal geplaatst hebt,
+      plaats je telkens het volgende getal op de tweede stip waarop nog geen
+      getal geplaatst werd &#8212; als je het einde van de reeks stippen
+      bereikt, ga dan verder aan het begin van de reeks. Herhaal deze procedure
+      totdat er op alle stippen getallen geplaatst zijn. Onderstaand schema
+      illustreert deze procedure voor elf kaarten die in de volgorde 0, 1, 2, 3,
+      4, 5, 6, 7, 8, 9, 10 moeten gedeeld worden. </p>
+    <div class="dodona-centered-group"><img alt="polka dot" data-caption="Strategie om elf kaarten in een stapel te leggen zodat ze in oplopende volgorde gedeeld worden volgens de manier die gebruikt wordt bij de Polka Dot puzzel."
+        src="media/polka.png" title="polka dot" height="540px"> </div>
+    <h3>Opgave</h3>
+    <p>Bovenstaande procedure werkt niet enkel voor getallen, maar voor elke
+      reeks items, ongeacht de lengte van de reeks. Gevraagd wordt:</p>
+    <ul>
+      <li>
+        <p>Schrijf een functie <samp>delen</samp> waaraan een reeks (een lijst,
+          tuple of string) items moet doorgegeven worden. De functie moet een
+          nieuwe lijst teruggeven die aangeeft in welk volgorde de items uit de
+          gegeven reeks gedeeld worden, als je de manier van delen van de Polka
+          Dot puzzel gebruikt.</p>
+      </li>
+      <li>
+        <p>Schrijf een functie <samp>polka</samp> waaraan een reeks (een lijst,
+          tuple of string) items moet doorgegeven worden. De gegeven reeks geeft
+          de volgorde aan waarin we de items willen delen op de manier zoals ze
+          gebruikt wordt bij de Polka Dot puzzel. De functie moet een nieuwe
+          lijst teruggeven, die aangeeft in welke volgorde we de gegeven items
+          initieel op een stapel moeten leggen om ze in de gevraagde volgorde te
+          delen.</p>
+      </li>
+    </ul>
+    <h3>Voorbeeld</h3>
+    <div class="highlighter-rouge language-python">
+      <div class="syntax">
+        <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">delen</span><span
+class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span
+class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="go">[0, 2, 4, 6, 8, 10, 3, 7, 1, 9, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delen</span><span class="p">([</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span
+class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">5</span><span class="p">])</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delen</span><span class="p">(</span><span
+class="s1">'ABCDEFGHIJKLMOP'</span><span class="p">)</span>
+<span class="go">['A', 'C', 'E', 'G', 'I', 'K', 'M', 'P', 'D', 'H', 'L', 'B', 'J', 'F', 'O']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">delen</span><span class="p">(</span><span
+class="s1">'ALBICODJEMFKGPH'</span><span class="p">)</span>
+<span class="go">['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P']</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">((</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span
+class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">5</span><span class="p">))</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">([</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span
+class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">10</span><span class="p">])</span>
+<span class="go">[0, 8, 1, 6, 2, 10, 3, 7, 4, 9, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">(</span><span
+class="s1">'ACEGIKMPDHLBJFO'</span><span class="p">)</span>
+<span class="go">['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">(</span><span
+class="s1">'ABCDEFGHIJKLMOP'</span><span class="p">)</span>
+<span class="go">['A', 'L', 'B', 'I', 'C', 'O', 'D', 'J', 'E', 'M', 'F', 'K', 'G', 'P', 'H']</span>
+</pre></div>
+    </div>
+    <div class="hidden-print">
+      <h3>Epiloog</h3>
+      <p><i><a target="_blank" href="http://mathforlove.com/">Math for Love</a></i>
+        is een organisatie uit Seattle (Verenigde Staten) die het
+        wiskunde-onderwijs wil hervormen door middel van puzzels, spelletjes en
+        het organiseren van workshops voor leerkrachten. In 2014 startten ze een
+        geldinzamelingscampagne op <a target="_blank" href="https://www.kickstarter.com/projects/343941773/tiny-polka-dot-the-colorful-math-game-for-young-ki">Kickstarter</a>
+        om de kaartenset Tiny Polka Dot op de markt te kunnen brengen, waarmee
+        leerkrachten hun kleuters en kinderen kunnen uitdagen om verschillende
+        puzzels op te lossen. In een voordracht voor Ted Talks geeft Daniel
+        Finkel van <i>Math for Love</i> aan waar het de organisatie om te doen
+        is: </p>
+      <div class="dodona-centered-group"><iframe src="https://www.youtube.com/embed/ytVneQUA5-c"
+          allowfullscreen="" width="560" height="315" frameborder="0">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;br&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+          </iframe></div>
+      <p>De oudste versie van de Polka Dot puzzel is terug te vinden onder de
+        naam <a target="_blank" href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm#p11"><i>
+            The Nun's Puzzle</i></a> in het boek <a target="_blank" href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm"><i>The
+            Canterbury Puzzles</i></a> uit 1907, geschreven door Henry Dudeney.
+        Dudeney zegt erbij dat de puzzel heel eenvoudig op te lossen is als je
+        gebruikt maakt van echte kaarten, en stelt daarom voor om hem zonder
+        kaarten te proberen oplossen.</p>
+    </div>
+    <h3>Bronnen</h3>
+    <ul>
+      <li>
+        <p><strong>Burns M (1982)</strong>. Math for Smarty Pants. <i>Little
+            Brown Books for Young Readers</i>. <strong><a href="https://www.amazon.com/Brown-Paper-School-book-Smarty/dp/0316117390"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+      <li>
+        <p><strong>Dudeney HE (1907)</strong>. The Canterbury Puzzles and Other
+          Curious Problems. Thomas Nelson and Sons, LTD., London, Edinburgh and
+          New York. <strong><a href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+      <li>
+        <p><strong>Stenmark JK, Thompson V, Cossey R, Hill M (1986)</strong>.
+          Family Math. <i>Lawrence Hall of Science</i>. <strong><a href="https://www.amazon.com/Family-Math-Equals-Series-Stenmark/dp/0912511060"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+    </ul>
+  </body>
+</html>

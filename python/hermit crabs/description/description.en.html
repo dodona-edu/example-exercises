@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  </head>
+  <body>
+    <p> Hermit crabs adopt other creatures' castoff shells for protection. But
+      as they grow, crabs must move into successively larger shells. This
+      produces a curious phenomenon: when a crab finds a shell that's too big
+      for it, it waits nearby. Other crabs may accumulate, forming a little
+      conga line of dissatisfied shell seekers. Finally a "Goldilocks" crab
+      arrives &#8212; a crab large enough to claim the new shell &#8212; and now
+      each waiting crab can move into the shell abandoned by its larger
+      neighbor. By cooperating to share a scarce resource, the whole
+      species benefits.</p>
+    <div class="dodona-centered-group hidden-print"><iframe allowfullscreen="" mozallowfullscreen=""
+        src="https://player.vimeo.com/video/117375257" webkitallowfullscreen=""
+        frameborder="0" height="281" width="500"></iframe> </div>
+    <p>The same thing happens in human societies &#8212; when one person finds a
+      new apartment, car, or job, she leaves behind her old one, and the vacancy
+      passes down through society until the final unit is cast away or
+      destroyed. It's called a <i>vacancy chain</i>.</p>
+    <h3>Assignment</h3>
+    <p>In this assignment we work with sequences of integers that represent
+      shell sizes. A <span style="font-weight: bold;">sequence of consecutive
+        integers</span> is a sequence of $$n$$ integers $$a_1, a_2, \ldots,
+      a_n$$ such that $$a_i + 1 = a_{i + 1} (i = 1, \ldots, n - 1)$$. Your task:
+    </p>
+    <ul>
+      <li>
+        <p>Write a function <samp>consecutive</samp> that takes a <span style="font-weight: bold;">sequence</span>
+          (a list or a tuple) of integers. The function must return a Boolean
+          value that indicates whether or not the given sequence forms a
+          sequence of consecutive integers if the integers are sorted in
+          increasing order.</p>
+      </li>
+      <li>
+        <p>Write a function <samp>goldilocks</samp> that takes a <span style="font-weight: bold;">sequence</span>
+          (a list or a tuple) of integers. In case the given sequence cannot be
+          used to form a sequence of consecutive integers, but if a single
+          integer can be added to the list so that a sequence of consecutive
+          integers can be formed, the function must return this "missing"
+          integer. Otherwise, the function must return the value <samp>None</samp>.</p>
+      </li>
+      <li>
+        <p>Write a function <samp>move1</samp> that takes a <span style="font-weight: bold;">sequence</span>
+          (a list or a tuple) of integers. The function must return a list that
+          contains a copy of the given sequence of numbers, in the given order.
+          In case the given sequence cannot be used to form a sequence of
+          consecutive integers, but if a single integer can be added to the list
+          so that a sequence of consecutive integers can be formed, the function
+          must append this "missing" integer to the end of the list that is
+          returned.</p>
+      </li>
+      <li>
+        <p>Write a function <samp>move2</samp> that takes a <span style="font-weight: bold;">list</span>
+          of integers. The function may not return a value (read: the function
+          must return the value <samp>None</samp>), but in case the given
+          integers cannot be used to form a sequence of consecutive integers,
+          and a single integer can be added to the list so that a sequence of
+          consecutive integers can be formed, this "missing" integer must be
+          appened to the end of the given list.</p>
+      </li>
+    </ul>
+    <h3>Example</h3>
+    <div class="highlighter-rouge language-python">
+      <pre class="highlight"><code><span class="gp">&gt;&gt;&gt; </span><span class="n">consecutive</span><span
+class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">consecutive</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">consecutive</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goldilocks</span><span class="p">([</span><span
+class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goldilocks</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">19</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">goldilocks</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move1</span><span class="p">([</span><span
+class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">])</span>
+<span class="go">[7, 5, 4, 9, 6, 3, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move1</span><span class="p">((</span><span
+class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span
+class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span
+class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span
+class="mi">20</span><span class="p">))</span>
+<span class="go">[16, 13, 18, 17, 15, 14, 20, 19]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move1</span><span class="p">((</span><span
+class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="go">[3, 4, 1, 6, 8, 7]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move2</span><span class="p">(</span><span
+class="n">shells</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span>
+<span class="go">[7, 5, 4, 9, 6, 3, 8]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">13</span><span
+class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span
+class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">14</span><span
+class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move2</span><span class="p">(</span><span
+class="n">shells</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span>
+<span class="go">[16, 13, 18, 17, 15, 14, 20, 19]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span> <span class="o">=</span> <span
+class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span
+class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span
+class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move2</span><span class="p">(</span><span
+class="n">shells</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shells</span>
+<span class="go">[3, 4, 1, 6, 8, 7]</span></code></pre>
+    </div>
+  </body>
+</html>
