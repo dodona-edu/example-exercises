@@ -1,0 +1,681 @@
+>>> inHouse(70.0, 0.0)
+<DEFINITION>
+class DrawCurl(OutputProcessor):
+
+    def __init__(self, stonelist, inch, **kwargs):
+        
+        # call initialization method of base class
+        super().__init__(**kwargs)
+        
+        self.stonelist = stonelist
+        self.inch = inch
+
+    def renderOutput(self, **kwargs):
+        
+        if self.getStatus() == 'AC':
+            return
+ 
+        from math import pi
+        from io import StringIO
+        colormap = {'R' : '#C81A2D', 'Y' : '#EBD141'}
+        colormap['G'] = colormap['Y']
+
+        outfile = StringIO()
+        dim = (200, 200)
+        center = [x/2 for x in dim]
+        maxradius = min(dim) // 2
+        maxradius = round(0.8*maxradius)
+        ticksperinch = maxradius/(12*6)
+        middleradius = round((2/3)*maxradius)
+        smallradius = round((1/3)*maxradius)
+        innerradius = round((1/12)*maxradius)
+        stoneradius = (36 / (2 * pi)) * ticksperinch
+
+        print('<svg xmlns="http://www.w3.org/2000/svg" width="{}" height="{}">'.format(*dim), file=outfile)
+        print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="#F35A61" />.'.format(*center, maxradius), file=outfile)
+        print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="#FFFFFF" />.'.format(*center, middleradius), file=outfile)
+        print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="#6A7FBB" />.'.format(*center, smallradius), file=outfile)
+        print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="#FFFFFF" />.'.format(*center, innerradius), file=outfile)
+        print('<line x1="{centerx}" y1="0" x2="{centerx}" y2="{dimy}" style="stroke:rgb(105,105,105);stroke-width:2;stroke-opacity:0.2" />'.format(centerx=center[0], dimy=dim[1]), file=outfile)
+        print('<line x1="0" y1="{centery}" x2="{dimx}" y2="{centery}" style="stroke:rgb(105,105,105);stroke-width:2;stroke-opacity:0.2" />'.format(centery=center[1], dimx=dim[0]), file=outfile)
+
+        def placeStone(x, y, color='R'):
+            stonecoord = tuple(ticksperinch*r + c for r, c in zip((x, y), center))
+            print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="#000000" />.'.format(*stonecoord, stoneradius), file=outfile)
+            print('<circle cx="{}" cy="{}" r="{}" stroke="black" stroke-width="0" fill="{}" />.'.format(*stonecoord, 0.7*stoneradius, colormap[color]), file=outfile)
+
+
+        for x, y, color in self.stonelist:
+            if self.inch is False:
+                x, y = (r/0.0254 for r in (x, y))
+
+            placeStone(x, -y, color)
+
+        print('</svg>', file=outfile)
+
+        self.addMessage(outfile.getvalue(), escape=False, plain=True)
+
+</DEFINITION>
+<OUTPUTPROCESSOR>
+DrawCurl([(70.0, 0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(70.0, 0.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(70.0, 0.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(78.0, 0.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(78.0, 0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(0.0, 0.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.0, 0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(57.1, -0.0, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(57.1, -0.0, 'Y'),], True)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(69.8, -14.8)
+<OUTPUTPROCESSOR>
+DrawCurl([(69.8, -14.8, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(71.6, -31.9)
+<OUTPUTPROCESSOR>
+DrawCurl([(71.6, -31.9, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(80.9, -58.8)
+<OUTPUTPROCESSOR>
+DrawCurl([(80.9, -58.8, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(46.6, -51.8, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(46.6, -51.8, 'Y'),], True)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(49.4, -85.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(49.4, -85.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(21.1, -64.8)
+<OUTPUTPROCESSOR>
+DrawCurl([(21.1, -64.8, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(8.0, -76.1, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(8.0, -76.1, 'Y'),], True)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-7.5, -71.1)
+<OUTPUTPROCESSOR>
+DrawCurl([(-7.5, -71.1, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-21.2, -65.3)
+<OUTPUTPROCESSOR>
+DrawCurl([(-21.2, -65.3, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-40.4, -70.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(-40.4, -70.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-56.5, -62.7)
+<OUTPUTPROCESSOR>
+DrawCurl([(-56.5, -62.7, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-69.1, -50.2)
+<OUTPUTPROCESSOR>
+DrawCurl([(-69.1, -50.2, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-64.1, -28.6)
+<OUTPUTPROCESSOR>
+DrawCurl([(-64.1, -28.6, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-74.9, -15.9)
+<OUTPUTPROCESSOR>
+DrawCurl([(-74.9, -15.9, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-94.6, -0.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(-94.6, -0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-66.8, 14.2)
+<OUTPUTPROCESSOR>
+DrawCurl([(-66.8, 14.2, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-69.0, 30.7)
+<OUTPUTPROCESSOR>
+DrawCurl([(-69.0, 30.7, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-59.1, 43.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(-59.1, 43.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-49.2, 54.7)
+<OUTPUTPROCESSOR>
+DrawCurl([(-49.2, 54.7, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-31.2, 54.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(-31.2, 54.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-29.2, 89.8, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(-29.2, 89.8, 'Y'),], True)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-7.1, 67.8, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(-7.1, 67.8, 'Y'),], True)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(9.4, 89.7, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(9.4, 89.7, 'Y'),], True)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(20.2, 62.1)
+<OUTPUTPROCESSOR>
+DrawCurl([(20.2, 62.1, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(32.5, 56.3)
+<OUTPUTPROCESSOR>
+DrawCurl([(32.5, 56.3, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(55.5, 61.6)
+<OUTPUTPROCESSOR>
+DrawCurl([(55.5, 61.6, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(78.5, 57.1, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(78.5, 57.1, 'Y'),], True)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(85.8, 38.2, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(85.8, 38.2, 'Y'),], True)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(86.0, 18.3, inch=True)
+<OUTPUTPROCESSOR>
+DrawCurl([(86.0, 18.3, 'Y'),], True)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(1.6, -0.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.6, -0.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.8, -0.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.8, -0.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.6, -0.7, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.6, -0.7, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.3, -1.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.3, -1.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.3, -1.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.3, -1.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.0, -1.7, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.0, -1.7, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.5, -1.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.5, -1.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.1, -1.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.1, -1.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.2, -1.9, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.2, -1.9, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.7, -2.3, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.7, -2.3, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-0.7, -1.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.7, -1.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.4, -1.5, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.4, -1.5, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-1.7, -1.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.7, -1.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-1.7, -0.8, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.7, -0.8, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.8, -0.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.8, -0.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.8, -0.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.8, -0.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.6, 0.3, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.6, 0.3, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.8, 0.8, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.8, 0.8, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.3, 0.9, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.3, 0.9, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.1, 1.3, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.1, 1.3, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.1, 1.9, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.1, 1.9, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-0.7, 2.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.7, 2.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(-0.2, 2.1, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.2, 2.1, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(0.2, 1.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.2, 1.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.6, 1.9, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.6, 1.9, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(1.0, 1.8, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.0, 1.8, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(0.9, 1.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.9, 1.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.7, 1.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.7, 1.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(2.0, 0.9, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(2.0, 0.9, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(2.5, 0.5, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(2.5, 0.5, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(0.0, -0.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.0, -0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.1, -0.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.1, -0.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(4.3, -1.4)
+<OUTPUTPROCESSOR>
+DrawCurl([(4.3, -1.4, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.2, -0.1, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.2, -0.1, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(7.3, -5.3)
+<OUTPUTPROCESSOR>
+DrawCurl([(7.3, -5.3, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.2, -0.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.2, -0.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(7.9, -10.9)
+<OUTPUTPROCESSOR>
+DrawCurl([(7.9, -10.9, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.2, -0.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.2, -0.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(5.6, -17.1)
+<OUTPUTPROCESSOR>
+DrawCurl([(5.6, -17.1, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.1, -0.5, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.1, -0.5, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.0, -22.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.0, -22.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.1, -0.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.1, -0.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-8.3, -25.7)
+<OUTPUTPROCESSOR>
+DrawCurl([(-8.3, -25.7, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.3, -0.7, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.3, -0.7, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-18.5, -25.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(-18.5, -25.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.6, -0.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.6, -0.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-29.1, -21.2)
+<OUTPUTPROCESSOR>
+DrawCurl([(-29.1, -21.2, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.9, -0.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.9, -0.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-38.5, -12.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(-38.5, -12.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.1, -0.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.1, -0.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-45.0, -0.0)
+<OUTPUTPROCESSOR>
+DrawCurl([(-45.0, -0.0, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.2, 0.2, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.2, 0.2, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-47.1, 15.3)
+<OUTPUTPROCESSOR>
+DrawCurl([(-47.1, 15.3, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.2, 0.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.2, 0.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-43.7, 31.7)
+<OUTPUTPROCESSOR>
+DrawCurl([(-43.7, 31.7, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-1.0, 1.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-1.0, 1.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-34.4, 47.3)
+<OUTPUTPROCESSOR>
+DrawCurl([(-34.4, 47.3, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.7, 1.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.7, 1.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-19.5, 59.9)
+<OUTPUTPROCESSOR>
+DrawCurl([(-19.5, 59.9, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.3, 1.6, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.3, 1.6, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(-0.0, 67.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(-0.0, 67.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.3, 1.7, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.3, 1.7, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(22.2, 68.5)
+<OUTPUTPROCESSOR>
+DrawCurl([(22.2, 68.5, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(0.9, 1.7, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(0.9, 1.7, 'Y'),], False)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(45.0, 61.9)
+<OUTPUTPROCESSOR>
+DrawCurl([(45.0, 61.9, 'Y'),], None)
+</OUTPUTPROCESSOR>
+True
+
+>>> inHouse(1.4, 1.4, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.4, 1.4, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(65.5, 47.6)
+<OUTPUTPROCESSOR>
+DrawCurl([(65.5, 47.6, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(1.9, 1.0, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(1.9, 1.0, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(81.3, 26.4)
+<OUTPUTPROCESSOR>
+DrawCurl([(81.3, 26.4, 'Y'),], None)
+</OUTPUTPROCESSOR>
+False
+
+>>> inHouse(2.2, 0.3, inch=False)
+<OUTPUTPROCESSOR>
+DrawCurl([(2.2, 0.3, 'Y'),], False)
+</OUTPUTPROCESSOR>
+False
+

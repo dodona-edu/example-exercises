@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <script type="text/javascript">
+    $(function(){
+        $('div.exercise-description').css('background', 'url("media/polka-dot-background.png")');
+    });
+    </script>
+    <p>The <b>Polka Dot</b> puzzle uses eleven cards numbered from 0 to 10. The
+      back of all cards is the same, so they can not be distinguished from each
+      other. Arrange the cards so that they form a stack. Then deal the top card
+      up, next card to the bottom of the deck, card up, next on the bottom, card
+      up, next on the bottom, and so on until all cards have been dealt.</p>
+    <p>In what order should you arrange the cards in the original deck, so that
+      they are dealt in the order 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10? <span class="hidden-print">The
+        following video demonstrates a successful deal.</span></p>
+    <div class="hidden-print">
+      <div class="dodona-centered-group"><iframe src="https://www.youtube.com/embed/F4uD3pUCUy8"
+          allowfullscreen="" width="560" height="315" frameborder="0"></iframe></div>
+    </div>
+    <p>This is a classic puzzle that is often used to learn problem solving
+      skills to children. Solving the puzzle with real cards is an astonishingly
+      good challenge for a wide range of kids. If using eleven cards is
+      initially too hard, the kids can try using three, five or seven cards to
+      start and slowly work their way up. There's an easy way to pepper
+      successes in as they approach the larger challenge, which is one of the
+      best ways to develop perseverance.</p>
+    <p>There is a plethora of different strategies that can be used to tackle
+      the Polka Dot puzzle, but this is probably the most elegant method for
+      solving it. Put as many dots in a line as there are cards. Place a zero on
+      the first dot. Now, starting at the zero, place each next number at the
+      second unused dot &#8212; when reaching the end of the line, start again
+      at the beginning. Repeat this procedure until numbers have been placed on
+      all dots. The following scheme demonstrates how this procedure works for
+      eleven cards that have to be dealt in the order 0, 1, 2, 3, 4, 5, 6, 7, 8,
+      9, 10. </p>
+    <div class="dodona-centered-group"><img alt="polka dot" data-caption="Strategy to put eleven cards on a stack, such that they are dealt in increasing order when applying the way of dealing as used in the Polka Dot puzzle."
+        src="media/polka.png" title="polka dot" height="540px"> </div>
+    <h3>Assignment</h3>
+    <p>The above procedure not only works with numbers, but with any sequence of
+      items, irrespective of the length of the sequence. Your task:</p>
+    <ul>
+      <li>
+        <p>Write a function <samp>deal</samp> that takes a sequence (a list,
+          tuple or string) of items. The function must return a new list
+          containing the items from the given sequence in the order they are
+          dealt when applying the way of dealing used in the Polka Dot puzzle.</p>
+      </li>
+      <li>
+        <p>Write a function <samp>polka</samp> that takes a sequence (a list,
+          tuple or string) of items. The given sequence indicates the order in
+          which we want to deal the items when applying the way of dealing used
+          in the Polka Dot puzzle. The function must return a new list
+          containing the items from the given sequence in the order they have to
+          be arranged in the initial stack, such that they will be dealt in the
+          given order.</p>
+      </li>
+    </ul>
+    <h3>Example</h3>
+    <div class="highlighter-rouge language-python">
+      <div class="syntax">
+        <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span
+class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span
+class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span
+class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span
+class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span
+class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span
+class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="go">[0, 2, 4, 6, 8, 10, 3, 7, 1, 9, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span class="p">([</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span
+class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">5</span><span class="p">])</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span class="p">(</span><span
+class="s1">'ABCDEFGHIJKLMOP'</span><span class="p">)</span>
+<span class="go">['A', 'C', 'E', 'G', 'I', 'K', 'M', 'P', 'D', 'H', 'L', 'B', 'J', 'F', 'O']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deal</span><span class="p">(</span><span
+class="s1">'ALBICODJEMFKGPH'</span><span class="p">)</span>
+<span class="go">['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P']</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">((</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span
+class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">5</span><span class="p">))</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">([</span><span
+class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span
+class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span
+class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span
+class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span
+class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span
+class="mi">10</span><span class="p">])</span>
+<span class="go">[0, 8, 1, 6, 2, 10, 3, 7, 4, 9, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">(</span><span
+class="s1">'ACEGIKMPDHLBJFO'</span><span class="p">)</span>
+<span class="go">['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P']</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">polka</span><span class="p">(</span><span
+class="s1">'ABCDEFGHIJKLMOP'</span><span class="p">)</span>
+<span class="go">['A', 'L', 'B', 'I', 'C', 'O', 'D', 'J', 'E', 'M', 'F', 'K', 'G', 'P', 'H']</span>
+</pre></div>
+    </div>
+    <div class="hidden-print">
+      <h3>Epilogue</h3>
+      <p><i><a target="_blank" href="http://mathforlove.com/">Math for Love</a></i>
+        is a Seattle-based team (United States) that is out to transform math
+        education through puzzles, games and teacher workshops. In 2014 they
+        launched a successful fund raising campaign on <a target="_blank" href="https://www.kickstarter.com/projects/343941773/tiny-polka-dot-the-colorful-math-game-for-young-ki">Kickstarter</a>
+        to enable them to release <i>Tiny Polka Dot</i>, a collection of
+        mathematical games for 3-8 year-olds packed into one colorful card deck.
+        In his presentation on Ted Talks, Daniel Finkel of <i>Math for Love</i>
+        explains the goals of his organization: </p>
+      <div class="dodona-centered-group"><iframe src="https://www.youtube.com/embed/ytVneQUA5-c"
+          allowfullscreen="" width="560" height="315" frameborder="0">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;br&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;
+          </iframe></div>
+      <p>The oldest version of the Polka Dot puzzle is found as <a target="_blank"
+          href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm#p11"><i>
+            The Nun's Puzzle</i></a> in the 1907 book <a target="_blank" href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm"><i>The
+            Canterbury Puzzles</i></a> by Henry Dudeney. Dudeney calls the
+        puzzle easy to solve if you use actual cards, and suggests solving it
+        without them.</p>
+    </div>
+    <h3>Resources</h3>
+    <ul>
+      <li>
+        <p><strong>Burns M (1982)</strong>. Math for Smarty Pants. <i>Little
+            Brown Books for Young Readers</i>. <strong><a href="https://www.amazon.com/Brown-Paper-School-book-Smarty/dp/0316117390"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+      <li>
+        <p><strong>Dudeney HE (1907)</strong>. The Canterbury Puzzles and Other
+          Curious Problems. Thomas Nelson and Sons, LTD., London, Edinburgh and
+          New York. <strong><a href="http://www.gutenberg.org/files/27635/27635-h/27635-h.htm"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+      <li>
+        <p><strong>Stenmark JK, Thompson V, Cossey R, Hill M (1986)</strong>.
+          Family Math. <i>Lawrence Hall of Science</i>. <strong><a href="https://www.amazon.com/Family-Math-Equals-Series-Stenmark/dp/0912511060"
+              target="_blank"><span aria-hidden="true" class="glyphicon glyphicon-share-alt hidden-print"></span></a></strong></p>
+      </li>
+    </ul>
+  </body>
+</html>

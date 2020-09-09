@@ -1,0 +1,5 @@
+--------------------------------------------------
+<LANGUAGE code="nl">
+    <function from="manhattanDistance" to="manhattanAfstand" />
+    <function from="critical" to="doodpunt" />
+</LANGUAGE>

@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "nl": "Echo",
+      "en": "Echo"
+    }
+  },
+  "labels": [],
+  "programming_language": "haskell"
+}

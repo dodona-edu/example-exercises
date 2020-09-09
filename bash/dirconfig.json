@@ -1,0 +1,6 @@
+{
+  "evaluation": {
+    "handler": "bash"
+  },
+  "programming_language": "bash"
+}

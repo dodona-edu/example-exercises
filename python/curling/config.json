@@ -1,0 +1,12 @@
+{
+  "description": {
+    "names": {
+      "en": "Curling",
+      "nl": "Curling"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "doctest"
+  },
+  "labels": []
+}

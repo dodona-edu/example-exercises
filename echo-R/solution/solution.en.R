@@ -1,3 +1,0 @@
-echo <- function(input) {
-    input
-}

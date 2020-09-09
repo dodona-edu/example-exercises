@@ -1,0 +1,8 @@
+{
+    "evaluation": {
+        "handler": "prolog",
+        "time_limit": 50,
+        "memory_limit": 500000000
+    },
+    "programming_language": "prolog"
+}

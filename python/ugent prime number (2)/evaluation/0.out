@@ -1,0 +1,72 @@
+character '2' only occurs at row 21 and column 30
+character '=' only occurs at row 1 and column 6
+character '?' only occurs at row 10 and column 23
+character '3' only occurs at row 20 and column 29
+character ';' only occurs at row 39 and column 7
+character ';' only occurs at row 32 and column 17
+character '=' only occurs at row 34 and column 2
+character ';' only occurs at row 24 and column 19
+character ':' only occurs at row 13 and column 4
+character ';' only occurs at row 30 and column 85
+character ';' only occurs at row 67 and column 39
+character '!' only occurs at row 4 and column 19
+character ';' only occurs at row 30 and column 13
+character ':' only occurs at row 18 and column 31
+character '5' only occurs at row 25 and column 18
+character '+' only occurs at row 39 and column 17
+character '+' only occurs at row 6 and column 28
+character ';' only occurs at row 59 and column 44
+character '+' only occurs at row 55 and column 21
+character '?' only occurs at row 37 and column 39
+character ':' only occurs at row 53 and column 31
+character ';' only occurs at row 53 and column 59
+character ':' only occurs at row 31 and column 13
+character '!' only occurs at row 10 and column 31
+character '!' only occurs at row 2 and column 10
+character '2' only occurs at row 1 and column 41
+character ',' only occurs at row 33 and column 2
+character '!' only occurs at row 33 and column 25
+character ';' only occurs at row 45 and column 24
+character '+' only occurs at row 60 and column 20
+character '+' only occurs at row 9 and column 47
+character '!' only occurs at row 29 and column 88
+character '?' only occurs at row 77 and column 35
+character '!' only occurs at row 27 and column 18
+character '_' only occurs at row 1 and column 54
+character ';' only occurs at row 1 and column 9
+character '<' only occurs at row 13 and column 22
+character ';' only occurs at row 3 and column 5
+character ':' only occurs at row 35 and column 42
+character '/' only occurs at row 12 and column 21
+character '+' only occurs at row 1 and column 28
+character ':' only occurs at row 3 and column 21
+character ';' only occurs at row 42 and column 6
+character '+' only occurs at row 19 and column 13
+character '`' only occurs at row 35 and column 68
+character '+' only occurs at row 20 and column 3
+character ';' only occurs at row 9 and column 23
+character '7' only occurs at row 56 and column 43
+character '?' only occurs at row 23 and column 3
+character '+' only occurs at row 6 and column 5
+--------------------------------------------------------------------
+python input without prompt: true
+block count: multi
+input block size: ends with
+output block size: 1
+comparison: exact match
+<LANGUAGE code="en">
+  <detect token="character" />
+  <detect token="only" />
+  <detect token="occurs" />
+  <detect token="row" />
+  <detect token="column" />
+</LANGUAGE>
+<LANGUAGE code="nl">
+  <detect token="karakter" />
+  <detect token="enkel" />
+  <detect token="rij" />
+  <detect token="kolom" />
+  <token from="character" to="karakter" detect="false" />
+  <fixed from="only occurs at row" to="komt enkel voor op rij" detect="false" />
+  <fixed from="and column" to="en kolom" detect="false" />
+</LANGUAGE>

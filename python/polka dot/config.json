@@ -1,0 +1,12 @@
+{
+  "description": {
+    "names": {
+      "en": "Polka Dot",
+      "nl": "Polka Dot"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "doctest"
+  },
+  "labels": []
+}

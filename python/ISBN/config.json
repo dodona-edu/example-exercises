@@ -1,0 +1,12 @@
+{
+  "description": {
+    "names": {
+      "en": "ISBN",
+      "nl": "ISBN"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "output"
+  },
+  "labels": []
+}

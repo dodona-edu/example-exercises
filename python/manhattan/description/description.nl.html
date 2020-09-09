@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+</meta></head>
+<body>
+<p>Het schiereiland Manhattan vormt
+      &#233;&#233;n van de vijf stadsdelen van New York. Dit stadsdeel staat
+      bekend om zijn wolkenkrabbers, brede avenues, het financi&#235;le centrum
+      Wall Street en de vele, gele taxi's die er rondrijden. De straten van
+      Manhattan zijn ingedeeld volgens het rechthoekige <em>Commissioners' Plan</em>
+      van 1811. Het gebied wordt doorsneden door <em>avenues </em>(noord-zuid)
+      en <em>streets </em>(oost-west).</p>
+<div class="dodona-centered-group"><img alt="Manhattan Commissioner's Plan" data-caption="Manhattan Commissioner's Plan" height="200" src="media/manhattan.png" title="Manhattan Commissioner's Plan"/>
+
+</div>
+<p>Veronderstel een gegeven rechthoekig $$s
+      \times a$$ rooster dat een deelgebied van Manhattan met $$s$$ streets en $$a$$
+      avenues voorstelt. Op verschillende kruispunten zijn pompstations te
+      vinden waar taxi's kunnen tanken. Wanneer een taxi zonder benzine dreigt
+      te vallen, kan de chauffeur op zijn GPS de co&#246;rdinaten van het
+      dichtsbijzijnde pompstation aflezen. Er is echter een <em>bug </em>in de
+      software van de GPS geslopen. Als er vanaf een kruispunt meerdere
+      "dichtste" pompstations zijn, dan raakt de GPS het noorden kwijt, waardoor
+      de chauffeur in paniek slaat en een aanrijding veroorzaakt. Dergelijke
+      kruispunten worden daarom ook <em>dode punten</em> genoemd.</p>
+<h3>Opgave</h3>
+<p>In Manhattan wordt een kruispunt (verder
+      kortweg punt genoemd) op een rechthoekig $$s \times a$$ rooster steeds
+      voorgesteld als een tuple $$(x, y)$$, waarbij $$x, y \in \mathbb{N}$$, $$0 \leq
+      x &lt; s$$ en $$0 \leq y &lt; a$$. Het punt in de linkerbovenhoek van het
+      rooster is dus het punt $$(0, 0)$$, en het punt in de rechteronderhoek is
+      het punt $$(s-1, a-1)$$. Dit is ook de voorstelling van punten zoals die in
+      deze opgave gebruikt worden.</p>
+<ul>
+<li><p>In Manhattan wordt de afstand tussen twee kruispunten $$(x_1, y_1)$$ en
+        $$(x_2, y_2)$$ berekend als \[|x_1 - x_2| + |y_1 - y_2|\,,\]waarbij $$|x|$$
+        de absolute waarde van $$x$$ voorstelt. Deze afstand wordt immers niet
+        voor niets de Manhattan-afstand (of <em>city block distance</em>)
+        genoemd. Schrijf een functie <samp>manhattanAfstand</samp>
+        die de Manhattan-afstand tussen twee gegeven kruispunten als resultaat <span style="font-weight: bold;">teruggeeft</span>. De co&#246;rdinaten van
+        de twee punten moeten als argument aan de functie doorgegeven worden.</p></li>
+<li><p>Gebruik de functie <samp>manhattanAfstand</samp>
+        om een functie <samp>doodpunt</samp> te
+        schrijven die een Booleaanse waarde <span style="font-weight: bold;">teruggeeft</span>
+        die aangeeft of een gegeven kruispunt een dood punt is of niet. Aan deze
+        functie moeten twee argumenten doorgegeven worden: de co&#246;rdinaten
+        van het kruispunt waarvoor moet bepaald worden of het al dan niet een
+        dood punt is, en een lijst van punten die de locaties van de
+        pompstations op het $$s \times a$$ rooster aangeven.</p></li>
+<li><p>Schrijf een functie <samp>manhattan</samp>
+        waaraan drie argumenten moeten doorgegeven worden: het aantal streets
+        $$s$$, het aantal avenues $$a$$, en een lijst van punten die de locaties van
+        de pompstations op het $$s \times a$$ rooster aangeven. De functie moet
+        een voorstelling van het rechthoekig rooster <span style="font-weight: bold;">uitschrijven</span>,
+        waarbij kruispunten worden aangeduid met een sterretje (<samp>*</samp>).
+        Kruispunten waarop een pompstation gelegen is moeten echter voorgesteld
+        worden met de letter <samp>P</samp>, en
+        kruispunten die dode punten zijn moeten
+        voorgesteld worden met de letter <samp>D</samp>.</p></li>
+</ul>
+<h3>Voorbeeld</h3>
+<p>In het voorbeeld $$10\times 10$$ rooster dat
+      in onderstaande interactieve Python sessie wordt afgebeeld is $$(5,0)$$
+      bijvoorbeeld een <em>dood punt</em>, omdat de twee pompstations die op de
+      vierde avenue gelegen zijn allebei op afstand 4 van het punt $$(5,0)$$
+      liggen.</p>
+<div class="highlighter-rouge language-python">
+<pre class="highlight">
+<code><span class="gp">&gt;&gt;&gt; </span><span class="n">manhattanAfstand</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">manhattanAfstand</span><span class="p">((</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+<span class="go">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">doodpunt</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">doodpunt</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">manhattan</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+<span class="go">****D*****</span>
+<span class="go">****D***P*</span>
+<span class="go">*****D****</span>
+<span class="go">*****DD***</span>
+<span class="go">***P*DDD**</span>
+<span class="go">DDDDD***DD</span>
+<span class="go">***PDP****</span>
+<span class="go">****D*****</span>
+<span class="go">****D*****</span>
+<span class="go">****D*****</span></code> </pre>
+</div>
+</body>
+</html>

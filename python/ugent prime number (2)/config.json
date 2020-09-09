@@ -1,0 +1,12 @@
+{
+  "description": {
+    "names": {
+      "en": "The Ghent University prime number",
+      "nl": "Het priemgetal van de UGent"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "output"
+  },
+  "labels": []
+}

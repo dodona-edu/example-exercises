@@ -1,0 +1,7 @@
+{
+    "evaluation": {
+        "handler": "haskell",
+        "time_limit": 15,
+        "memory_limit": 500000000
+    }
+}

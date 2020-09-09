@@ -1,0 +1,13 @@
+{
+  "description": {
+    "names": {
+      "nl": "Echo",
+      "en": "Echo"
+    }
+  },
+  "evaluation": {
+      "filename": "Echo.java"
+  },
+  "labels": [],
+  "programming_language": "java"
+}
