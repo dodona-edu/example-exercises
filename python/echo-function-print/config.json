@@ -1,0 +1,13 @@
+{
+  "description": {
+    "names": {
+      "en": "Echo function print",
+      "nl": "Echo functie print"
+    }
+  },
+  "evaluation": {
+    "pythia_judge": "doctest"
+  },
+  "access": "public",
+  "labels": ["function", "print"]
+}
