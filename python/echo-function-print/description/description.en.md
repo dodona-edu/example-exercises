@@ -10,7 +10,7 @@ The same text is printed that is given between the brackets of the function.
 
 {: .callout.callout-info}
 > #### Example notation
-> To make a clear distinction between input and output in the example below, the input is preceded by three major characters and a space (`>>>`). Furthermore, that notation has no meaning. The output is against the left margin.
+> This notation imitates the doctest format, where the input is preceded by `>>> ` and the output is against the left margin.
 
 ```python
 >>> echo("Hello world!")

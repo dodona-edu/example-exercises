@@ -10,7 +10,7 @@ Hetzelfde wordt geprint wat meegegeven wordt tussen de haakjes van de functie.
 
 {: .callout.callout-info}
 > #### Voorbeeldnotatie
-> Om een duidelijk onderscheid te maken tussen invoer en uitvoer in onderstaand voorbeeld, wordt de invoer voorafgegeaan door drie groterdantekens en een spatie (`>>> `). Verder heeft die notatie geen betekenis. De uitvoer staat tegen de linkerkantlijn.*
+> Deze notatie imiteert de doctest notatie, waarbij de invoer voorafgegeaan wordt door `>>> ` en de uitvoer tegen de linkerkantlijn staat.
 
 ```python
 >>> echo("Hello world!")
