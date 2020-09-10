@@ -1,0 +1,33 @@
+>>> echo("Hello world!")
+Hello world!
+>>> echo(42)
+42
+>>> echo("ECHO")
+ECHO
+>>> echo("CoderDojo")
+CoderDojo
+>>> echo("Scratch")
+Scratch
+>>> echo("Micro:bit")
+Micro:bit
+>>> echo("Arduino")
+Arduino
+>>> echo("Unity")
+Unity
+>>> echo("Arduino")
+Arduino
+>>> echo("Minecraft")
+Minecraft
+>>> echo(5)
+5
+>>> echo(4)
+4
+>>> echo("4")
+4
+>>> echo(True)
+True
+>>> echo("Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.")
+Twinkle, twinkle, little star,
+How I wonder what you are!
+Up above the world so high,
+Like a diamond in the sky.
