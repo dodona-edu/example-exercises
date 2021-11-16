@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Border</title>
+    <style>
+        /* Add your CSS here */
+
+    </style>
+</head>
+<body>
+<img src="./media/dodona_icon.png" alt="Dodona logo">
+</body>
+</html>

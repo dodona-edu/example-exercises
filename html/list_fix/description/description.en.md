@@ -1,0 +1,1 @@
+Find and fix the two mistakes in the following code.

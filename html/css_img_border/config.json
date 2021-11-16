@@ -1,0 +1,20 @@
+{
+  "description": {
+    "names": {
+      "nl": "Rand afbeelding (CSS)",
+      "en": "Image border (CSS)"
+    }
+  },
+  "type": "exercise",
+  "programming_language": "html",
+  "labels": [
+
+  ],
+  "evaluation": {
+    "handler": "html"
+  },
+  "internals": {
+    "token": "_JWxNSD6deEc_MUEDQeIiHZf4DAQA3Seaz7qstnkkNCGDuAVGxa7VT4xMGupgh2G",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

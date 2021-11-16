@@ -1,0 +1,20 @@
+{
+  "description": {
+    "names": {
+      "nl": "HTML-template normaal",
+      "en": "HTML template regular"
+    }
+  },
+  "type": "exercise",
+  "programming_language": "html",
+  "labels": [
+
+  ],
+  "evaluation": {
+    "handler": "html"
+  },
+  "internals": {
+    "token": "SB8RcpjpJ6W3P-2JqNCzyaRvDTiFBSmEDqhvN_MPa2Iyjdt4PMRxYI4F9bgKaU9D",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}
