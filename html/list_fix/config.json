@@ -1,0 +1,20 @@
+{
+  "description": {
+    "names": {
+      "nl": "Fix list (comparison mode)",
+      "en": "Verbeter lijst (comparison mode)"
+    }
+  },
+  "type": "exercise",
+  "programming_language": "html",
+  "labels": [
+
+  ],
+  "evaluation": {
+    "handler": "html"
+  },
+  "internals": {
+    "token": "RTYSKuYrQcIBfTrm9z7heuq4ebtMBUEMabAhjy6UDZZaSEbNCAySRyCr-KmX6ysQ",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

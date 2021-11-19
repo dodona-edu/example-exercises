@@ -1,0 +1,20 @@
+{
+  "description": {
+    "names": {
+      "nl": "Afbeelding als link",
+      "en": "Image as link"
+    }
+  },
+  "type": "exercise",
+  "programming_language": "html",
+  "labels": [
+
+  ],
+  "evaluation": {
+    "handler": "html"
+  },
+  "internals": {
+    "token": "aZbsKASdyXKJTMIpQ4RDukpJI5QDCn7TdMj8hezsMmk3UY-aCF43xJUYmAHFt_CN",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}
