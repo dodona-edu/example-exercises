@@ -1,0 +1,1 @@
+Maak een simpele tabel met minstens twee rijen (zonder hoofding).
