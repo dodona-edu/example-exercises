@@ -1,0 +1,11 @@
+solutionfile=solution.txt
+tabname=Test
+
+test <<---
+precmd=cat solution.txt
+cmd=# Correct?
+stdout<<###
+Verwachte waarde
+###
+handler=hide_expected
+---
