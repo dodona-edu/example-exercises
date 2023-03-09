@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "en": "House",
+      "nl": "Huis"
+    }
+  },
+  "evaluation": {
+    "handler": "turtle"
+  },
+  "labels": [
+    "turtle",
+    "house"
+  ]
+}
