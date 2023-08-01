@@ -1,0 +1,9 @@
+- tab: "sum"
+  testcases:
+    - arguments: [ "-1", "-23", "72", "84", "-38", "-61", "49", "45" ]
+      stdout: "127"
+    - arguments: [ ]
+      stdout: "0"
+    - arguments: [ "spam", "eggs", "bacon" ]
+      stderr: "invalid arguments"
+      exit_code: 1

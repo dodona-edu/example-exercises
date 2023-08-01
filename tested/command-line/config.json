@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Sum of numbers",
+      "nl": "Som van getallen"
+    }
+  },
+  "programming_language": "python",
+  "access": "private"
+}

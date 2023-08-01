@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Counter",
+      "nl": "Teller"
+    }
+  },
+  "programming_language": "python",
+  "access": "private"
+}
