@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Minimum",
+      "nl": "Minimum"
+    }
+  },
+  "programming_language": "python",
+  "access": "private"
+}
