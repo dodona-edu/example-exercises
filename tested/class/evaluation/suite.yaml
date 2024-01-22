@@ -4,7 +4,7 @@
         - statement: "counter = Counter(5)"
         - statement: "counter.report()"
           stdout: "5"
-        - expression: "counter.count()"
+        - statement: "counter.count()"
         - statement: "counter.report()"
           stdout: "6"
         - statement: "counter.count().count().count().count().report()"
