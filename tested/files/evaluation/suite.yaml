@@ -1,0 +1,9 @@
+- tab: "Sorteren"
+  testcases:
+    - arguments: [ "ongesorteerd.txt", "gesorteerd.txt" ]
+      file:
+        content: "oplossing.txt"
+        location: "gesorteerd.txt"
+      files:
+        - name: "ongesorteerd.txt"
+          url: "media/ongesorteerd.txt"

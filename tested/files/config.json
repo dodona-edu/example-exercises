@@ -1,0 +1,14 @@
+{
+  "description": {
+    "names": {
+      "en": "Sort",
+      "nl": "Sorteren"
+    }
+  },
+  "evaluation": {
+    "handler": "tested",
+    "test_suite": "suite.yaml"
+  },
+  "programming_language": "python",
+  "access": "private"
+}
