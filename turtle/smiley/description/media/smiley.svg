@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-200 -200 400 400" width="400" height="400">
+  <!-- Background -->
+  <rect x="-200" y="-200" width="400" height="400" fill="skyblue"/>
+
+  <!-- Face -->
+  <circle cx="0" cy="0" r="110" fill="gold" stroke="black" stroke-width="2"/>
+
+  <!-- Rosy cheeks (behind eyes, drawn first) -->
+  <circle cx="-83" cy="8" r="20" fill="lightpink" stroke="none" opacity="0.7"/>
+  <circle cx="83" cy="8" r="20" fill="lightpink" stroke="none" opacity="0.7"/>
+
+  <!-- Eyes (white sclera) -->
+  <circle cx="-40" cy="-35" r="18" fill="white" stroke="black" stroke-width="2"/>
+  <circle cx="40" cy="-35" r="18" fill="white" stroke="black" stroke-width="2"/>
+
+  <!-- Pupils -->
+  <circle cx="-38" cy="-28" r="9" fill="black"/>
+  <circle cx="38" cy="-28" r="9" fill="black"/>
+
+  <!-- Eyebrows -->
+  <line x1="-57" y1="-62" x2="-23" y2="-68" stroke="saddlebrown" stroke-width="5" stroke-linecap="round"/>
+  <line x1="23" y1="-68" x2="57" y2="-62" stroke="saddlebrown" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <circle cx="0" cy="5" r="8" fill="tomato" stroke="none"/>
+
+  <!-- Smile: arc from (-60,30) through (0,90) to (60,30) -->
+  <path d="M -60,30 A 60,60 0 0,0 60,30" stroke="black" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
