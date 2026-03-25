@@ -1,2 +1,8 @@
 import turtle
 
+
+def house():
+    pass
+
+
+house()
