@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -80 300 140">
+  <!-- Body segments (back to front, 6 segments centered) -->
+  <!-- segment_spacing=35, n=6, first x = -(5*35)/2 = -87.5 -->
+  <circle cx="87.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="52.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="17.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="-17.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="-52.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="-87.5" cy="0" r="20" fill="limegreen" stroke="darkgreen" stroke-width="2"/>
+
+  <!-- Head face (leftmost segment at x=-87.5) -->
+  <!-- Left eye -->
+  <circle cx="-95.5" cy="-5" r="6" fill="white" stroke="black" stroke-width="1.5"/>
+  <circle cx="-93.5" cy="-3" r="3" fill="black"/>
+  <!-- Right eye -->
+  <circle cx="-79.5" cy="-5" r="6" fill="white" stroke="black" stroke-width="1.5"/>
+  <circle cx="-77.5" cy="-3" r="3" fill="black"/>
+
+  <!-- Smile -->
+  <path d="M -79.5 5 A 8 8 0 0 1 -95.5 5" fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Left antenna -->
+  <line x1="-93.5" y1="-20" x2="-108" y2="-44" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="-108" cy="-44" r="4" fill="red" stroke="darkgreen" stroke-width="1"/>
+
+  <!-- Right antenna -->
+  <line x1="-81.5" y1="-20" x2="-67" y2="-44" stroke="darkgreen" stroke-width="2"/>
+  <circle cx="-67" cy="-44" r="4" fill="red" stroke="darkgreen" stroke-width="1"/>
+</svg>
