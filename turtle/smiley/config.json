@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "en": "Draw a Smiley Face",
+      "nl": "Teken een smiley"
+    }
+  },
+  "programming_language": "python",
+  "evaluation": {
+    "handler": "turtle",
+    "canvas_width": 400,
+    "canvas_height": 400
+  },
+  "labels": ["example", "voorbeeld", "turtle", "smiley"]
+}

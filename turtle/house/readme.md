@@ -1,1 +1,1 @@
-This is a basic Python Turtle exercise.
+This exercise asks students to draw a house using Python's `turtle` module. The house consists of a square base (50×50 pixels) topped by an equilateral triangle roof (50-pixel sides), drawn in blue. Students practice combining basic turtle movements and turns to compose a multi-part figure.
