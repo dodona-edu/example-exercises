@@ -1,0 +1,48 @@
+{
+  "tabs": [
+    {
+      "name": "Tests",
+      "contexts": [
+        {
+          "before": {
+            "javascript": {
+              "data": "const _fs = require('fs');\nconst _lines = _fs.readFileSync(0, 'utf8').trim().split('\\n');\nlet _i = 0;\nglobalThis.prompt = function(msg) { return _lines[_i++]; };"
+            }
+          },
+          "testcases": [
+            {
+              "input": { "main_call": true, "stdin": { "type": "text", "data": "World" } },
+              "output": { "stdout": { "type": "text", "data": "Hello, World!\n" } }
+            }
+          ]
+        },
+        {
+          "before": {
+            "javascript": {
+              "data": "const _fs = require('fs');\nconst _lines = _fs.readFileSync(0, 'utf8').trim().split('\\n');\nlet _i = 0;\nglobalThis.prompt = function(msg) { return _lines[_i++]; };"
+            }
+          },
+          "testcases": [
+            {
+              "input": { "main_call": true, "stdin": { "type": "text", "data": "Dodona" } },
+              "output": { "stdout": { "type": "text", "data": "Hello, Dodona!\n" } }
+            }
+          ]
+        },
+        {
+          "before": {
+            "javascript": {
+              "data": "const _fs = require('fs');\nconst _lines = _fs.readFileSync(0, 'utf8').trim().split('\\n');\nlet _i = 0;\nglobalThis.prompt = function(msg) { return _lines[_i++]; };"
+            }
+          },
+          "testcases": [
+            {
+              "input": { "main_call": true, "stdin": { "type": "text", "data": "Alice" } },
+              "output": { "stdout": { "type": "text", "data": "Hello, Alice!\n" } }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
