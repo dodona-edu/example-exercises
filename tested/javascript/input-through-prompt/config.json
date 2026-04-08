@@ -1,0 +1,18 @@
+{
+  "description": {
+    "names": {
+      "en": "Input through prompt",
+      "nl": "Input through prompt"
+    }
+  },
+  "evaluation": {
+    "test_suite": "suite.json",
+    "options": {
+      "language": {
+        "javascript": {
+          "eslint_config": "eslintrc.yaml"
+        }
+      }
+    }
+  }
+}
