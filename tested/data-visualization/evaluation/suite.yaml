@@ -1,0 +1,110 @@
+- tab: "Aantal Pokémon"
+  testcases:
+    - expression: "number_of_pokemon('pokemon.csv')"
+      return: 20
+    - expression: "number_of_pokemon('starters.csv')"
+      return: 9
+    - expression: "number_of_pokemon('eeveelutions.csv')"
+      return: 4
+    - expression: "number_of_pokemon('legendary.csv')"
+      return: 1
+
+- tab: "Types"
+  testcases:
+    - expression: "all_types('pokemon.csv')"
+      return: ["Dragon", "Electric", "Fire", "Ghost", "Grass", "Normal", "Psychic", "Water"]
+    - expression: "all_types('starters.csv')"
+      return: ["Fire", "Grass", "Water"]
+    - expression: "all_types('eeveelutions.csv')"
+      return: ["Electric", "Fire", "Normal", "Water"]
+    - expression: "all_types('legendary.csv')"
+      return: ["Psychic"]
+
+- tab: "Sterkste"
+  testcases:
+    - expression: "strongest_pokemon('pokemon.csv')"
+      return: "Mewtwo"
+    - expression: "strongest_pokemon('starters.csv')"
+      return: "Charizard"
+    - expression: "strongest_pokemon('eeveelutions.csv')"
+      return: "Vaporeon"
+    - expression: "strongest_pokemon('legendary.csv')"
+      return: "Mewtwo"
+
+- tab: "Sterkste per type"
+  testcases:
+    - expression: "strongest_per_type('pokemon.csv')"
+      return:
+        Dragon: "Dragonite"
+        Electric: "Jolteon"
+        Fire: "Charizard"
+        Ghost: "Gengar"
+        Grass: "Venusaur"
+        Normal: "Snorlax"
+        Psychic: "Mewtwo"
+        Water: "Gyarados"
+    - expression: "strongest_per_type('starters.csv')"
+      return:
+        Fire: "Charizard"
+        Grass: "Venusaur"
+        Water: "Blastoise"
+    - expression: "strongest_per_type('eeveelutions.csv')"
+      return:
+        Electric: "Jolteon"
+        Fire: "Flareon"
+        Normal: "Eevee"
+        Water: "Vaporeon"
+    - expression: "strongest_per_type('legendary.csv')"
+      return:
+        Psychic: "Mewtwo"
+
+- tab: "Grafiek"
+  contexts:
+    - testcases:
+        - statement:
+            python: "fig = submission.plot_top_pokemon('starters.csv', 3)"
+        - expression:
+            python: "fig.axes[0].get_title()"
+          return: "Top 3 Pokémon by total stats"
+        - expression:
+            python: "fig.axes[0].get_xlabel()"
+          return: "Pokémon"
+        - expression:
+            python: "fig.axes[0].get_ylabel()"
+          return: "Total stats"
+        - expression:
+            python: "len(fig.axes[0].patches)"
+          return: 3
+        - expression:
+            python: "[round(p.get_height()) for p in fig.axes[0].patches]"
+          return: [534, 530, 525]
+        - expression:
+            python: "[t.get_text() for t in fig.axes[0].get_xticklabels()]"
+          return: ["Charizard", "Blastoise", "Venusaur"]
+    - testcases:
+        - statement:
+            python: "fig = submission.plot_top_pokemon('pokemon.csv', 5)"
+        - expression:
+            python: "fig.axes[0].get_title()"
+          return: "Top 5 Pokémon by total stats"
+        - expression:
+            python: "len(fig.axes[0].patches)"
+          return: 5
+        - expression:
+            python: "[round(p.get_height()) for p in fig.axes[0].patches]"
+          return: [680, 600, 540, 540, 534]
+        - expression:
+            python: "[t.get_text() for t in fig.axes[0].get_xticklabels()]"
+          return: ["Mewtwo", "Dragonite", "Snorlax", "Gyarados", "Charizard"]
+    - testcases:
+        - statement:
+            python: "fig = submission.plot_top_pokemon('legendary.csv', 1)"
+        - expression:
+            python: "fig.axes[0].get_title()"
+          return: "Top 1 Pokémon by total stats"
+        - expression:
+            python: "len(fig.axes[0].patches)"
+          return: 1
+        - expression:
+            python: "[round(p.get_height()) for p in fig.axes[0].patches]"
+          return: [680]

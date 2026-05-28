@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Pokémon stats",
+      "nl": "Pokémon-statistieken"
+    }
+  },
+  "labels": ["pandas", "matplotlib", "csv", "data-visualization"]
+}
