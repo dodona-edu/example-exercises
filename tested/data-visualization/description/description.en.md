@@ -32,7 +32,7 @@ The four files are:
 
 ### Functions to write
 
-The editor is pre-filled with stubs for every function you have to implement and a small `__main__` block that calls them on `pokemon.csv` and shows the chart. Replace each `raise NotImplementedError` with your implementation — pressing **Run** then prints the textual results and renders the bar chart in the sandbox.
+The editor is pre-filled with stubs for every function you have to implement and a small `if __name__ == "sandbox":` block that calls them on `pokemon.csv` and shows the chart. Replace each `raise NotImplementedError` with your implementation — pressing **Run** then prints the textual results and renders the bar chart in the sandbox. The `if __name__ == "sandbox":` guard makes the block fire only when you press **Run**; it is skipped during automated testing.
 
 You may import `pandas` and `matplotlib.pyplot`.
 

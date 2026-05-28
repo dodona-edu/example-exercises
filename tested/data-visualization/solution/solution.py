@@ -44,7 +44,7 @@ def plot_top_pokemon(filename, n):
     return fig
 
 
-if __name__ == "__main__":
+if __name__ == "sandbox":
     print("Number of Pokémon:", number_of_pokemon('pokemon.csv'))
     print("All types:        ", all_types('pokemon.csv'))
     print("Strongest:        ", strongest_pokemon('pokemon.csv'))

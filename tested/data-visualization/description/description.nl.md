@@ -32,7 +32,7 @@ De vier bestanden zijn:
 
 ### Te schrijven functies
 
-In de editor staan reeds stubs voor elke functie die je moet implementeren, gevolgd door een klein `__main__`-blok dat ze oproept op `pokemon.csv` en de grafiek toont. Vervang elke `raise NotImplementedError` door je eigen implementatie — als je dan op **Run** klikt, zie je de tekstuele resultaten en wordt de staafgrafiek in de sandbox getekend.
+In de editor staan reeds stubs voor elke functie die je moet implementeren, gevolgd door een klein `if __name__ == "sandbox":`-blok dat ze oproept op `pokemon.csv` en de grafiek toont. Vervang elke `raise NotImplementedError` door je eigen implementatie — als je dan op **Run** klikt, zie je de tekstuele resultaten en wordt de staafgrafiek in de sandbox getekend. De `if __name__ == "sandbox":`-bewaking zorgt ervoor dat dit blok enkel uitgevoerd wordt als je op **Run** klikt; tijdens automatische tests wordt het overgeslagen.
 
 Je mag `pandas` en `matplotlib.pyplot` importeren.
 
