@@ -1,4 +1,4 @@
-- tab: "Aantal Pokémon"
+- tab: "Number of Pokémon"
   testcases:
     - expression: "number_of_pokemon('pokemon.csv')"
       return: 20
@@ -20,7 +20,7 @@
     - expression: "all_types('legendary.csv')"
       return: ["Psychic"]
 
-- tab: "Sterkste"
+- tab: "Strongest"
   testcases:
     - expression: "strongest_pokemon('pokemon.csv')"
       return: "Mewtwo"
@@ -31,7 +31,7 @@
     - expression: "strongest_pokemon('legendary.csv')"
       return: "Mewtwo"
 
-- tab: "Sterkste per type"
+- tab: "Strongest per type"
   testcases:
     - expression: "strongest_per_type('pokemon.csv')"
       return:
@@ -58,7 +58,7 @@
       return:
         Psychic: "Mewtwo"
 
-- tab: "Grafiek"
+- tab: "Chart"
   contexts:
     - testcases:
         - statement:
