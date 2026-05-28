@@ -25,10 +25,12 @@ The **total stats** of a Pokémon are the sum of its six numeric stats (`hp + at
 
 The four files are:
 
-- [`pokemon.csv`](media/pokemon.csv) — 20 Pokémon from various types
-- [`starters.csv`](media/starters.csv) — the nine Generation 1 starter evolutions
-- [`eeveelutions.csv`](media/eeveelutions.csv) — Eevee and three of its evolutions
-- [`legendary.csv`](media/legendary.csv) — just one legendary Pokémon
+- `pokemon.csv` — 20 Pokémon from various types
+- `starters.csv` — the nine Generation 1 starter evolutions
+- `eeveelutions.csv` — Eevee and three of its evolutions
+- `legendary.csv` — just one legendary Pokémon
+
+They are pre-loaded in your sandbox, so you can read them directly by name.
 
 ### Functions to write
 
