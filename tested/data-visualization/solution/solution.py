@@ -42,3 +42,15 @@ def plot_top_pokemon(filename, n):
     ax.set_xlabel("Pokémon")
     ax.set_ylabel("Total stats")
     return fig
+
+
+if __name__ == "__main__":
+    print("Number of Pokémon:", number_of_pokemon('pokemon.csv'))
+    print("All types:        ", all_types('pokemon.csv'))
+    print("Strongest:        ", strongest_pokemon('pokemon.csv'))
+    print("Strongest per type:")
+    for type_, name in strongest_per_type('pokemon.csv').items():
+        print(f"  {type_:<10s} {name}")
+
+    plot_top_pokemon('pokemon.csv', 5)
+    plt.show()

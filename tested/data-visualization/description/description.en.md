@@ -25,14 +25,16 @@ The **total stats** of a Pokémon are the sum of its six numeric stats (`hp + at
 
 The four files are:
 
-- `pokemon.csv` — 20 Pokémon from various types
-- `starters.csv` — the nine Generation 1 starter evolutions
-- `eeveelutions.csv` — Eevee and three of its evolutions
-- `legendary.csv` — just one legendary Pokémon
+- [`pokemon.csv`](media/pokemon.csv) — 20 Pokémon from various types
+- [`starters.csv`](media/starters.csv) — the nine Generation 1 starter evolutions
+- [`eeveelutions.csv`](media/eeveelutions.csv) — Eevee and three of its evolutions
+- [`legendary.csv`](media/legendary.csv) — just one legendary Pokémon
 
 ### Functions to write
 
-Write the following functions in a file. You may import `pandas` and `matplotlib.pyplot`.
+The editor is pre-filled with stubs for every function you have to implement and a small `__main__` block that calls them on `pokemon.csv` and shows the chart. Replace each `raise NotImplementedError` with your implementation — pressing **Run** then prints the textual results and renders the bar chart in the sandbox.
+
+You may import `pandas` and `matplotlib.pyplot`.
 
 #### `load_pokemon(filename)`
 

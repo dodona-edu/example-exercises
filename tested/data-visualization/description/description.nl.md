@@ -25,14 +25,16 @@ De **totale stats** van een Pokémon zijn de som van de zes numerieke waarden (`
 
 De vier bestanden zijn:
 
-- `pokemon.csv` — 20 Pokémon van verschillende types
-- `starters.csv` — de negen starter-evoluties uit Generatie 1
-- `eeveelutions.csv` — Eevee en drie van haar evoluties
-- `legendary.csv` — één enkele legendarische Pokémon
+- [`pokemon.csv`](media/pokemon.csv) — 20 Pokémon van verschillende types
+- [`starters.csv`](media/starters.csv) — de negen starter-evoluties uit Generatie 1
+- [`eeveelutions.csv`](media/eeveelutions.csv) — Eevee en drie van haar evoluties
+- [`legendary.csv`](media/legendary.csv) — één enkele legendarische Pokémon
 
 ### Te schrijven functies
 
-Schrijf onderstaande functies in één bestand. Je mag `pandas` en `matplotlib.pyplot` importeren.
+In de editor staan reeds stubs voor elke functie die je moet implementeren, gevolgd door een klein `__main__`-blok dat ze oproept op `pokemon.csv` en de grafiek toont. Vervang elke `raise NotImplementedError` door je eigen implementatie — als je dan op **Run** klikt, zie je de tekstuele resultaten en wordt de staafgrafiek in de sandbox getekend.
+
+Je mag `pandas` en `matplotlib.pyplot` importeren.
 
 #### `load_pokemon(filename)`
 
