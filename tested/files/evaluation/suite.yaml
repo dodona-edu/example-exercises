@@ -1,9 +1,9 @@
-- tab: "Sorteren"
+- tab: "Sorting"
   testcases:
-    - arguments: [ "ongesorteerd.txt", "gesorteerd.txt" ]
+    - arguments: [ "unsorted.txt", "sorted.txt" ]
       file:
-        content: "oplossing.txt"
-        location: "gesorteerd.txt"
+        content: "solution.txt"
+        location: "sorted.txt"
       files:
-        - name: "ongesorteerd.txt"
-          url: "media/ongesorteerd.txt"
+        - name: "unsorted.txt"
+          url: "media/unsorted.txt"

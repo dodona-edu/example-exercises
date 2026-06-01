@@ -8,17 +8,17 @@ en de gesorteerde inhoud uitschrijven naar het doelbestand.
 Als het doelbestand nog niet bestaat moet het aangemaakt worden,
 anders moet het overschreven worden.
 
-Klik op het bestand [`ongesorteerd.txt`](media/ongesorteerd.txt) om het te openen. In de sandbox kan je het ook slepen: er verschijnt dan een dropzone waar je het kan laten vallen om het in de editor te openen.
+Klik op het bestand [`unsorted.txt`](media/unsorted.txt) om het te openen. In de sandbox kan je het ook slepen: er verschijnt dan een dropzone waar je het kan laten vallen om het in de editor te openen.
 
 ### Voorbeeld
 
 ```console
-$ ./sorteer ongeordend.txt geordend.txt
-$ cat ongeordend.txt
+$ ./sorteer unsorted.txt sorted.txt
+$ cat unsorted.txt
 2
 3
 1
-$ cat geordend.txt
+$ cat sorted.txt
 1
 2
 3
