@@ -5,6 +5,8 @@ Write a Python program that accepts two arguments:
 
 The program should read the content of the source file, sort it, and write the sorted content to the destination file. If the destination file does not exist, it should be created; otherwise, it should be overwritten.
 
+Click the file [`ongesorteerd.txt`](media/ongesorteerd.txt) to open it. In the sandbox you can also drag it: a dropzone appears where you can drop it to open it in the editor.
+
 ### Example
 
 ```console
