@@ -8,8 +8,6 @@ en de gesorteerde inhoud uitschrijven naar het doelbestand.
 Als het doelbestand nog niet bestaat moet het aangemaakt worden,
 anders moet het overschreven worden.
 
-Klik op het bestand [`unsorted.txt`](media/unsorted.txt) om het te openen.
-
 ### Voorbeeld
 
 ```console
