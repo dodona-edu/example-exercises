@@ -98,3 +98,5 @@ plt.show()  # toont de grafiek
 ```
 
 De staven moeten gesorteerd zijn van hoogste naar laagste totale stats — bij ex aequo komen Pokémon die eerst in het bestand staan eerst.
+
+> Wanneer je indient, vangt de judge de `Figure` op die je teruggeeft en toont ze meteen in de feedback, zodat je precies ziet hoe je grafiek eruitziet.

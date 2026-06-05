@@ -98,3 +98,5 @@ plt.show()  # shows the chart
 ```
 
 The bars must appear sorted from highest to lowest total — when several Pokémon are tied, those that appear first in the file go first.
+
+> When you submit, the judge captures the figure you return and renders it straight into the feedback, so you can see exactly what your chart looks like.

@@ -81,6 +81,17 @@
         - expression:
             python: "[t.get_text() for t in fig.axes[0].get_xticklabels()]"
           return: ["Charizard", "Blastoise", "Venusaur"]
+        # Capture the returned figure and render it in the feedback table.
+        - statement:
+            python: "fig.savefig('chart.png')"
+        - description: "We render the chart you built below"
+          expression:
+            python: "True"
+          return: !oracle
+            value: true
+            oracle: "custom_check"
+            file: "render.py"
+            name: "render"
     - testcases:
         - statement:
             python: "fig = submission.plot_top_pokemon('pokemon.csv', 5)"
