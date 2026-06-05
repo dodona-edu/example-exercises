@@ -3,7 +3,10 @@
     "names": {
       "en": "Sort",
       "nl": "Sorteren"
-    }
+    },
+    "sandbox_files": [
+      "unsorted.txt"
+    ]
   },
   "evaluation": {
     "handler": "tested",
