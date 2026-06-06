@@ -99,4 +99,6 @@ plt.show()  # shows the chart
 
 The bars must appear sorted from highest to lowest total — when several Pokémon are tied, those that appear first in the file go first.
 
+Only the title, axis labels, bar count, heights and order are checked, so you're free to style the chart however you like. The example solution colours each bar by the Pokémon's primary type and labels it with its total.
+
 > When you submit, the judge captures the figure you return and renders it straight into the feedback, so you can see exactly what your chart looks like.
