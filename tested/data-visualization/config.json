@@ -11,5 +11,6 @@
       "legendary.csv"
     ]
   },
+  "access": "public",
   "labels": ["pandas", "matplotlib", "csv", "data-visualization"]
 }
