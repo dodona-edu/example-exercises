@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "en": "Pokémon stats",
+      "nl": "Pokémon-statistieken"
+    },
+    "sandbox_files": [
+      "pokemon.csv",
+      "starters.csv",
+      "eeveelutions.csv",
+      "legendary.csv"
+    ]
+  },
+  "labels": ["pandas", "matplotlib", "csv", "data-visualization"]
+}

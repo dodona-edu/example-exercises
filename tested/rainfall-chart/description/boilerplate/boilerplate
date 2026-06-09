@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+def rainfall_chart(records):
+    # records is a list of [month, rainfall] pairs.
+    # TODO: compute the total rainfall per month as a list of 12 integers
+    #       (January to December), draw a bar chart of it, and return the list.
+    ...
+
+
+if __name__ == "sandbox":
+    sample = [[1, 49], [2, 41], [3, 38], [4, 52], [5, 57], [6, 72],
+              [7, 73], [8, 79], [9, 66], [10, 60], [11, 67], [12, 62]]
+    print(rainfall_chart(sample))

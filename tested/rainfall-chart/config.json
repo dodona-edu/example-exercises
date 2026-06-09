@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Monthly rainfall chart",
+      "nl": "Maandelijkse neerslaggrafiek"
+    }
+  },
+  "labels": ["pandas", "matplotlib", "data-visualization"]
+}

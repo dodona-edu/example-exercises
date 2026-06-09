@@ -1,0 +1,5 @@
+name,type1,type2,hp,attack,defense,sp_attack,sp_defense,speed
+Eevee,Normal,,55,55,50,45,65,55
+Vaporeon,Water,,130,65,60,110,95,65
+Jolteon,Electric,,65,65,60,110,95,130
+Flareon,Fire,,65,130,60,95,110,65

@@ -1,0 +1,38 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+def load_pokemon(filename):
+    raise NotImplementedError
+
+
+def number_of_pokemon(filename):
+    raise NotImplementedError
+
+
+def all_types(filename):
+    raise NotImplementedError
+
+
+def strongest_pokemon(filename):
+    raise NotImplementedError
+
+
+def strongest_per_type(filename):
+    raise NotImplementedError
+
+
+def plot_top_pokemon(filename, n):
+    raise NotImplementedError
+
+
+if __name__ == "sandbox":
+    print("Number of Pokémon:", number_of_pokemon('pokemon.csv'))
+    print("All types:        ", all_types('pokemon.csv'))
+    print("Strongest:        ", strongest_pokemon('pokemon.csv'))
+    print("Strongest per type:")
+    for type_, name in strongest_per_type('pokemon.csv').items():
+        print(f"  {type_:<10s} {name}")
+
+    plot_top_pokemon('pokemon.csv', 5)
+    plt.show()
