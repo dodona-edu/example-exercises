@@ -5,8 +5,8 @@ Welkom op Dodona, het platform waar je nu naar kijkt. Je leraar vult een cursus 
 Een reeks ziet er zo uit. Het icoontje vooraan een activiteit zegt welke soort het is, het icoontje achteraan hoe ver je staat.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/01-series-nl-light.png" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
-  <img class="dark-only" src="media/01-series-nl-dark.png" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
+  <img class="light-only" src="media/01-series-nl-light.png" srcset="media/01-series-nl-light.png 2x" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
+  <img class="dark-only" src="media/01-series-nl-dark.png" srcset="media/01-series-nl-dark.png 2x" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
 </div>
 
 ### Deze pagina is een leesactiviteit
@@ -14,15 +14,15 @@ Een reeks ziet er zo uit. Het icoontje vooraan een activiteit zegt welke soort h
 Een leesactiviteit is tekst: een uitleg, een voorbeeld, een stukje theorie. Er is geen editor en er valt niets in te dienen. Als je ze gelezen hebt, klik je op de knop onderaan de pagina:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/02-mark-as-read-nl-light.png" alt="De knop Markeren als gelezen">
-  <img class="dark-only" src="media/02-mark-as-read-nl-dark.png" alt="De knop Markeren als gelezen">
+  <img class="light-only" src="media/02-mark-as-read-nl-light.png" srcset="media/02-mark-as-read-nl-light.png 2x" alt="De knop Markeren als gelezen">
+  <img class="dark-only" src="media/02-mark-as-read-nl-dark.png" srcset="media/02-mark-as-read-nl-dark.png 2x" alt="De knop Markeren als gelezen">
 </div>
 
 De knop maakt dan plaats voor het moment waarop je dat deed, en de activiteit krijgt een vinkje in de reeks:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/03-read-at-nl-light.png" alt="De tekst: Gelezen op een datum">
-  <img class="dark-only" src="media/03-read-at-nl-dark.png" alt="De tekst: Gelezen op een datum">
+  <img class="light-only" src="media/03-read-at-nl-light.png" srcset="media/03-read-at-nl-light.png 2x" alt="De tekst: Gelezen op een datum">
+  <img class="dark-only" src="media/03-read-at-nl-dark.png" srcset="media/03-read-at-nl-dark.png 2x" alt="De tekst: Gelezen op een datum">
 </div>
 
 > **Dit is geen test.**
@@ -34,8 +34,8 @@ De knop maakt dan plaats voor het moment waarop je dat deed, en de activiteit kr
 Een oefening is de andere soort activiteit. Onder de opgave krijg je een editor, en daar schrijf je je oplossing.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/04-handin-nl-light.png" alt="Het invulvak: een editor met daaronder een knop Indienen">
-  <img class="dark-only" src="media/04-handin-nl-dark.png" alt="Het invulvak: een editor met daaronder een knop Indienen">
+  <img class="light-only" src="media/04-handin-nl-light.png" srcset="media/04-handin-nl-light.png 2x" alt="Het invulvak: een editor met daaronder een knop Indienen">
+  <img class="dark-only" src="media/04-handin-nl-dark.png" srcset="media/04-handin-nl-dark.png 2x" alt="Het invulvak: een editor met daaronder een knop Indienen">
 </div>
 
 1. In de editor staat vaak al wat begincode. Je mag die aanpassen, aanvullen of helemaal weghalen.
@@ -47,15 +47,15 @@ Een oefening is de andere soort activiteit. Onder de opgave krijg je een editor,
 Slaagt je code voor alle testen, dan krijg je een groene **Correct**:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/05-correct-nl-light.png" alt="Feedback van een correcte oplossing: een groene Correct en een test die slaagt">
-  <img class="dark-only" src="media/05-correct-nl-dark.png" alt="Feedback van een correcte oplossing: een groene Correct en een test die slaagt">
+  <img class="light-only" src="media/05-correct-nl-light.png" srcset="media/05-correct-nl-light.png 2x" alt="Feedback van een correcte oplossing: een groene Correct en een test die slaagt">
+  <img class="dark-only" src="media/05-correct-nl-dark.png" srcset="media/05-correct-nl-dark.png 2x" alt="Feedback van een correcte oplossing: een groene Correct en een test die slaagt">
 </div>
 
 Zo niet, dan krijg je een rode **Fout**, en toont Dodona welke test faalde en hoe jouw uitvoer verschilt van wat er verwacht werd:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/06-wrong-nl-light.png" alt="Feedback van een foute oplossing, met jouw uitvoer naast de verwachte uitvoer">
-  <img class="dark-only" src="media/06-wrong-nl-dark.png" alt="Feedback van een foute oplossing, met jouw uitvoer naast de verwachte uitvoer">
+  <img class="light-only" src="media/06-wrong-nl-light.png" srcset="media/06-wrong-nl-light.png 2x" alt="Feedback van een foute oplossing, met jouw uitvoer naast de verwachte uitvoer">
+  <img class="dark-only" src="media/06-wrong-nl-dark.png" srcset="media/06-wrong-nl-dark.png 2x" alt="Feedback van een foute oplossing, met jouw uitvoer naast de verwachte uitvoer">
 </div>
 
 Drie gewoontes maken die feedback een stuk leesbaarder:
@@ -110,8 +110,8 @@ Het oordeel bovenaan de feedback is een van deze:
 De testen zijn automatisch, maar je leraar kan je code ook zelf nalezen en opmerkingen bij bepaalde regels achterlaten. Die verschijnen bij je ingediende oplossing, onder het tabblad **Code**:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/08-annotation-nl-light.png" alt="Een opmerking van een leraar bij een regel code">
-  <img class="dark-only" src="media/08-annotation-nl-dark.png" alt="Een opmerking van een leraar bij een regel code">
+  <img class="light-only" src="media/08-annotation-nl-light.png" srcset="media/08-annotation-nl-light.png 2x" alt="Een opmerking van een leraar bij een regel code">
+  <img class="dark-only" src="media/08-annotation-nl-dark.png" srcset="media/08-annotation-nl-dark.png 2x" alt="Een opmerking van een leraar bij een regel code">
 </div>
 
 Je kunt er meteen onder antwoorden, dus zo'n opmerking is het begin van een gesprek en niet het laatste woord.
@@ -121,8 +121,8 @@ Je kunt er meteen onder antwoorden, dus zo'n opmerking is het begin van een gesp
 Je mag zo vaak indienen als je wilt. Elke poging wordt bijgehouden en je kunt de oude terug openen via je ingediende oplossingen, dus niets van wat je probeerde gaat verloren:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/07-history-nl-light.png" alt="De lijst met ingediende oplossingen, met een foute en een correcte oplossing">
-  <img class="dark-only" src="media/07-history-nl-dark.png" alt="De lijst met ingediende oplossingen, met een foute en een correcte oplossing">
+  <img class="light-only" src="media/07-history-nl-light.png" srcset="media/07-history-nl-light.png 2x" alt="De lijst met ingediende oplossingen, met een foute en een correcte oplossing">
+  <img class="dark-only" src="media/07-history-nl-dark.png" srcset="media/07-history-nl-dark.png 2x" alt="De lijst met ingediende oplossingen, met een foute en een correcte oplossing">
 </div>
 
 Normaal telt enkel je laatste oplossing, dus een foute poging kost je niets. Eerst iets fout doen is hoe de meeste mensen werken.

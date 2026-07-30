@@ -19,8 +19,8 @@ De test vergelijkt jouw uitvoer letterlijk, dus de woorden, de komma, de spatie 
 3. Wacht een paar seconden. Dodona voert je programma uit en toont het resultaat meteen in het invulvak.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/01-submit-nl-light.png" alt="De balk onder de editor, met de knoppen Naar sandbox en Indienen">
-  <img class="dark-only" src="media/01-submit-nl-dark.png" alt="De balk onder de editor, met de knoppen Naar sandbox en Indienen">
+  <img class="light-only" src="media/01-submit-nl-light.png" srcset="media/01-submit-nl-light.png 2x" alt="De balk onder de editor, met de knoppen Naar sandbox en Indienen">
+  <img class="dark-only" src="media/01-submit-nl-dark.png" srcset="media/01-submit-nl-dark.png 2x" alt="De balk onder de editor, met de knoppen Naar sandbox en Indienen">
 </div>
 
 Als alles goed ging, krijg je een groene **Correct**. Dat is je eerste opgeloste oefening op Dodona.

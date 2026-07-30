@@ -5,8 +5,8 @@ Welcome to Dodona, the platform you are looking at right now. Your teacher fills
 A series looks like this. The icon in front of an activity tells you what kind it is, the icon behind it shows how far you got.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/01-series-en-light.png" alt="A series containing a reading activity and an exercise, with status icons">
-  <img class="dark-only" src="media/01-series-en-dark.png" alt="A series containing a reading activity and an exercise, with status icons">
+  <img class="light-only" src="media/01-series-en-light.png" srcset="media/01-series-en-light.png 2x" alt="A series containing a reading activity and an exercise, with status icons">
+  <img class="dark-only" src="media/01-series-en-dark.png" srcset="media/01-series-en-dark.png 2x" alt="A series containing a reading activity and an exercise, with status icons">
 </div>
 
 ### This page is a reading activity
@@ -14,15 +14,15 @@ A series looks like this. The icon in front of an activity tells you what kind i
 A reading activity is text: an explanation, an example, a piece of theory. There is no code editor and there is nothing to hand in. Once you have read it, press the button at the bottom of the page:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/02-mark-as-read-en-light.png" alt="The Mark as read button">
-  <img class="dark-only" src="media/02-mark-as-read-en-dark.png" alt="The Mark as read button">
+  <img class="light-only" src="media/02-mark-as-read-en-light.png" srcset="media/02-mark-as-read-en-light.png 2x" alt="The Mark as read button">
+  <img class="dark-only" src="media/02-mark-as-read-en-dark.png" srcset="media/02-mark-as-read-en-dark.png 2x" alt="The Mark as read button">
 </div>
 
 The button is then replaced by the moment you did it, and the activity gets a check mark in the series:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/03-read-at-en-light.png" alt="The text: Marked as read on a date">
-  <img class="dark-only" src="media/03-read-at-en-dark.png" alt="The text: Marked as read on a date">
+  <img class="light-only" src="media/03-read-at-en-light.png" srcset="media/03-read-at-en-light.png 2x" alt="The text: Marked as read on a date">
+  <img class="dark-only" src="media/03-read-at-en-dark.png" srcset="media/03-read-at-en-dark.png 2x" alt="The text: Marked as read on a date">
 </div>
 
 > **This is not a test.**
@@ -34,8 +34,8 @@ The button is then replaced by the moment you did it, and the activity gets a ch
 An exercise is the other kind of activity. Under the assignment you get a code editor, and that is where you write your solution.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/04-handin-en-light.png" alt="The submission box: a code editor with a Submit button underneath">
-  <img class="dark-only" src="media/04-handin-en-dark.png" alt="The submission box: a code editor with a Submit button underneath">
+  <img class="light-only" src="media/04-handin-en-light.png" srcset="media/04-handin-en-light.png 2x" alt="The submission box: a code editor with a Submit button underneath">
+  <img class="dark-only" src="media/04-handin-en-dark.png" srcset="media/04-handin-en-dark.png 2x" alt="The submission box: a code editor with a Submit button underneath">
 </div>
 
 1. The editor often already holds some starting code. Change it, add to it, or clear it out.
@@ -47,15 +47,15 @@ An exercise is the other kind of activity. Under the assignment you get a code e
 If your code passes every test, you get a green **Correct**:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/05-correct-en-light.png" alt="Feedback of a correct submission: a green Correct and one passing test">
-  <img class="dark-only" src="media/05-correct-en-dark.png" alt="Feedback of a correct submission: a green Correct and one passing test">
+  <img class="light-only" src="media/05-correct-en-light.png" srcset="media/05-correct-en-light.png 2x" alt="Feedback of a correct submission: a green Correct and one passing test">
+  <img class="dark-only" src="media/05-correct-en-dark.png" srcset="media/05-correct-en-dark.png 2x" alt="Feedback of a correct submission: a green Correct and one passing test">
 </div>
 
 If it does not, you get a red **Wrong**, and Dodona shows you which test failed and how your output differs from what was expected:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/06-wrong-en-light.png" alt="Feedback of a wrong submission, with your output next to the expected output">
-  <img class="dark-only" src="media/06-wrong-en-dark.png" alt="Feedback of a wrong submission, with your output next to the expected output">
+  <img class="light-only" src="media/06-wrong-en-light.png" srcset="media/06-wrong-en-light.png 2x" alt="Feedback of a wrong submission, with your output next to the expected output">
+  <img class="dark-only" src="media/06-wrong-en-dark.png" srcset="media/06-wrong-en-dark.png 2x" alt="Feedback of a wrong submission, with your output next to the expected output">
 </div>
 
 Three habits make that feedback a lot easier to read:
@@ -110,8 +110,8 @@ The verdict at the top of the feedback is one of these:
 The tests are automatic, but your teacher can also read your code and leave comments on specific lines. Those show up with your submission, under the **Code** tab:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/08-annotation-en-light.png" alt="A comment from a teacher attached to a line of code">
-  <img class="dark-only" src="media/08-annotation-en-dark.png" alt="A comment from a teacher attached to a line of code">
+  <img class="light-only" src="media/08-annotation-en-light.png" srcset="media/08-annotation-en-light.png 2x" alt="A comment from a teacher attached to a line of code">
+  <img class="dark-only" src="media/08-annotation-en-dark.png" srcset="media/08-annotation-en-dark.png 2x" alt="A comment from a teacher attached to a line of code">
 </div>
 
 You can reply right underneath, so a comment is the start of a conversation rather than a final word.
@@ -121,8 +121,8 @@ You can reply right underneath, so a comment is the start of a conversation rath
 You may submit as often as you like. Every attempt is kept and you can open the old ones from the submission history, so nothing you tried is ever lost:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/07-history-en-light.png" alt="The submission history, with a wrong and a correct submission">
-  <img class="dark-only" src="media/07-history-en-dark.png" alt="The submission history, with a wrong and a correct submission">
+  <img class="light-only" src="media/07-history-en-light.png" srcset="media/07-history-en-light.png 2x" alt="The submission history, with a wrong and a correct submission">
+  <img class="dark-only" src="media/07-history-en-dark.png" srcset="media/07-history-en-dark.png 2x" alt="The submission history, with a wrong and a correct submission">
 </div>
 
 Normally only your latest submission counts, so a wrong attempt costs you nothing. Getting it wrong first is how most people work.
