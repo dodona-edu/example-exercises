@@ -134,14 +134,8 @@ Dat is alles wat je moet weten. Zette je leraar de oefening **Je eerste oplossin
 En als je klaar bent met lezen: klik hieronder op **Markeren als gelezen**.
 
 <style>
-  .dodona-shot {
-    margin: 1rem 0;
-  }
-
   .dodona-shot img {
     max-width: 100%;
     height: auto;
-    border: 1px solid var(--d-outline-variant);
-    border-radius: 0.5rem;
   }
 </style>

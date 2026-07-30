@@ -134,14 +134,8 @@ That is all you need to know. If your teacher put the exercise **Your first subm
 And when you are done reading, press **Mark as read** below.
 
 <style>
-  .dodona-shot {
-    margin: 1rem 0;
-  }
-
   .dodona-shot img {
     max-width: 100%;
     height: auto;
-    border: 1px solid var(--d-outline-variant);
-    border-radius: 0.5rem;
   }
 </style>

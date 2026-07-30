@@ -40,14 +40,8 @@ Once you have a correct submission, it is worth breaking it on purpose:
 Nothing can go wrong here: you may submit as often as you like, and only your latest submission counts.
 
 <style>
-  .dodona-shot {
-    margin: 1rem 0;
-  }
-
   .dodona-shot img {
     max-width: 100%;
     height: auto;
-    border: 1px solid var(--d-outline-variant);
-    border-radius: 0.5rem;
   }
 </style>

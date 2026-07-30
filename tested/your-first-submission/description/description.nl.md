@@ -40,14 +40,8 @@ Zodra je een correcte indiening hebt, is het de moeite om ze bewust stuk te make
 Er kan niets misgaan: je mag zo vaak indienen als je wilt, en enkel je laatste indiening telt.
 
 <style>
-  .dodona-shot {
-    margin: 1rem 0;
-  }
-
   .dodona-shot img {
     max-width: 100%;
     height: auto;
-    border: 1px solid var(--d-outline-variant);
-    border-radius: 0.5rem;
   }
 </style>
