@@ -19,8 +19,8 @@ The test compares your output literally, so the words, the comma, the space and 
 3. Wait a few seconds. Dodona runs your program and shows the result right there in the submission box.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/01-submit-en-light.png" srcset="media/01-submit-en-light.png 2x" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
-  <img class="dark-only" src="media/01-submit-en-dark.png" srcset="media/01-submit-en-dark.png 2x" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
+  <img class="light-only" src="media/01-submit-en-light.png" width="1077" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
+  <img class="dark-only" src="media/01-submit-en-dark.png" width="1077" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
 </div>
 
 If all went well, you get a green **Correct**. That is your first solved exercise on Dodona.
