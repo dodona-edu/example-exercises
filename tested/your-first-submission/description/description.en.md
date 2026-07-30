@@ -18,6 +18,11 @@ The test compares your output literally, so the words, the comma, the space and 
 2. Press the **Submit** button underneath the editor.
 3. Wait a few seconds. Dodona runs your program and shows the result right there in the submission box.
 
+<div class="dodona-centered-group dodona-shot">
+  <img class="light-only" src="media/01-submit-en-light.png" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
+  <img class="dark-only" src="media/01-submit-en-dark.png" alt="The bar underneath the editor, with the To sandbox and Submit buttons">
+</div>
+
 If all went well, you get a green **Correct**. That is your first solved exercise on Dodona.
 
 > **Lost the starting code?**
@@ -33,3 +38,16 @@ Once you have a correct submission, it is worth breaking it on purpose:
 3. Change it back and submit one more time.
 
 Nothing can go wrong here: you may submit as often as you like, and only your latest submission counts.
+
+<style>
+  .dodona-shot {
+    margin: 1rem 0;
+  }
+
+  .dodona-shot img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--d-outline-variant);
+    border-radius: 0.5rem;
+  }
+</style>

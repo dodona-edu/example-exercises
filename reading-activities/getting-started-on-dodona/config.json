@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Getting started on Dodona",
+      "nl": "Aan de slag op Dodona"
+    }
+  },
+  "access": "public",
+  "labels": ["onboarding", "introductie"]
+}
