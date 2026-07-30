@@ -1,4 +1,4 @@
-Welkom op Dodona, het platform waar je nu naar kijkt. Je leraar vult een cursus met **activiteiten**, gebundeld in reeksen. Er bestaan maar twee soorten activiteiten, en deze pagina laat je ze allebei zien.
+Welkom op Dodona! In Dodona werk je steeds binnen een cursus. Een lesgever vult de cursus met **activiteiten**, gebundeld in reeksen. Er bestaan twee soorten activiteiten: leesactiviteiten en programmeeroefeningen.
 
 ### Waar je zit
 
@@ -27,20 +27,19 @@ De knop maakt dan plaats voor het moment waarop je dat deed, en de activiteit kr
   <img class="dark-only" src="media/03-read-at-nl-dark.png" width="1077" alt="De tekst: Gelezen op een datum">
 </div>
 
-> **Dit is geen test.**
-> Een pagina als gelezen markeren houdt enkel je voortgang bij, voor jou en voor je leraar. Er gaat niets op slot: je kunt zo vaak terugkomen en herlezen als je wilt.
+> Een pagina als gelezen markeren houdt enkel je voortgang bij, voor jou en voor de lesgever. Je kunt zo vaak terugkomen en herlezen als je wilt.
 {: .callout.callout-info}
 
 ### Bij een oefening schrijf je code
 
-Een oefening is de andere soort activiteit. Onder de opgave krijg je een editor, en daar schrijf je je oplossing.
+Een programmeeroefening is de tweede soort activiteit. Onder de opgave krijg je een editor, en daar schrijf je je oplossing.
 
 <div class="dodona-centered-group dodona-shot">
   <img class="light-only" src="media/04-handin-nl-light.png" width="1077" alt="De editor met daaronder de knop Indienen">
   <img class="dark-only" src="media/04-handin-nl-dark.png" width="1077" alt="De editor met daaronder de knop Indienen">
 </div>
 
-1. In de editor staat vaak al wat begincode. Je mag die aanpassen, aanvullen of helemaal weghalen.
+1. In de editor staat soms al wat begincode. Je kunt die aanpassen, aanvullen of helemaal weghalen.
 2. Bij Python-oefeningen kun je je code eerst in je browser uitproberen met **Naar sandbox**. Je dient dan nog niets in, dus experimenteer gerust.
 3. Ben je tevreden? Klik op **Indienen**. Dodona voert je code uit tegen een reeks testen en toont je binnen enkele seconden het resultaat.
 
@@ -60,7 +59,7 @@ Zo niet, dan krijg je een rode **Fout**, en toont Dodona welke test faalde en ho
   <img class="dark-only" src="media/06-wrong-nl-dark.png" width="1045" alt="Feedback van een foute oplossing, met jouw uitvoer naast de verwachte uitvoer">
 </div>
 
-Drie gewoontes maken die feedback een stuk leesbaarder:
+Drie gewoontes maken die feedback interpreteren een stuk eenvoudiger:
 
 - **Kijk eerst naar de test die faalde.** Daar staat wat er precies verkeerd ging. Het aantal bovenaan (`0/1 correct`) zegt alleen hoeveel testen geslaagd zijn, niet wat je moet aanpassen.
 - **Vergelijk de twee kolommen.** Links staat jouw uitvoer, rechts de verwachte uitvoer, en de tekens die verschillen zijn gemarkeerd. Let op de kleine dingen: een hoofdletter, een komma, een spatie op het einde van een regel.
@@ -107,13 +106,13 @@ Het oordeel bovenaan de feedback is een van deze:
   </table>
 </div>
 
-### Opmerkingen van je leraar
+### Opmerkingen van de lesgever
 
-De testen zijn automatisch, maar je leraar kan je code ook zelf nalezen en opmerkingen bij bepaalde regels achterlaten. Die verschijnen bij je ingediende oplossing, onder het tabblad **Code**:
+De testen zijn automatisch, maar de lesgever kan je code ook zelf nalezen en opmerkingen bij bepaalde regels achterlaten. Die verschijnen bij je ingediende oplossing, onder het tabblad **Code**:
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/08-annotation-nl-light.png" width="1045" alt="Een opmerking van een leraar bij een regel code">
-  <img class="dark-only" src="media/08-annotation-nl-dark.png" width="1045" alt="Een opmerking van een leraar bij een regel code">
+  <img class="light-only" src="media/08-annotation-nl-light.png" width="1045" alt="Een opmerking van de lesgever bij een regel code">
+  <img class="dark-only" src="media/08-annotation-nl-dark.png" width="1045" alt="Een opmerking van de lesgever bij een regel code">
 </div>
 
 Je kunt er meteen onder antwoorden, dus zo'n opmerking is het begin van een gesprek en niet het laatste woord.
@@ -127,11 +126,11 @@ Je mag zo vaak indienen als je wilt. Elke poging wordt bijgehouden en je kunt de
   <img class="dark-only" src="media/07-history-nl-dark.png" width="351" alt="De lijst met ingediende oplossingen, met een foute en een correcte oplossing">
 </div>
 
-Normaal telt enkel je laatste oplossing, dus een foute poging kost je niets. Eerst iets fout doen is hoe de meeste mensen werken.
+Enkel je laatste oplossing telt, dus een foute poging kost je niets.
 
 ### Nu jij
 
-Dat is alles wat je moet weten. Zette je leraar de oefening **Je eerste oplossing** hierna in deze reeks? Open ze dan nu: de oplossing staat al voor je klaar, dus je hoeft enkel op **Indienen** te klikken en te kijken hoe de feedback verschijnt.
+Dat is alles wat je moet weten. Zette de lesgever de oefening **Je eerste oplossing** hierna in deze reeks? Open ze dan nu: de oplossing staat al voor je klaar, dus je hoeft enkel op **Indienen** te klikken en te kijken hoe de feedback verschijnt.
 
 En als je klaar bent met lezen: klik hieronder op **Markeren als gelezen**.
 
