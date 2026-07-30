@@ -105,6 +105,17 @@ Het oordeel bovenaan de feedback is een van deze:
   </table>
 </div>
 
+### Opmerkingen van je leraar
+
+De testen zijn automatisch, maar je leraar kan je code ook zelf nalezen en opmerkingen bij bepaalde regels achterlaten. Die verschijnen bij je ingediende oplossing, onder het tabblad **Code**:
+
+<div class="dodona-centered-group dodona-shot">
+  <img class="light-only" src="media/08-annotation-nl-light.png" alt="Een opmerking van een leraar bij een regel code">
+  <img class="dark-only" src="media/08-annotation-nl-dark.png" alt="Een opmerking van een leraar bij een regel code">
+</div>
+
+Je kunt er meteen onder antwoorden, dus zo'n opmerking is het begin van een gesprek en niet het laatste woord.
+
 ### Opnieuw indienen kost niets
 
 Je mag zo vaak indienen als je wilt. Elke poging wordt bijgehouden en je kunt de oude terug openen via je ingediende oplossingen, dus niets van wat je probeerde gaat verloren:

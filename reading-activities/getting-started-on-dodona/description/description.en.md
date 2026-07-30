@@ -105,6 +105,17 @@ The verdict at the top of the feedback is one of these:
   </table>
 </div>
 
+### Comments from your teacher
+
+The tests are automatic, but your teacher can also read your code and leave comments on specific lines. Those show up with your submission, under the **Code** tab:
+
+<div class="dodona-centered-group dodona-shot">
+  <img class="light-only" src="media/08-annotation-en-light.png" alt="A comment from a teacher attached to a line of code">
+  <img class="dark-only" src="media/08-annotation-en-dark.png" alt="A comment from a teacher attached to a line of code">
+</div>
+
+You can reply right underneath, so a comment is the start of a conversation rather than a final word.
+
 ### Submitting again is free
 
 You may submit as often as you like. Every attempt is kept and you can open the old ones from the submission history, so nothing you tried is ever lost:
