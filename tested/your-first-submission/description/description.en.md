@@ -1,4 +1,4 @@
-This is an **exercise**, so it comes with a submission box: you write code, you hand it in, and Dodona runs a series of tests on it.
+This is an **exercise**: you write code in the editor, you hand it in, and Dodona runs a series of tests on it.
 
 You do not have to write anything yet. The editor below already holds a complete, working solution, so you can hand it in exactly as it is and see what a successful submission looks like.
 
@@ -16,7 +16,7 @@ The test compares your output literally, so the words, the comma, the space and 
 
 1. Look at the code in the editor below. Dodona filled it in for you.
 2. Press the **Submit** button underneath the editor.
-3. Wait a few seconds. Dodona runs your program and shows the result right there in the submission box.
+3. Wait a few seconds. Dodona runs your program and shows the result in the same place.
 
 <div class="dodona-centered-group dodona-shot">
   <img class="light-only" src="media/01-submit-en-light.png" width="1077" alt="The bar underneath the editor, with the To sandbox and Submit buttons">

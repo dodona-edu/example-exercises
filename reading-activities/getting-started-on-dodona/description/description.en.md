@@ -2,12 +2,14 @@ Welcome to Dodona, the platform you are looking at right now. Your teacher fills
 
 ### Where you are
 
-A series looks like this. The icon in front of an activity tells you what kind it is, the icon behind it shows how far you got.
+A series looks like this:
 
 <div class="dodona-centered-group dodona-shot">
   <img class="light-only" src="media/01-series-en-light.png" width="966" alt="A series containing a reading activity and an exercise, with status icons">
   <img class="dark-only" src="media/01-series-en-dark.png" width="966" alt="A series containing a reading activity and an exercise, with status icons">
 </div>
+
+A series has a title, a short description, sometimes a deadline, and then the list of activities. In front of each activity there is a check mark once you have finished it, next to that an icon for the kind of activity, and on the right your status in words.
 
 ### This page is a reading activity
 
@@ -29,13 +31,13 @@ The button is then replaced by the moment you did it, and the activity gets a ch
 > Marking a page as read only records your progress, for you and for your teacher. Nothing gets locked: you can come back and reread the page as often as you want.
 {: .callout.callout-info}
 
-### An exercise has a submission box
+### With an exercise you write code
 
 An exercise is the other kind of activity. Under the assignment you get a code editor, and that is where you write your solution.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/04-handin-en-light.png" width="1077" alt="The submission box: a code editor with a Submit button underneath">
-  <img class="dark-only" src="media/04-handin-en-dark.png" width="1077" alt="The submission box: a code editor with a Submit button underneath">
+  <img class="light-only" src="media/04-handin-en-light.png" width="1077" alt="The editor with a Submit button underneath">
+  <img class="dark-only" src="media/04-handin-en-dark.png" width="1077" alt="The editor with a Submit button underneath">
 </div>
 
 1. The editor often already holds some starting code. Change it, add to it, or clear it out.
@@ -60,7 +62,7 @@ If it does not, you get a red **Wrong**, and Dodona shows you which test failed 
 
 Three habits make that feedback a lot easier to read:
 
-- **Start at the red test**, not at the summary. It is the one that tells you something.
+- **Look at the failing test first.** That is where it says what actually went wrong. The count at the top (`0/1 correct`) only tells you how many tests passed, not what to change.
 - **Compare the two columns.** Your output is on the left, the expected output on the right, and the characters that differ are highlighted. Watch out for the small stuff: a capital letter, a comma, a space at the end of a line.
 - **Fix one thing, then submit again.** Changing five things at once makes it hard to see which one helped.
 

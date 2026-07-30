@@ -1,4 +1,4 @@
-Dit is een **oefening**, en die heeft een invulvak: je schrijft code, je dient ze in, en Dodona voert er een reeks testen op uit.
+Dit is een **oefening**: je schrijft code in de editor, je dient ze in, en Dodona voert er een reeks testen op uit.
 
 Je moet nog niets schrijven. In de editor hieronder staat al een volledige, werkende oplossing. Je kunt ze indienen zoals ze is, en zo zien hoe een geslaagde indiening eruitziet.
 
@@ -16,7 +16,7 @@ De test vergelijkt jouw uitvoer letterlijk, dus de woorden, de komma, de spatie 
 
 1. Kijk naar de code in de editor hieronder. Dodona heeft die al voor je ingevuld.
 2. Klik op de knop **Indienen** onder de editor.
-3. Wacht een paar seconden. Dodona voert je programma uit en toont het resultaat meteen in het invulvak.
+3. Wacht een paar seconden. Dodona voert je programma uit en toont het resultaat meteen op dezelfde plek.
 
 <div class="dodona-centered-group dodona-shot">
   <img class="light-only" src="media/01-submit-nl-light.png" width="1077" alt="De balk onder de editor, met de knoppen Naar sandbox en Indienen">

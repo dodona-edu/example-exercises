@@ -2,12 +2,14 @@ Welkom op Dodona, het platform waar je nu naar kijkt. Je leraar vult een cursus 
 
 ### Waar je zit
 
-Een reeks ziet er zo uit. Het icoontje vooraan een activiteit zegt welke soort het is, het icoontje achteraan hoe ver je staat.
+Een reeks ziet er zo uit:
 
 <div class="dodona-centered-group dodona-shot">
   <img class="light-only" src="media/01-series-nl-light.png" width="966" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
   <img class="dark-only" src="media/01-series-nl-dark.png" width="966" alt="Een reeks met een leesactiviteit en een oefening, met statusicoontjes">
 </div>
+
+Een reeks heeft een titel, een korte beschrijving, soms een deadline, en daaronder de lijst met activiteiten. Bij elke activiteit staat vooraan een vinkje zodra je ze afgerond hebt, daarnaast een icoontje voor de soort activiteit, en rechts je status in woorden.
 
 ### Deze pagina is een leesactiviteit
 
@@ -29,13 +31,13 @@ De knop maakt dan plaats voor het moment waarop je dat deed, en de activiteit kr
 > Een pagina als gelezen markeren houdt enkel je voortgang bij, voor jou en voor je leraar. Er gaat niets op slot: je kunt zo vaak terugkomen en herlezen als je wilt.
 {: .callout.callout-info}
 
-### Een oefening heeft een invulvak
+### Bij een oefening schrijf je code
 
 Een oefening is de andere soort activiteit. Onder de opgave krijg je een editor, en daar schrijf je je oplossing.
 
 <div class="dodona-centered-group dodona-shot">
-  <img class="light-only" src="media/04-handin-nl-light.png" width="1077" alt="Het invulvak: een editor met daaronder een knop Indienen">
-  <img class="dark-only" src="media/04-handin-nl-dark.png" width="1077" alt="Het invulvak: een editor met daaronder een knop Indienen">
+  <img class="light-only" src="media/04-handin-nl-light.png" width="1077" alt="De editor met daaronder de knop Indienen">
+  <img class="dark-only" src="media/04-handin-nl-dark.png" width="1077" alt="De editor met daaronder de knop Indienen">
 </div>
 
 1. In de editor staat vaak al wat begincode. Je mag die aanpassen, aanvullen of helemaal weghalen.
@@ -60,7 +62,7 @@ Zo niet, dan krijg je een rode **Fout**, en toont Dodona welke test faalde en ho
 
 Drie gewoontes maken die feedback een stuk leesbaarder:
 
-- **Begin bij de rode test**, niet bij de samenvatting. Die rode test is de enige die je iets bijleert.
+- **Kijk eerst naar de test die faalde.** Daar staat wat er precies verkeerd ging. Het aantal bovenaan (`0/1 correct`) zegt alleen hoeveel testen geslaagd zijn, niet wat je moet aanpassen.
 - **Vergelijk de twee kolommen.** Links staat jouw uitvoer, rechts de verwachte uitvoer, en de tekens die verschillen zijn gemarkeerd. Let op de kleine dingen: een hoofdletter, een komma, een spatie op het einde van een regel.
 - **Pas één ding aan en dien opnieuw in.** Vijf dingen tegelijk veranderen maakt het moeilijk om te zien wat geholpen heeft.
 
