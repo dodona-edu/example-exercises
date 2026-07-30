@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Your first submission",
+      "nl": "Je eerste oplossing"
+    }
+  },
+  "access": "public",
+  "labels": ["onboarding", "introductie"]
+}
