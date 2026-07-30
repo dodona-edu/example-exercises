@@ -67,9 +67,9 @@ Three habits make that feedback a lot easier to read:
 The verdict at the top of the feedback is one of these:
 
 <div class="dodona-centered-group">
-  <table class="table table-striped table-condensed">
+  <table class="table table-condensed">
     <thead>
-      <tr>
+      <tr style="background-color: var(--d-code-bg);">
         <th></th>
         <th>Verdict</th>
         <th>What it means</th>
