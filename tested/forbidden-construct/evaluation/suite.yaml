@@ -1,0 +1,28 @@
+- tab: "Sum"
+  testcases:
+    - expression: "sum_to(1)"
+      return: 1
+    - expression: "sum_to(5)"
+      return: 15
+    - expression: "sum_to(10)"
+      return: 55
+    - expression: "sum_to(100)"
+      return: 5050
+    - expression: "sum_to(0)"
+      return: 0
+    - expression: "sum_to(-3)"
+      return: 0
+
+# Checks the submitted source code instead of a return value. The oracle needs
+# languages, otherwise TESTed does not pass it the path of the submission.
+- tab: "Source check"
+  testcases:
+    - description: "builds the sum with a for loop, without a while loop or sum"
+      expression:
+        python: "True"
+      return: !oracle
+        value: true
+        oracle: "custom_check"
+        file: "source_check.py"
+        name: "check_source"
+        languages: ["python"]

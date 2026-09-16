@@ -1,0 +1,10 @@
+{
+  "description": {
+    "names": {
+      "en": "Sum to n",
+      "nl": "Som tot n"
+    }
+  },
+  "access": "public",
+  "labels": ["for-loop", "static-analysis", "custom-check"]
+}
