@@ -3,8 +3,8 @@
 Demonstrates how to reject a submission because of **how it is written**, not
 because of what it returns. The student writes `sum_to(n)`, and the exercise
 insists the sum is built with a `for` loop: a `while` loop, a call to the
-built-in `sum`, and a closed-form formula are all refused, even though each of
-them returns exactly the right number.
+built-in `sum`, and the closed form `0 if n < 1 else n * (n + 1) // 2` are all
+refused, even though each of them returns exactly the right number.
 
 This is the usual answer to "my students must use a loop here, not `sum`" or
 "this one has to be recursive". TESTed grades behaviour, so behaviour tests
@@ -51,7 +51,7 @@ check" tab.
 
 ## Adapting it
 
-Everything that encodes the rule sits in three constants at the top of
+Everything that encodes the rule sits in four constants at the top of
 `evaluation/source_check.py`. The walking code below them is generic, so
 forbidding something else is a one-line edit:
 
@@ -59,13 +59,22 @@ forbidding something else is a one-line edit:
 FORBIDDEN_NODES = {ast.While: "a while loop"}          # syntax that is refused
 FORBIDDEN_CALLS = {"sum": "the built-in function sum"} # calls that are refused
 REQUIRED_NODES  = {ast.For: "a for loop"}              # syntax that must appear
+REQUIRED_IN_FUNCTION = "sum_to"                        # where it must appear
 ```
 
+The two kinds of check are scoped differently, on purpose. The forbidden checks
+look at the whole file, so a forbidden construct cannot be hidden in a helper.
+The required checks look inside `REQUIRED_IN_FUNCTION` only, so a `for` loop in
+an unrelated helper does not satisfy a rule about the function being graded; set
+that constant to `None` to search the whole file instead. A submission that does
+not define the function at all falls back to the whole file, since the behaviour
+tests already fail it.
+
 To forbid recursion helpers instead, put their names in `FORBIDDEN_CALLS`; to
-forbid imports, add `ast.Import` to `FORBIDDEN_NODES`; to demand a `try` block,
-add `ast.Try` to `REQUIRED_NODES`. Update `RULE` and `EXPECTED` in the same
-block so the feedback keeps matching the rule, and state the rule in the
-description too.
+forbid imports, add both `ast.Import` (`import x`) and `ast.ImportFrom`
+(`from x import y`) to `FORBIDDEN_NODES`; to demand a `try` block, add `ast.Try`
+to `REQUIRED_NODES`. Update `RULE` and `EXPECTED` in the same block so the
+feedback keeps matching the rule, and state the rule in the description too.
 
 ## Limits
 
@@ -90,10 +99,10 @@ Worth knowing before reusing this:
   honest students on the intended path, not a sandbox.
 - **`REQUIRED_NODES` rejects legitimate answers on purpose.** Requiring a `for`
   loop is what closes the "just return the constant" hole, but it also refuses
-  `n * (n + 1) // 2`, which is a perfectly good solution to the stated problem,
-  and it refuses comprehensions, because `ast.For` matches a `for` statement
-  and not an `ast.comprehension`. That is a deliberate trade-off for an
-  exercise whose point is practising the loop. Say so in the description, as
+  `0 if n < 1 else n * (n + 1) // 2`, which answers the stated problem
+  correctly, and it refuses comprehensions, because `ast.For` matches a `for`
+  statement and not an `ast.comprehension`. That is a deliberate trade-off for
+  an exercise whose point is practising the loop. Say so in the description, as
   this one does, rather than letting a student discover it from a failing test.
   If you only want to forbid things, set `REQUIRED_NODES = {}`.
 

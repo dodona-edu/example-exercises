@@ -9,12 +9,14 @@ from evaluation_utils import EvaluationResult, Message
 # This block is the only thing you have to edit to forbid something else. Each
 # entry maps a check to the words used in the feedback, so the message stays
 # readable whatever you put here. The code below is generic: it walks the
-# syntax tree and applies whatever these three constants contain.
+# syntax tree and applies whatever these four constants contain.
 # ---------------------------------------------------------------------------
 
 # Syntax the submission may not contain. Keys are ast node classes.
 # Examples: ast.While (while loop), ast.ListComp (list comprehension),
-# ast.Import (any import), ast.Lambda, ast.Global, ast.Try.
+# ast.Lambda, ast.Global, ast.Try. Imports take two node classes: ast.Import
+# matches "import x", ast.ImportFrom matches "from x import y", so forbidding
+# imports means adding both.
 FORBIDDEN_NODES = {
     ast.While: "a while loop",
 }
@@ -31,6 +33,15 @@ FORBIDDEN_CALLS = {
 REQUIRED_NODES = {
     ast.For: "a for loop",
 }
+
+# The function REQUIRED_NODES has to appear in, or None to search the whole
+# file. The two kinds of check are scoped differently on purpose: the forbidden
+# checks always look at the whole file, so a forbidden construct cannot be
+# hidden in a helper, while the required checks look inside this one function,
+# so a for loop in an unrelated helper does not satisfy a rule about the
+# function being graded. A submission that does not define the function at all
+# falls back to the whole file; the behaviour tests already fail it.
+REQUIRED_IN_FUNCTION = "sum_to"
 
 # One sentence stating the rule, shown to the student when the check fails.
 RULE = (
@@ -72,6 +83,17 @@ def _called_name(func):
     return None
 
 
+def _graded_function(tree):
+    """The definition of REQUIRED_IN_FUNCTION, or None if the file lacks it."""
+    if not REQUIRED_IN_FUNCTION:
+        return None
+    for node in ast.walk(tree):
+        is_function = isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+        if is_function and node.name == REQUIRED_IN_FUNCTION:
+            return node
+    return None
+
+
 def check_source(context):
     """Check how the submission is written, not what it returns.
 
@@ -90,20 +112,21 @@ def check_source(context):
     try:
         with open(path, "r", encoding="utf-8") as handle:
             source = handle.read()
-    except OSError:
-        # Same reasoning: the source should be there, but if it is not, the
-        # student is not the one to blame.
+    except (OSError, UnicodeDecodeError):
+        # Same reasoning: the source should be there and should be UTF-8, but
+        # if it cannot be read or decoded, the student is not the one to blame.
         return _accepted()
 
     try:
         tree = ast.parse(source)
     except SyntaxError as error:
         return _rejected(
-            f"code Python could not parse ({error.msg}, line {error.lineno})"
+            f"a solution Python could not parse ({error.msg}, line {error.lineno})"
         )
 
     nodes = list(ast.walk(tree))
 
+    # The forbidden checks look at the whole file (see REQUIRED_IN_FUNCTION).
     for node_type, description in FORBIDDEN_NODES.items():
         if any(isinstance(node, node_type) for node in nodes):
             return _rejected(f"a solution that uses {description}")
@@ -114,8 +137,17 @@ def check_source(context):
             if name in FORBIDDEN_CALLS:
                 return _rejected(f"a solution that calls {FORBIDDEN_CALLS[name]}")
 
+    # The required checks look inside the graded function only, falling back to
+    # the whole file when the submission does not define it.
+    graded = _graded_function(tree)
+    required_nodes = list(ast.walk(graded)) if graded else nodes
+
     for node_type, description in REQUIRED_NODES.items():
-        if not any(isinstance(node, node_type) for node in nodes):
+        if not any(isinstance(node, node_type) for node in required_nodes):
+            if graded:
+                return _rejected(
+                    f"a solution whose {graded.name} does not use {description}"
+                )
             return _rejected(f"a solution without {description}")
 
     return _accepted()
