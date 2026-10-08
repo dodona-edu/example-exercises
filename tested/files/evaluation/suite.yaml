@@ -5,4 +5,4 @@
         - path: "unsorted.txt"
       output_files:
         - path: "sorted.txt"
-          content: !path "solution.txt"
+          content: !path "expected_sorted.txt"
