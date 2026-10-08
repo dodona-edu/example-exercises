@@ -1,9 +1,8 @@
 - tab: "Sorting"
   testcases:
     - arguments: [ "unsorted.txt", "sorted.txt" ]
-      file:
-        content: "solution.txt"
-        location: "sorted.txt"
-      files:
-        - name: "unsorted.txt"
-          url: "media/unsorted.txt"
+      input_files:
+        - path: "unsorted.txt"
+      output_files:
+        - path: "sorted.txt"
+          content: !path "solution.txt"
