@@ -5,7 +5,7 @@
       "nl": "Rups"
     }
   },
-  "programming_language": "python",
+  "programming_language": "turtle",
   "evaluation": {
     "handler": "turtle",
     "canvas_width": 400,

@@ -8,7 +8,7 @@
   "evaluation": {
     "handler": "turtle"
   },
-  "programming_language": "python",
+  "programming_language": "turtle",
   "labels": [
     "turtle",
     "house"
