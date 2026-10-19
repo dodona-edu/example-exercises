@@ -1,0 +1,6 @@
+{
+  "evaluation": {
+    "handler": "sql"
+  },
+  "programming_language": "sql"
+}
