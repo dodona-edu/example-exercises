@@ -1,0 +1,12 @@
+- tab: "Student"
+  contexts:
+    - testcases:
+        - statement: 'student = Student("Alice")'
+        - expression: "student.get_name()"
+          return: "Alice"
+        - statement: "student.add_grade(12)"
+        - expression: "student.average()"
+          return: 12.0
+        - statement: "student.add_grade(15)"
+        - expression: "student.average()"
+          return: 13.5

@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Student",
+      "nl": "Student"
+    }
+  },
+  "access": "private"
+}

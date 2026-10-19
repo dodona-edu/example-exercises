@@ -1,0 +1,20 @@
+- tab: "Temperature"
+  contexts:
+    - testcases:
+        - statement: "water = Temperature(100.0)"
+        - expression: "water.to_fahrenheit()"
+          return: 212.0
+    - testcases:
+        - statement: "mild = Temperature(36.6)"
+        - expression: "mild.to_fahrenheit()"
+          return: 97.88
+    - testcases:
+        - statement: "zero = Temperature(-273.15)"
+        - expression: "zero.to_fahrenheit()"
+          return: -459.67
+    - testcases:
+        - statement: "Temperature(-300.0)"
+          exception:
+            message: "below absolute zero"
+            types:
+              java: "IllegalArgumentException"

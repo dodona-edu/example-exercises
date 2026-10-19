@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Temperature",
+      "nl": "Temperatuur"
+    }
+  },
+  "access": "private"
+}
