@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Factorial",
+      "nl": "Faculteit"
+    }
+  },
+  "access": "private"
+}

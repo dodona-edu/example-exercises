@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Sum of lines",
+      "nl": "Som van regels"
+    }
+  },
+  "access": "private"
+}
