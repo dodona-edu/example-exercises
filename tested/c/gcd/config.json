@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Greatest common divisor",
+      "nl": "Grootste gemene deler"
+    }
+  },
+  "access": "private"
+}
