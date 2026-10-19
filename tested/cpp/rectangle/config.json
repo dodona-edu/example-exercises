@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Rectangle",
+      "nl": "Rechthoek"
+    }
+  },
+  "access": "private"
+}

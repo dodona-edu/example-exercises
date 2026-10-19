@@ -1,0 +1,14 @@
+- tab: "Rectangle"
+  contexts:
+    - testcases:
+        - statement: "rectangle = Rectangle(3, 4)"
+        - expression: "rectangle.area()"
+          return: 12
+        - expression: "rectangle.perimeter()"
+          return: 14
+    - testcases:
+        - statement: "square = Rectangle(5, 5)"
+        - expression: "square.area()"
+          return: 25
+        - expression: "square.perimeter()"
+          return: 20

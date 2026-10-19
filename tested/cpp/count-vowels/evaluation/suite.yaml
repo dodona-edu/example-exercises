@@ -1,0 +1,12 @@
+- tab: "count_vowels"
+  testcases:
+    - expression: "count_vowels('hello')"
+      return: 2
+    - expression: "count_vowels('Hello World')"
+      return: 3
+    - expression: "count_vowels('AEIOU')"
+      return: 5
+    - expression: "count_vowels('rhythm')"
+      return: 0
+    - expression: "count_vowels('')"
+      return: 0
