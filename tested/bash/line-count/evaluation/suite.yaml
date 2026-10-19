@@ -1,0 +1,14 @@
+- tab: "Testen"
+  testcases:
+    - arguments: [ "fruits.txt" ]
+      input_files:
+        - path: "fruits.txt"
+      stdout: "4"
+    - arguments: [ "numbers.txt" ]
+      input_files:
+        - path: "numbers.txt"
+      stdout: "10"
+    - arguments: [ "single.txt" ]
+      input_files:
+        - path: "single.txt"
+      stdout: "1"

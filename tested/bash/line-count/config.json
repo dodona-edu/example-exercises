@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Line count",
+      "nl": "Regels tellen"
+    }
+  },
+  "access": "private"
+}

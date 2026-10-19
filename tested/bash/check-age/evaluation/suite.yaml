@@ -1,0 +1,15 @@
+- tab: "Testen"
+  testcases:
+    - arguments: [ "25" ]
+      stdout: "Age: 25"
+    - arguments: [ "0" ]
+      stdout: "Age: 0"
+    - arguments: [ "abc" ]
+      stderr: "invalid age"
+      exit_code: 1
+    - arguments: [ "-5" ]
+      stderr: "invalid age"
+      exit_code: 1
+    - arguments: [ "3.5" ]
+      stderr: "invalid age"
+      exit_code: 1
