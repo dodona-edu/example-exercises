@@ -1,0 +1,14 @@
+- tab: "average"
+  testcases:
+    - expression: "average([1, 2])"
+      return: 1.5
+    - expression: "average([1, 2, 2])"
+      return: 1.6666666666666667
+    - expression: "average([10, 20, 30])"
+      return: 20
+    - expression: "average([2.5, 3.5])"
+      return: 3
+    - expression: "average([-4, -5])"
+      return: -4.5
+    - expression: "average([7])"
+      return: 7
