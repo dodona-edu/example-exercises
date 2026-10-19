@@ -84,7 +84,7 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
     opgelijst worden. Gevraagd wordt:</p>
 <ul>
     <li>
-        <p>Schrijf een functie <samp>familieleden</samp> waaraan de locatie van
+        <p>Schrijf een functie <samp>familyMembers</samp> waaraan de locatie van
             een tekstbestand moet doorgegeven worden. Dit tekstbestand moet
             informatie bevatten over een familiestamboom, in het formaat zoals
             hierboven beschreven. De functie moet een object teruggeven dat de
@@ -93,15 +93,15 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
     </li>
     <ul>
         <li>
-            <p><samp>moeder</samp>: wordt afgebeeld op de naam van de moeder van
+            <p><samp>mother</samp>: wordt afgebeeld op de naam van de moeder van
                 het familielid</p>
         </li>
         <li>
-            <p><samp>vader</samp>: wordt afgebeeld op de naam van de vader van het
+            <p><samp>father</samp>: wordt afgebeeld op de naam van de vader van het
                 familielid</p>
         </li>
         <li>
-            <p><samp>kinderen</samp>: wordt afgebeeld op een lijst met de
+            <p><samp>children</samp>: wordt afgebeeld op een lijst met de
                 namen van alle kinderen van het familielid</p>
         </li>
     </ul>
@@ -111,12 +111,12 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
 </ul>
 <ul>
     <li>
-        <p>Schrijf een functie <samp>voorouder</samp> waaraan drie argumenten
+        <p>Schrijf een functie <samp>ancestor</samp> waaraan drie argumenten
             moeten doorgegeven worden: <i>i</i>) de naam van een familielid, <i>ii</i>)
             de Zweedse omschrijving van een voorouder en <i>iii</i>) een
             object dat de relaties in een familiestamboom omschrijft
             (opgemaakt zoals de objecten die worden teruggegeven door de
-            functie <samp>familieleden</samp>). De functie moet de naam
+            functie <samp>familyMembers</samp>). De functie moet de naam
             teruggeven van de voorouder die door het gegeven familielid in het
             Zweeds wordt aangesproken met de gegeven omschrijving, rekening
             houdend met de relaties in de gegeven familiestamboom. Hierbij mag de
@@ -127,15 +127,15 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
             expliciet moet gecontroleerd worden. Indien de gegeven familiestamboom
             geen voorouder van het gegeven familielid bevat die wordt aangesproken
             met de gegeven omschrijving, dan moet de functie een <samp>AssertionError</samp>
-            opwerpen met de boodschap <samp>onbekende voorouder</samp>.</p>
+            opwerpen met de boodschap <samp>unknown ancestor</samp>.</p>
     </li>
     <li>
-        <p>Schrijf een functie <samp>nakomelingen</samp> waaraan drie
+        <p>Schrijf een functie <samp>descendants</samp> waaraan drie
             argumenten moeten doorgegeven worden: <i>i</i>) de naam van een
             familielid, <i>ii</i>) een getal $$n \in \mathbb{N}_0$$ en <i>iii</i>)
             een object dat de relaties in een familiestamboom omschrijft
             (opgemaakt zoals de objecten die worden teruggegeven door de
-            functie <samp>familieleden</samp>). De functie moet een object
+            functie <samp>familyMembers</samp>). De functie moet een object
             teruggeven waarvan de sleutels bestaan uit alle Zweedse omschrijvingen
             waarmee het gegeven familielid wordt aangesproken door zijn/haar
             $$n$$-de generatie nakomelingen uit de gegeven familiestamboom. Elk
@@ -161,28 +161,28 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
     opgave.</p>
 
 ```javascript
->> const relaties = familieleden('data.txt');
->> relaties['Sincere'];
-{'vader': 'Jovanni', 'moeder': 'Rosa'}
->> relaties['August'];
-{'vader': 'Ronan', 'moeder': 'Alana', 'kinderen': ['Eric', 'Drake', 'Jadon', 'Rosa']}
->> relaties['Ronan'];
-{'kinderen': ['Beatrice', 'August']}
+>> const relations = familyMembers('data.txt');
+>> relations['Sincere'];
+{'father': 'Jovanni', 'mother': 'Rosa'}
+>> relations['August'];
+{'father': 'Ronan', 'mother': 'Alana', 'children': ['Eric', 'Drake', 'Jadon', 'Rosa']}
+>> relations['Ronan'];
+{'children': ['Beatrice', 'August']}
 
->> voorouder('Drake', 'mor', relaties);
+>> ancestor('Drake', 'mor', relations);
 'Amira'
->> voorouder('Rosa', 'farmor', relaties);
+>> ancestor('Rosa', 'farmor', relations);
 'Alana'
->> voorouder('Sincere', 'morfarfar', relaties);
+>> ancestor('Sincere', 'morfarfar', relations);
 'Ronan'
->> voorouder('Luciana', 'morfarmor', relaties);
-AssertionError: onbekende voorouder
+>> ancestor('Luciana', 'morfarmor', relations);
+AssertionError: unknown ancestor
 
->> nakomelingen('Ronan', 1, relaties);
+>> descendants('Ronan', 1, relations);
 {'far': [ 'August', 'Beatrice']}
->> nakomelingen('Ronan', 2, relaties);
+>> descendants('Ronan', 2, relations);
 {'morfar': ['Ramiro', 'Regan'], 'farfar': ['Drake', 'Eric', 'Jadon', 'Rosa']}
->> nakomelingen('Ronan', 3, relaties);
+>> descendants('Ronan', 3, relations);
 {'farmorfar': ['Carlos', 'Ciara', 'Luciana'], 'farfarfar': ['Aryana', 'Cadence', 'Gavyn'], 'mormorfar': ['Alberto', 'Natalee'], 'morfarfar': ['Emmy', 'Gabriella', 'Kole', 'Sincere', 'Xavier']}
 ```
 
