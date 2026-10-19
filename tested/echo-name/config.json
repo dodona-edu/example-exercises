@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Echo name",
+      "nl": "Naam herhalen"
+    }
+  },
+  "access": "private"
+}

@@ -1,0 +1,10 @@
+- tab: "smallest"
+  testcases:
+    - expression: "smallest(5, 6)"
+      return: 5
+    - expression: "smallest(1000000000, -5)"
+      return: -5
+    - expression: "smallest(-5, -6)"
+      return: -6
+    - expression: "smallest(6, 6)"
+      return: 6

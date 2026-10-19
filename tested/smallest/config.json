@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Smallest",
+      "nl": "Kleinste"
+    }
+  },
+  "access": "private"
+}
