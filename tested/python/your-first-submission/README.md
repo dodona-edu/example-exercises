@@ -5,7 +5,7 @@ boilerplate is deliberately byte-identical to the reference solution
 (`solution.py`), so pressing Submit on the untouched editor is immediately
 Correct, giving a first-time success instead of a blank-editor failure.
 
-Not called "Hello World" on purpose: `tested/input-output` already uses that
+Not called "Hello World" on purpose: `tested/python/input-output` already uses that
 name in this repo, so this one is named after what it's actually meant to
 teach, submitting.
 
