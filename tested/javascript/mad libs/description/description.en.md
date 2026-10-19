@@ -38,7 +38,7 @@ Write a class `MadLibs` whose objects can be used to complete a given quote or s
 >> madlib.learn('inhabitants', 'Americans');
 >> madlib.learn('discipline', 'geography');
 >> madlib.vocabulary;
-{'thing': ['war'], 'name': ['god'], 'discipline': ['geography'], 'inhabitants': ['americans']}
+{'name': ['god'], 'thing': ['war'], 'inhabitants': ['americans'], 'discipline': ['geography']}
 >> madlib.suggest('name');
 'god'
 >> madlib.suggest('NAME');
@@ -54,7 +54,7 @@ Write a class `MadLibs` whose objects can be used to complete a given quote or s
 >> madlib.learn('discipline', 'navigation');
 >> madlib.learn('discipline', 'colonisation');
 >> madlib.vocabulary;
-{'thing': ['maps', 'war', 'coordinates'], 'name': ['god', 'caesar', 'mercator'], 'discipline': ['colonisation', 'navigation', 'geography'], 'inhabitants': ['belgians', 'americans', 'germans', 'martians']}
+{'name': ['god', 'mercator', 'caesar'], 'thing': ['war', 'maps', 'coordinates'], 'inhabitants': ['americans', 'belgians', 'martians', 'germans'], 'discipline': ['geography', 'navigation', 'colonisation']}
 >> madlib.fill('_Name_ created _thing_ so that _INHABITANTS_ would learn _discipline_.');
 'Mercator created maps so that BELGIANS would learn geography.'
 >> madlib.fill('_Name_ created _thing_ so that _INHABITANTS_ would learn _discipline_.');

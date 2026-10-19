@@ -163,11 +163,11 @@ Teresa Jadon Cadence Gavyn Aryana</pre>
 ```javascript
 >> const relations = familyMembers('data.txt');
 >> relations['Sincere'];
-{'father': 'Jovanni', 'mother': 'Rosa'}
+{'mother': 'Rosa', 'father': 'Jovanni'}
 >> relations['August'];
-{'father': 'Ronan', 'mother': 'Alana', 'children': ['Eric', 'Drake', 'Jadon', 'Rosa']}
+{'mother': 'Alana', 'father': 'Ronan', 'children': ['Drake', 'Eric', 'Jadon', 'Rosa']}
 >> relations['Ronan'];
-{'children': ['Beatrice', 'August']}
+{'children': ['August', 'Beatrice']}
 
 >> ancestor('Drake', 'mor', relations);
 'Amira'
@@ -181,9 +181,9 @@ AssertionError: unknown ancestor
 >> descendants('Ronan', 1, relations);
 {'far': [ 'August', 'Beatrice']}
 >> descendants('Ronan', 2, relations);
-{'morfar': ['Ramiro', 'Regan'], 'farfar': ['Drake', 'Eric', 'Jadon', 'Rosa']}
+{'farfar': ['Drake', 'Eric', 'Jadon', 'Rosa'], 'morfar': ['Ramiro', 'Regan']}
 >> descendants('Ronan', 3, relations);
-{'farmorfar': ['Carlos', 'Ciara', 'Luciana'], 'farfarfar': ['Aryana', 'Cadence', 'Gavyn'], 'mormorfar': ['Alberto', 'Natalee'], 'morfarfar': ['Emmy', 'Gabriella', 'Kole', 'Sincere', 'Xavier']}
+{'farfarfar': ['Aryana', 'Cadence', 'Gavyn'], 'morfarfar': ['Emmy', 'Gabriella', 'Kole', 'Sincere', 'Xzavier'], 'farmorfar': ['Carlos', 'Ciara', 'Luciana'], 'mormorfar': ['Alberto', 'Natalee']}
 ```
 
 <h3>Epiloog</h3>
