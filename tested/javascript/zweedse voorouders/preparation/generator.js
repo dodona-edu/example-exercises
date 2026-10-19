@@ -30,19 +30,24 @@ function choice(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+function draw(list) {
+    if (list.length === 0) {
+        throw new Error('ran out of names');
+    }
+    return list.splice(Math.floor(Math.random() * list.length), 1)[0];
+}
+
 function familyGenerator(males, females, maxChildren = 5, maxGenerations = 5) {
     const malesList = [...males];
     const femalesList = [...females];
     const family = [];
 
     function generateFamily(father = null, mother = null, offSpringOdds = 1.0) {
-        father = father || malesList.splice(Math.floor(Math.random() * malesList.length), 1);
-        mother = mother || femalesList.splice(Math.floor(Math.random() * femalesList.left), 1);
-        const children = [father, mother];
+        father = father || draw(malesList);
+        mother = mother || draw(femalesList);
+        const children = [mother, father];
         [...Array(randint(1, maxChildren)).keys()].forEach(() => {
-            children.push(randint(0, 1) === 1 ?
-                malesList.splice(Math.floor(Math.random() * malesList.length), 1) :
-                femalesList.splice(Math.floor(Math.random() * femalesList.left), 1));
+            children.push(randint(0, 2) === 1 ? draw(malesList) : draw(femalesList));
         });
         family.push(children);
         for (let child of children.slice(2)) {
@@ -60,7 +65,7 @@ function familyGenerator(males, females, maxChildren = 5, maxGenerations = 5) {
     return shuffle(family);
 }
 
-const females = fs.readFileSync('male_names.txt')
+const females = fs.readFileSync('female_names.txt')
     .toString()
     .split('\n')
     .map(s => s.trim())
@@ -70,7 +75,7 @@ const males = fs.readFileSync('male_names.txt')
     .split('\n')
     .map(s => s.trim())
     .filter(s => s.search(/^[A-Z]+$/i) === 0)
-    .filter(s => females.indexOf(s) !== -1);
+    .filter(s => females.indexOf(s) === -1);
 
 function flow(value) {
     if (Array.isArray(value)) {
