@@ -1,0 +1,12 @@
+- tab: "gcd"
+  testcases:
+    - expression: "gcd(12, 18)"
+      return: 6
+    - expression: "gcd(17, 5)"
+      return: 1
+    - expression: "gcd(100, 10)"
+      return: 10
+    - expression: "gcd(7, 7)"
+      return: 7
+    - expression: "gcd(0, 9)"
+      return: 9

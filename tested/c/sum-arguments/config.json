@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Sum of arguments",
+      "nl": "Som van argumenten"
+    }
+  },
+  "access": "private"
+}
