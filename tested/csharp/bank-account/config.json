@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Bank account",
+      "nl": "Bankrekening"
+    }
+  },
+  "access": "private"
+}

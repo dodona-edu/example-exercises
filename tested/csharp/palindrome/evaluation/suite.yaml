@@ -1,0 +1,12 @@
+- tab: "is_palindrome"
+  testcases:
+    - expression: 'is_palindrome("lepel")'
+      return: true
+    - expression: 'is_palindrome("Dodona")'
+      return: false
+    - expression: 'is_palindrome("Lepel")'
+      return: true
+    - expression: 'is_palindrome("a")'
+      return: true
+    - expression: 'is_palindrome("ab")'
+      return: false

@@ -1,0 +1,12 @@
+- tab: "BankAccount"
+  contexts:
+    - testcases:
+        - statement: "account = BankAccount()"
+        - expression: "account.balance"
+          return: 0
+        - statement: "account.deposit(100)"
+        - expression: "account.balance"
+          return: 100
+        - statement: "account.withdraw(30)"
+        - expression: "account.balance"
+          return: 70
