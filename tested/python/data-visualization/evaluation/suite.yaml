@@ -1,39 +1,78 @@
 - tab: "Number of Pokémon"
   testcases:
     - expression: "number_of_pokemon('pokemon.csv')"
+      input_files:
+        - path: "pokemon.csv"
+          content: !path "pokemon.csv"
       return: 20
     - expression: "number_of_pokemon('starters.csv')"
+      input_files:
+        - path: "starters.csv"
+          content: !path "starters.csv"
       return: 9
     - expression: "number_of_pokemon('eeveelutions.csv')"
+      input_files:
+        - path: "eeveelutions.csv"
+          content: !path "eeveelutions.csv"
       return: 4
     - expression: "number_of_pokemon('legendary.csv')"
+      input_files:
+        - path: "legendary.csv"
+          content: !path "legendary.csv"
       return: 1
 
 - tab: "Types"
   testcases:
     - expression: "all_types('pokemon.csv')"
+      input_files:
+        - path: "pokemon.csv"
+          content: !path "pokemon.csv"
       return: ["Dragon", "Electric", "Fire", "Ghost", "Grass", "Normal", "Psychic", "Water"]
     - expression: "all_types('starters.csv')"
+      input_files:
+        - path: "starters.csv"
+          content: !path "starters.csv"
       return: ["Fire", "Grass", "Water"]
     - expression: "all_types('eeveelutions.csv')"
+      input_files:
+        - path: "eeveelutions.csv"
+          content: !path "eeveelutions.csv"
       return: ["Electric", "Fire", "Normal", "Water"]
     - expression: "all_types('legendary.csv')"
+      input_files:
+        - path: "legendary.csv"
+          content: !path "legendary.csv"
       return: ["Psychic"]
 
 - tab: "Strongest"
   testcases:
     - expression: "strongest_pokemon('pokemon.csv')"
+      input_files:
+        - path: "pokemon.csv"
+          content: !path "pokemon.csv"
       return: "Mewtwo"
     - expression: "strongest_pokemon('starters.csv')"
+      input_files:
+        - path: "starters.csv"
+          content: !path "starters.csv"
       return: "Charizard"
     - expression: "strongest_pokemon('eeveelutions.csv')"
+      input_files:
+        - path: "eeveelutions.csv"
+          content: !path "eeveelutions.csv"
       return: "Vaporeon"
     - expression: "strongest_pokemon('legendary.csv')"
+      input_files:
+        - path: "legendary.csv"
+          content: !path "legendary.csv"
       return: "Mewtwo"
 
 - tab: "Strongest per type"
   testcases:
     - expression: "strongest_per_type('pokemon.csv')"
+      input_files:
+        - path: "pokemon.csv"
+          content: !path "pokemon.csv"
       return:
         Dragon: "Dragonite"
         Electric: "Jolteon"
@@ -44,17 +83,26 @@
         Psychic: "Mewtwo"
         Water: "Gyarados"
     - expression: "strongest_per_type('starters.csv')"
+      input_files:
+        - path: "starters.csv"
+          content: !path "starters.csv"
       return:
         Fire: "Charizard"
         Grass: "Venusaur"
         Water: "Blastoise"
     - expression: "strongest_per_type('eeveelutions.csv')"
+      input_files:
+        - path: "eeveelutions.csv"
+          content: !path "eeveelutions.csv"
       return:
         Electric: "Jolteon"
         Fire: "Flareon"
         Normal: "Eevee"
         Water: "Vaporeon"
     - expression: "strongest_per_type('legendary.csv')"
+      input_files:
+        - path: "legendary.csv"
+          content: !path "legendary.csv"
       return:
         Psychic: "Mewtwo"
 
@@ -63,6 +111,9 @@
     - testcases:
         - statement:
             python: "fig = submission.plot_top_pokemon('starters.csv', 3)"
+          input_files:
+            - path: "starters.csv"
+              content: !path "starters.csv"
         - expression:
             python: "fig.axes[0].get_title()"
           return: "Top 3 Pokémon by total stats"
@@ -84,6 +135,9 @@
     - testcases:
         - statement:
             python: "fig = submission.plot_top_pokemon('pokemon.csv', 5)"
+          input_files:
+            - path: "pokemon.csv"
+              content: !path "pokemon.csv"
         - expression:
             python: "fig.axes[0].get_title()"
           return: "Top 5 Pokémon by total stats"
@@ -110,6 +164,9 @@
     - testcases:
         - statement:
             python: "fig = submission.plot_top_pokemon('legendary.csv', 1)"
+          input_files:
+            - path: "legendary.csv"
+              content: !path "legendary.csv"
         - expression:
             python: "fig.axes[0].get_title()"
           return: "Top 1 Pokémon by total stats"
