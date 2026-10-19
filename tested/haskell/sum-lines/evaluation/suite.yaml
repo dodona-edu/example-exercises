@@ -1,0 +1,19 @@
+- tab: "Testen"
+  testcases:
+    - stdin: "5"
+      stdout: "5"
+    - stdin: |-
+        1
+        2
+        3
+      stdout: "6"
+    - stdin: |-
+        10
+        -4
+        7
+        100
+      stdout: "113"
+    - stdin: |-
+        -5
+        5
+      stdout: "0"

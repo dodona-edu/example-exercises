@@ -1,0 +1,12 @@
+- tab: "factorial"
+  testcases:
+    - expression: "factorial(0)"
+      return: 1
+    - expression: "factorial(1)"
+      return: 1
+    - expression: "factorial(5)"
+      return: 120
+    - expression: "factorial(10)"
+      return: 3628800
+    - expression: "factorial(20)"
+      return: 2432902008176640000

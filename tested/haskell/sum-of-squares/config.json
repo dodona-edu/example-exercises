@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Sum of squares",
+      "nl": "Som van kwadraten"
+    }
+  },
+  "access": "private"
+}

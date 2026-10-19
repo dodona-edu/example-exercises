@@ -1,0 +1,10 @@
+- tab: "sum_of_squares"
+  testcases:
+    - expression: "sum_of_squares([3])"
+      return: 9
+    - expression: "sum_of_squares([1, 2, 3])"
+      return: 14
+    - expression: "sum_of_squares([-4, 4])"
+      return: 32
+    - expression: "sum_of_squares([10, 20, 30, 40])"
+      return: 3000
