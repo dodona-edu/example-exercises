@@ -1,0 +1,14 @@
+- tab: "Point"
+  contexts:
+    - testcases:
+        - statement: "a = Point(0.0, 0.0)"
+        - expression: "a.distance_to(Point(3.0, 4.0))"
+          return: 5.0
+        - expression: "a.distance_to(Point(0.0, 0.0))"
+          return: 0.0
+    - testcases:
+        - statement: "b = Point(1.5, -2.0)"
+        - expression: "b.distance_to(Point(-1.5, 2.0))"
+          return: 5.0
+        - expression: "b.x"
+          return: 1.5

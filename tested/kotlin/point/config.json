@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Point",
+      "nl": "Punt"
+    }
+  },
+  "access": "private"
+}
