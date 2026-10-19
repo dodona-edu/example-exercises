@@ -9,9 +9,10 @@
 
 ## Programming language
 
-The programming language of these exercises is set to Python.
-However, you should be able to change it to JavaScript (or other supported languages), and it should work.
+The exercises directly in this directory are in Python, the default set in `dirconfig.json`.
+Examples in other languages have a directory per language, whose `dirconfig.json` sets the programming language:
 
-The one exception is `forbidden-construct`, which checks how a submission is written by parsing it with Python's `ast` module.
-Its oracle is tied to Python, so switching that exercise to another language means parsing that language instead.
+- [`javascript/`](javascript/)
+
+`forbidden-construct` checks how a submission is written by parsing it with Python's `ast` module, so its oracle only works for Python.
 
