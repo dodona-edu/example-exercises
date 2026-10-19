@@ -1,0 +1,21 @@
+- tab: "parse_positive"
+  testcases:
+    - expression: "parse_positive('42')"
+      return: 42
+    - expression: "parse_positive('7')"
+      return: 7
+    - expression: "parse_positive('0')"
+      exception:
+        message: "not a positive number"
+        types:
+          python: "ValueError"
+    - expression: "parse_positive('-3')"
+      exception:
+        message: "not a positive number"
+        types:
+          python: "ValueError"
+    - expression: "parse_positive('abc')"
+      exception:
+        message: "not a positive number"
+        types:
+          python: "ValueError"
