@@ -1,0 +1,43 @@
+name: Examples
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  languages:
+    name: Find languages
+    runs-on: ubuntu-latest
+    outputs:
+      languages: ${{ steps.find.outputs.languages }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: find
+        run: |
+          languages=$(.github/check-examples.sh --languages)
+          echo "$languages"
+          echo "languages=$languages" >> "$GITHUB_OUTPUT"
+
+  examples:
+    name: ${{ matrix.language }}
+    needs: languages
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/dodona-edu/dodona-tested
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ${{ fromJSON(needs.languages.outputs.languages) }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: dodona-edu/universal-judge
+          ref: master
+          path: universal-judge
+      - name: Run the examples
+        run: .github/check-examples.sh ${{ matrix.language }}
+        env:
+          JUDGE: ${{ github.workspace }}/universal-judge
