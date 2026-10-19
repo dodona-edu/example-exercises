@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Even squares",
+      "nl": "Even kwadraten"
+    }
+  },
+  "access": "private"
+}
