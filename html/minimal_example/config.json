@@ -12,9 +12,5 @@
   ],
   "evaluation": {
     "handler": "html"
-  },
-  "internals": {
-    "token": "a9QJNFJuDpQaxvWJZ66bd3MnYeGGcGfc5NyBvS75Mr7JGdvurkqbS7bt3jfu-yIw",
-    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }
