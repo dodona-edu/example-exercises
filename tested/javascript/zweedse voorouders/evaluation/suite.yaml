@@ -8,6 +8,9 @@ tabs:
     contexts:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
+            input_files:
+              - path: "data1.txt"
+                content: !path "data/data1.txt"
           - expression:
               javascript: 'relations1["Joel"]'
             return: !object {"mother": "Paloma", "father": "Bruce"}
@@ -25,6 +28,9 @@ tabs:
             return: !object {"mother": "Claudia", "father": "Keshawn"}
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
+            input_files:
+              - path: "data2.txt"
+                content: !path "data/data2.txt"
           - expression:
               javascript: 'relations2["Kelsie"]'
             return: !object {"children": ["Cortez"]}
@@ -42,6 +48,9 @@ tabs:
             return: !object {"children": ["Cortez"]}
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
+            input_files:
+              - path: "data3.txt"
+                content: !path "data/data3.txt"
           - expression:
               javascript: 'relations3["Janiyah"]'
             return: !object {"mother": "Maria", "father": "Jameson", "children": ["Braylon", "Johnathon"]}
@@ -59,6 +68,9 @@ tabs:
             return: !object {"children": ["Carsen", "Kaliyah", "Mekhi"], "mother": "Alejandra", "father": "Krish"}
       - testcases:
           - statement: 'relations4: object = familyMembers("data4.txt")'
+            input_files:
+              - path: "data4.txt"
+                content: !path "data/data4.txt"
           - expression:
               javascript: 'relations4["Rayan"]'
             return: !object {"mother": "Iyana", "father": "Arjun"}
@@ -76,6 +88,9 @@ tabs:
             return: !object {"children": ["Iyana"]}
       - testcases:
           - statement: 'relations5: object = familyMembers("data5.txt")'
+            input_files:
+              - path: "data5.txt"
+                content: !path "data/data5.txt"
           - expression:
               javascript: 'relations5["Darryl"]'
             return: !object {"mother": "Laci", "father": "Yael", "children": ["Adrianna"]}
@@ -93,6 +108,9 @@ tabs:
             return: !object {"children": ["Lyla", "Marin", "Seth", "Sidney"]}
       - testcases:
           - statement: 'relations6: object = familyMembers("data6.txt")'
+            input_files:
+              - path: "data6.txt"
+                content: !path "data/data6.txt"
           - expression:
               javascript: 'relations6["Kylan"]'
             return: !object {"children": ["Hayley", "Lauren"]}
@@ -110,6 +128,9 @@ tabs:
             return: !object {"children": ["Osvaldo"]}
       - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
+            input_files:
+              - path: "data7.txt"
+                content: !path "data/data7.txt"
           - expression:
               javascript: 'relations7["Ciara"]'
             return: !object {"children": ["Willow"], "mother": "Madelynn", "father": "Trenton"}
@@ -127,6 +148,9 @@ tabs:
             return: !object {"children": ["Hallie", "Houston", "Virginia"]}
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
+            input_files:
+              - path: "data8.txt"
+                content: !path "data/data8.txt"
           - expression:
               javascript: 'relations8["Jordon"]'
             return: !object {"mother": "Ayla", "father": "Guillermo", "children": ["Joe", "Marley"]}
@@ -144,6 +168,9 @@ tabs:
             return: !object {"mother": "Zoey", "father": "Manuel"}
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
+            input_files:
+              - path: "data9.txt"
+                content: !path "data/data9.txt"
           - expression:
               javascript: 'relations9["Vivian"]'
             return: !object {"mother": "Jayden", "father": "Sammy"}
@@ -161,6 +188,9 @@ tabs:
             return: !object {"mother": "Jayden", "father": "Sammy"}
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
+            input_files:
+              - path: "data10.txt"
+                content: !path "data/data10.txt"
           - expression:
               javascript: 'relations10["Karissa"]'
             return: !object {"mother": "Donna", "father": "Mason"}
@@ -178,6 +208,9 @@ tabs:
             return: !object {"mother": "Nathalie", "father": "Walker"}
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
+            input_files:
+              - path: "data11.txt"
+                content: !path "data/data11.txt"
           - expression:
               javascript: 'relations11["Mario"]'
             return: !object {"mother": "Jamya", "father": "Gage"}
@@ -195,6 +228,9 @@ tabs:
             return: !object {"mother": "Ingrid", "father": "Semaj"}
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
+            input_files:
+              - path: "data12.txt"
+                content: !path "data/data12.txt"
           - expression:
               javascript: 'relations12["Gabriella"]'
             return: !object {"mother": "Alana", "father": "Isiah", "children": ["Mylee", "Trevor"]}
@@ -212,6 +248,9 @@ tabs:
             return: !object {"mother": "Maleah", "father": "Maxwell", "children": ["Peyton"]}
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
+            input_files:
+              - path: "data13.txt"
+                content: !path "data/data13.txt"
           - expression:
               javascript: 'relations13["Asa"]'
             return: !object {"children": ["Joaquin", "Rex"], "mother": "Melany", "father": "Kaden"}
@@ -229,6 +268,9 @@ tabs:
             return: !object {"mother": "Kaylen", "father": "Asa"}
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
+            input_files:
+              - path: "data14.txt"
+                content: !path "data/data14.txt"
           - expression:
               javascript: 'relations14["Amari"]'
             return: !object {"children": ["Darius", "Heaven", "Kayleigh"]}
@@ -246,6 +288,9 @@ tabs:
             return: !object {"children": ["Kristin", "Lillie", "Robert"]}
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
+            input_files:
+              - path: "data15.txt"
+                content: !path "data/data15.txt"
           - expression:
               javascript: 'relations15["Kiana"]'
             return: !object {"mother": "Alissa", "father": "Arnav", "children": ["Cecelia", "Taylor"]}
@@ -263,6 +308,9 @@ tabs:
             return: !object {"mother": "Neveah", "father": "Stanley"}
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
+            input_files:
+              - path: "data16.txt"
+                content: !path "data/data16.txt"
           - expression:
               javascript: 'relations16["Declan"]'
             return: !object {"mother": "Shaylee", "father": "Damion"}
@@ -280,6 +328,9 @@ tabs:
             return: !object {"mother": "Krystal", "father": "Braydon"}
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
+            input_files:
+              - path: "data17.txt"
+                content: !path "data/data17.txt"
           - expression:
               javascript: 'relations17["Jasmine"]'
             return: !object {"mother": "Johanna", "father": "Rene", "children": ["Belinda", "Dixie", "Kyra", "Noah"]}
@@ -297,6 +348,9 @@ tabs:
             return: !object {"mother": "Alani", "father": "Caiden"}
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
+            input_files:
+              - path: "data18.txt"
+                content: !path "data/data18.txt"
           - expression:
               javascript: 'relations18["Tyson"]'
             return: !object {"mother": "Eleanor", "father": "Trevon"}
@@ -314,6 +368,9 @@ tabs:
             return: !object {"children": ["Amira", "Elisabeth", "Tyson"]}
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
+            input_files:
+              - path: "data19.txt"
+                content: !path "data/data19.txt"
           - expression:
               javascript: 'relations19["Tyree"]'
             return: !object {"mother": "Amirah", "father": "Harry"}
@@ -331,6 +388,9 @@ tabs:
             return: !object {"mother": "Amirah", "father": "Harry"}
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
+            input_files:
+              - path: "data20.txt"
+                content: !path "data/data20.txt"
           - expression:
               javascript: 'relations20["Kenya"]'
             return: !object {"mother": "Arely", "father": "Dalton", "children": ["Meredith"]}
@@ -348,6 +408,9 @@ tabs:
             return: !object {"children": ["Kenya"]}
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
+            input_files:
+              - path: "data21.txt"
+                content: !path "data/data21.txt"
           - expression:
               javascript: 'relations21["Shaun"]'
             return: !object {"children": ["Jacoby"]}
@@ -365,6 +428,9 @@ tabs:
             return: !object {"children": ["Kyler"]}
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
+            input_files:
+              - path: "data22.txt"
+                content: !path "data/data22.txt"
           - expression:
               javascript: 'relations22["Alannah"]'
             return: !object {"mother": "Rhianna", "father": "Nikhil"}
@@ -382,6 +448,9 @@ tabs:
             return: !object {"mother": "Audrey", "father": "Maximus", "children": ["Darion", "Franklin", "Leandro"]}
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
+            input_files:
+              - path: "data23.txt"
+                content: !path "data/data23.txt"
           - expression:
               javascript: 'relations23["Lena"]'
             return: !object {"children": ["Tristen"]}
@@ -399,6 +468,9 @@ tabs:
             return: !object {"mother": "Ashly", "father": "Marshall"}
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
+            input_files:
+              - path: "data24.txt"
+                content: !path "data/data24.txt"
           - expression:
               javascript: 'relations24["Keagan"]'
             return: !object {"mother": "Clarissa", "father": "Jeremiah", "children": ["Steve"]}
@@ -416,6 +488,9 @@ tabs:
             return: !object {"mother": "Madelynn", "father": "Easton", "children": ["Angelina", "Lewis", "Orion"]}
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
+            input_files:
+              - path: "data25.txt"
+                content: !path "data/data25.txt"
           - expression:
               javascript: 'relations25["Eleanor"]'
             return: !object {"children": ["Jayvion"], "mother": "Amina", "father": "Jamarion"}
@@ -433,6 +508,9 @@ tabs:
             return: !object {"children": ["Eleanor"]}
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
+            input_files:
+              - path: "data26.txt"
+                content: !path "data/data26.txt"
           - expression:
               javascript: 'relations26["Ana"]'
             return: !object {"children": ["Audrina", "Damion", "Lesly"]}
@@ -450,6 +528,9 @@ tabs:
             return: !object {"children": ["Arnav", "Cora"], "mother": "Ana", "father": "Michael"}
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
+            input_files:
+              - path: "data27.txt"
+                content: !path "data/data27.txt"
           - expression:
               javascript: 'relations27["Alani"]'
             return: !object {"mother": "Jaden", "father": "Jovanny", "children": ["Kade", "Nikhil"]}
@@ -467,6 +548,9 @@ tabs:
             return: !object {"mother": "Jaden", "father": "Jovanny", "children": ["Kade", "Nikhil"]}
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
+            input_files:
+              - path: "data28.txt"
+                content: !path "data/data28.txt"
           - expression:
               javascript: 'relations28["Karly"]'
             return: !object {"children": ["Isabelle", "Lee"], "mother": "Tanya", "father": "Giovanni"}
@@ -484,6 +568,9 @@ tabs:
             return: !object {"children": ["Melissa"]}
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
+            input_files:
+              - path: "data29.txt"
+                content: !path "data/data29.txt"
           - expression:
               javascript: 'relations29["Ali"]'
             return: !object {"children": ["Genevieve", "Jasmine", "Morgan"], "mother": "Madalyn", "father": "Brandon"}
@@ -501,6 +588,9 @@ tabs:
             return: !object {"children": ["Mathias", "Tessa"], "mother": "Logan", "father": "Giovanny"}
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
+            input_files:
+              - path: "data30.txt"
+                content: !path "data/data30.txt"
           - expression:
               javascript: 'relations30["Allan"]'
             return: !object {"children": ["Alexis", "Jazlyn", "Quincy"], "mother": "Paulina", "father": "Kieran"}
@@ -518,6 +608,9 @@ tabs:
             return: !object {"children": ["Danna", "Rashad"]}
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
+            input_files:
+              - path: "data31.txt"
+                content: !path "data/data31.txt"
           - expression:
               javascript: 'relations31["Aliana"]'
             return: !object {"mother": "Sage", "father": "Howard"}
@@ -535,6 +628,9 @@ tabs:
             return: !object {"mother": "Alisa", "father": "Nickolas", "children": ["Aliana", "Anahi", "Gordon"]}
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
+            input_files:
+              - path: "data32.txt"
+                content: !path "data/data32.txt"
           - expression:
               javascript: 'relations32["Leon"]'
             return: !object {"children": ["Asa", "Lexie", "Maddox"], "mother": "Patricia", "father": "Jakobe"}
@@ -552,6 +648,9 @@ tabs:
             return: !object {"mother": "Janelle", "father": "Justus", "children": ["Jayda", "Rhys", "Selah"]}
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
+            input_files:
+              - path: "data33.txt"
+                content: !path "data/data33.txt"
           - expression:
               javascript: 'relations33["Koen"]'
             return: !object {"children": ["Eden"]}
@@ -569,6 +668,9 @@ tabs:
             return: !object {"children": ["Harrison", "Matias"], "mother": "Olive", "father": "Damon"}
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
+            input_files:
+              - path: "data34.txt"
+                content: !path "data/data34.txt"
           - expression:
               javascript: 'relations34["Paulina"]'
             return: !object {"mother": "Courtney", "father": "Leonidas"}
@@ -586,6 +688,9 @@ tabs:
             return: !object {"mother": "Courtney", "father": "Leonidas"}
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
+            input_files:
+              - path: "data35.txt"
+                content: !path "data/data35.txt"
           - expression:
               javascript: 'relations35["Martin"]'
             return: !object {"children": ["Madelyn", "Melany"], "mother": "Amina", "father": "Rigoberto"}
@@ -603,6 +708,9 @@ tabs:
             return: !object {"children": ["Martin", "Rachael"]}
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
+            input_files:
+              - path: "data36.txt"
+                content: !path "data/data36.txt"
           - expression:
               javascript: 'relations36["Deshawn"]'
             return: !object {"mother": "Brianna", "father": "Adrien", "children": ["Janiya", "Laura"]}
@@ -620,6 +728,9 @@ tabs:
             return: !object {"mother": "Elle", "father": "Deshawn"}
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
+            input_files:
+              - path: "data37.txt"
+                content: !path "data/data37.txt"
           - expression:
               javascript: 'relations37["Alonso"]'
             return: !object {"mother": "Kinley", "father": "Isaiah", "children": ["Kendal"]}
@@ -637,6 +748,9 @@ tabs:
             return: !object {"mother": "Chana", "father": "Erik"}
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
+            input_files:
+              - path: "data38.txt"
+                content: !path "data/data38.txt"
           - expression:
               javascript: 'relations38["Noe"]'
             return: !object {"children": ["Cristofer"]}
@@ -654,6 +768,9 @@ tabs:
             return: !object {"mother": "Autumn", "father": "Jaime"}
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
+            input_files:
+              - path: "data39.txt"
+                content: !path "data/data39.txt"
           - expression:
               javascript: 'relations39["Catalina"]'
             return: !object {"mother": "Karina", "father": "Ricardo"}
@@ -671,6 +788,9 @@ tabs:
             return: !object {"mother": "Aliya", "father": "Ronan"}
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
+            input_files:
+              - path: "data40.txt"
+                content: !path "data/data40.txt"
           - expression:
               javascript: 'relations40["Emmett"]'
             return: !object {"children": ["Marc"]}
@@ -688,6 +808,9 @@ tabs:
             return: !object {"children": ["Haylie", "Nicole"]}
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
+            input_files:
+              - path: "data41.txt"
+                content: !path "data/data41.txt"
           - expression:
               javascript: 'relations41["Jerry"]'
             return: !object {"children": ["Heath", "Nadia"], "mother": "Skye", "father": "Ronald"}
@@ -705,6 +828,9 @@ tabs:
             return: !object {"children": ["Jerry"], "mother": "Presley", "father": "Greyson"}
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
+            input_files:
+              - path: "data42.txt"
+                content: !path "data/data42.txt"
           - expression:
               javascript: 'relations42["Talan"]'
             return: !object {"mother": "Edith", "father": "Roman", "children": ["Bruno", "Lizeth"]}
@@ -722,6 +848,9 @@ tabs:
             return: !object {"mother": "Edith", "father": "Roman", "children": ["Bruno", "Lizeth"]}
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
+            input_files:
+              - path: "data43.txt"
+                content: !path "data/data43.txt"
           - expression:
               javascript: 'relations43["Cali"]'
             return: !object {"children": ["Hayden"], "mother": "Josephine", "father": "Ethen"}
@@ -739,6 +868,9 @@ tabs:
             return: !object {"mother": "Adelyn", "father": "Memphis", "children": ["Cali"]}
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
+            input_files:
+              - path: "data44.txt"
+                content: !path "data/data44.txt"
           - expression:
               javascript: 'relations44["Elsa"]'
             return: !object {"children": ["Trevon"], "mother": "Arabella", "father": "Wayne"}
@@ -756,6 +888,9 @@ tabs:
             return: !object {"children": ["Gael", "Teagan"], "mother": "Lilly", "father": "Jon"}
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
+            input_files:
+              - path: "data45.txt"
+                content: !path "data/data45.txt"
           - expression:
               javascript: 'relations45["Bryce"]'
             return: !object {"children": ["Alice", "Sabrina"]}
@@ -773,6 +908,9 @@ tabs:
             return: !object {"children": ["Alice", "Sabrina"]}
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
+            input_files:
+              - path: "data46.txt"
+                content: !path "data/data46.txt"
           - expression:
               javascript: 'relations46["Paola"]'
             return: !object {"mother": "Paris", "father": "Enzo"}
@@ -790,6 +928,9 @@ tabs:
             return: !object {"children": ["Angelica", "Paola"], "mother": "Veronica", "father": "Justus"}
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
+            input_files:
+              - path: "data47.txt"
+                content: !path "data/data47.txt"
           - expression:
               javascript: 'relations47["Marilyn"]'
             return: !object {"children": ["Desirae", "Lauryn"], "mother": "Evelin", "father": "Seamus"}
@@ -807,6 +948,9 @@ tabs:
             return: !object {"children": ["Desirae", "Lauryn"], "mother": "Evelin", "father": "Seamus"}
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
+            input_files:
+              - path: "data48.txt"
+                content: !path "data/data48.txt"
           - expression:
               javascript: 'relations48["Addisyn"]'
             return: !object {"children": ["Alexa"], "mother": "Juliet", "father": "Ryker"}
@@ -824,6 +968,9 @@ tabs:
             return: !object {"mother": "Ashlee", "father": "Reece", "children": ["Zara"]}
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
+            input_files:
+              - path: "data49.txt"
+                content: !path "data/data49.txt"
           - expression:
               javascript: 'relations49["Gisselle"]'
             return: !object {"children": ["Rubi"]}
@@ -841,6 +988,9 @@ tabs:
             return: !object {"children": ["Ashlee", "Azaria"], "mother": "Gisselle", "father": "Tyshawn"}
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
+            input_files:
+              - path: "data50.txt"
+                content: !path "data/data50.txt"
           - expression:
               javascript: 'relations50["Derrick"]'
             return: !object {"children": ["Koen"], "mother": "Jenny", "father": "Kellen"}
@@ -860,403 +1010,703 @@ tabs:
     contexts:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
+            input_files:
+              - path: "data1.txt"
+                content: !path "data/data1.txt"
           - expression: 'ancestor("Aidan", "mor", relations1)'
             return: "Belinda"
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
+            input_files:
+              - path: "data2.txt"
+                content: !path "data/data2.txt"
           - expression: 'ancestor("Cortez", "far", relations2)'
             return: "Nicolas"
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
+            input_files:
+              - path: "data3.txt"
+                content: !path "data/data3.txt"
           - expression: 'ancestor("Alejandra", "far", relations3)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations4: object = familyMembers("data4.txt")'
+            input_files:
+              - path: "data4.txt"
+                content: !path "data/data4.txt"
           - expression: 'ancestor("Aliya", "far", relations4)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations5: object = familyMembers("data5.txt")'
+            input_files:
+              - path: "data5.txt"
+                content: !path "data/data5.txt"
           - expression: 'ancestor("Landyn", "mor", relations5)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations6: object = familyMembers("data6.txt")'
+            input_files:
+              - path: "data6.txt"
+                content: !path "data/data6.txt"
           - expression: 'ancestor("Lillianna", "mor", relations6)'
             return: "Valerie"
       - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
+            input_files:
+              - path: "data7.txt"
+                content: !path "data/data7.txt"
           - expression: 'ancestor("Zaid", "far", relations7)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
+            input_files:
+              - path: "data8.txt"
+                content: !path "data/data8.txt"
           - expression: 'ancestor("Pierce", "mor", relations8)'
             return: "Zoey"
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
+            input_files:
+              - path: "data9.txt"
+                content: !path "data/data9.txt"
           - expression: 'ancestor("Vivian", "mor", relations9)'
             return: "Jayden"
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
+            input_files:
+              - path: "data10.txt"
+                content: !path "data/data10.txt"
           - expression: 'ancestor("Shamar", "far", relations10)'
             return: "Connor"
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
+            input_files:
+              - path: "data11.txt"
+                content: !path "data/data11.txt"
           - expression: 'ancestor("Gage", "mor", relations11)'
             return: "Yamilet"
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
+            input_files:
+              - path: "data12.txt"
+                content: !path "data/data12.txt"
           - expression: 'ancestor("Ramiro", "mor", relations12)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
+            input_files:
+              - path: "data13.txt"
+                content: !path "data/data13.txt"
           - expression: 'ancestor("Asa", "far", relations13)'
             return: "Kaden"
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
+            input_files:
+              - path: "data14.txt"
+                content: !path "data/data14.txt"
           - expression: 'ancestor("Talon", "mor", relations14)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
+            input_files:
+              - path: "data15.txt"
+                content: !path "data/data15.txt"
           - expression: 'ancestor("Cristofer", "far", relations15)'
             return: "Arnav"
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
+            input_files:
+              - path: "data16.txt"
+                content: !path "data/data16.txt"
           - expression: 'ancestor("Giovanna", "mor", relations16)'
             return: "Leslie"
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
+            input_files:
+              - path: "data17.txt"
+                content: !path "data/data17.txt"
           - expression: 'ancestor("Jasmine", "mor", relations17)'
             return: "Johanna"
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
+            input_files:
+              - path: "data18.txt"
+                content: !path "data/data18.txt"
           - expression: 'ancestor("Elisabeth", "mor", relations18)'
             return: "Eleanor"
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
+            input_files:
+              - path: "data19.txt"
+                content: !path "data/data19.txt"
           - expression: 'ancestor("Brent", "far", relations19)'
             return: "Nolan"
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
+            input_files:
+              - path: "data20.txt"
+                content: !path "data/data20.txt"
           - expression: 'ancestor("Kenya", "mor", relations20)'
             return: "Arely"
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
+            input_files:
+              - path: "data21.txt"
+                content: !path "data/data21.txt"
           - expression: 'ancestor("Roselyn", "mormor", relations21)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
+            input_files:
+              - path: "data22.txt"
+                content: !path "data/data22.txt"
           - expression: 'ancestor("Preston", "far", relations22)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
+            input_files:
+              - path: "data23.txt"
+                content: !path "data/data23.txt"
           - expression: 'ancestor("Kylie", "far", relations23)'
             return: "Brooks"
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
+            input_files:
+              - path: "data24.txt"
+                content: !path "data/data24.txt"
           - expression: 'ancestor("Angelina", "far", relations24)'
             return: "Jackson"
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
+            input_files:
+              - path: "data25.txt"
+                content: !path "data/data25.txt"
           - expression: 'ancestor("Jayvion", "farmor", relations25)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
+            input_files:
+              - path: "data26.txt"
+                content: !path "data/data26.txt"
           - expression: 'ancestor("Liana", "morfar", relations26)'
             return: "Irvin"
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
+            input_files:
+              - path: "data27.txt"
+                content: !path "data/data27.txt"
           - expression: 'ancestor("Giana", "mor", relations27)'
             return: "Willow"
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
+            input_files:
+              - path: "data28.txt"
+                content: !path "data/data28.txt"
           - expression: 'ancestor("Malakai", "mor", relations28)'
             return: "Penelope"
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
+            input_files:
+              - path: "data29.txt"
+                content: !path "data/data29.txt"
           - expression: 'ancestor("Jayvon", "farfar", relations29)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
+            input_files:
+              - path: "data30.txt"
+                content: !path "data/data30.txt"
           - expression: 'ancestor("Rashad", "mor", relations30)'
             return: "Skylar"
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
+            input_files:
+              - path: "data31.txt"
+                content: !path "data/data31.txt"
           - expression: 'ancestor("Teagan", "mor", relations31)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
+            input_files:
+              - path: "data32.txt"
+                content: !path "data/data32.txt"
           - expression: 'ancestor("Asa", "morfar", relations32)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
+            input_files:
+              - path: "data33.txt"
+                content: !path "data/data33.txt"
           - expression: 'ancestor("Zachariah", "farfar", relations33)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
+            input_files:
+              - path: "data34.txt"
+                content: !path "data/data34.txt"
           - expression: 'ancestor("Laurel", "far", relations34)'
             return: "Leonidas"
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
+            input_files:
+              - path: "data35.txt"
+                content: !path "data/data35.txt"
           - expression: 'ancestor("Melany", "morfar", relations35)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
+            input_files:
+              - path: "data36.txt"
+                content: !path "data/data36.txt"
           - expression: 'ancestor("Adrien", "far", relations36)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
+            input_files:
+              - path: "data37.txt"
+                content: !path "data/data37.txt"
           - expression: 'ancestor("Sophie", "mor", relations37)'
             return: "Azul"
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
+            input_files:
+              - path: "data38.txt"
+                content: !path "data/data38.txt"
           - expression: 'ancestor("Shawn", "far", relations38)'
             return: "Dangelo"
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
+            input_files:
+              - path: "data39.txt"
+                content: !path "data/data39.txt"
           - expression: 'ancestor("Nehemiah", "mormor", relations39)'
             return: "Adelaide"
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
+            input_files:
+              - path: "data40.txt"
+                content: !path "data/data40.txt"
           - expression: 'ancestor("Adyson", "mor", relations40)'
             return: "Jaida"
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
+            input_files:
+              - path: "data41.txt"
+                content: !path "data/data41.txt"
           - expression: 'ancestor("Greyson", "far", relations41)'
             return: "Brenton"
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
+            input_files:
+              - path: "data42.txt"
+                content: !path "data/data42.txt"
           - expression: 'ancestor("Edith", "morfarfar", relations42)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
+            input_files:
+              - path: "data43.txt"
+                content: !path "data/data43.txt"
           - expression: 'ancestor("Rhett", "far", relations43)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
+            input_files:
+              - path: "data44.txt"
+                content: !path "data/data44.txt"
           - expression: 'ancestor("Kailee", "farmormor", relations44)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
+            input_files:
+              - path: "data45.txt"
+                content: !path "data/data45.txt"
           - expression: 'ancestor("Rocco", "mor", relations45)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
+            input_files:
+              - path: "data46.txt"
+                content: !path "data/data46.txt"
           - expression: 'ancestor("Paris", "farfar", relations46)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
+            input_files:
+              - path: "data47.txt"
+                content: !path "data/data47.txt"
           - expression: 'ancestor("Eliza", "morfar", relations47)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
+            input_files:
+              - path: "data48.txt"
+                content: !path "data/data48.txt"
           - expression: 'ancestor("Addisyn", "farfar", relations48)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
+            input_files:
+              - path: "data49.txt"
+                content: !path "data/data49.txt"
           - expression: 'ancestor("Ashlee", "far", relations49)'
             return: "Raiden"
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
+            input_files:
+              - path: "data50.txt"
+                content: !path "data/data50.txt"
           - expression: 'ancestor("Joe", "mor", relations50)'
             return: "Arielle"
   - tab: "descendants"
     contexts:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
+            input_files:
+              - path: "data1.txt"
+                content: !path "data/data1.txt"
           - expression: 'descendants("Ainsley", 2, relations1)'
             return: !object {"farmor": ["Joel", "Kadence", "Mikayla", "Zain"]}
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
+            input_files:
+              - path: "data2.txt"
+                content: !path "data/data2.txt"
           - expression: 'descendants("Cortez", 1, relations2)'
             return: !object {"far": ["Davin", "Gemma", "Talan"]}
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
+            input_files:
+              - path: "data3.txt"
+                content: !path "data/data3.txt"
           - expression: 'descendants("Steven", 1, relations3)'
             return: !object {"far": ["Alan", "Chandler"]}
       - testcases:
           - statement: 'relations4: object = familyMembers("data4.txt")'
+            input_files:
+              - path: "data4.txt"
+                content: !path "data/data4.txt"
           - expression: 'descendants("Aliya", 1, relations4)'
             return: !object {"mor": ["Iyana"]}
       - testcases:
           - statement: 'relations5: object = familyMembers("data5.txt")'
+            input_files:
+              - path: "data5.txt"
+                content: !path "data/data5.txt"
           - expression: 'descendants("Marin", 1, relations5)'
             return: !object {"mor": ["Joanna"]}
       - testcases:
           - statement: 'relations6: object = familyMembers("data6.txt")'
+            input_files:
+              - path: "data6.txt"
+                content: !path "data/data6.txt"
           - expression: 'descendants("Nasir", 1, relations6)'
             return: !object {"far": ["Lillianna"]}
       - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
+            input_files:
+              - path: "data7.txt"
+                content: !path "data/data7.txt"
           - expression: 'descendants("Carmelo", 1, relations7)'
             return: !object {"far": ["Alejandra", "Kenya", "Ray"]}
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
+            input_files:
+              - path: "data8.txt"
+                content: !path "data/data8.txt"
           - expression: 'descendants("Guillermo", 1, relations8)'
             return: !object {"far": ["Bethany", "Jordon", "Manuel", "Mario"]}
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
+            input_files:
+              - path: "data9.txt"
+                content: !path "data/data9.txt"
           - expression: 'descendants("Andreas", 1, relations9)'
             return: !object {"far": ["Nathanael", "Sammy"]}
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
+            input_files:
+              - path: "data10.txt"
+                content: !path "data/data10.txt"
           - expression: 'descendants("Victor", 1, relations10)'
             return: !object {"far": ["Augustus", "Donna", "Geovanni", "Nathalie"]}
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
+            input_files:
+              - path: "data11.txt"
+                content: !path "data/data11.txt"
           - expression: 'descendants("Yamilet", 2, relations11)'
             return: !object {"farmor": ["Aiden", "Everett", "Mario", "Semaj"]}
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
+            input_files:
+              - path: "data12.txt"
+                content: !path "data/data12.txt"
           - expression: 'descendants("Ramiro", 1, relations12)'
             return: !object {"far": ["Darion", "Kenley"]}
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
+            input_files:
+              - path: "data13.txt"
+                content: !path "data/data13.txt"
           - expression: 'descendants("Dorian", 1, relations13)'
             return: !object {"far": ["Cameron", "Cyrus", "Houston", "Travis"]}
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
+            input_files:
+              - path: "data14.txt"
+                content: !path "data/data14.txt"
           - expression: 'descendants("Steven", 1, relations14)'
             return: !object {"far": ["Paige", "Zaire"]}
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
+            input_files:
+              - path: "data15.txt"
+                content: !path "data/data15.txt"
           - expression: 'descendants("Peyton", 2, relations15)'
             return: !object {"mormor": ["Cristofer", "Elaine", "Kiana", "Ruby"], "farmor": ["Anna"]}
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
+            input_files:
+              - path: "data16.txt"
+                content: !path "data/data16.txt"
           - expression: 'descendants("Holden", 2, relations16)'
             return: !object {"farfar": ["Alfred", "Eliza", "Ishaan", "Korbin", "Larry", "Nina"], "morfar": ["Felix", "Giovanna", "Kathy", "Shannon", "Xavier", "Xzavier"]}
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
+            input_files:
+              - path: "data17.txt"
+                content: !path "data/data17.txt"
           - expression: 'descendants("Alani", 2, relations17)'
             return: !object {"mormor": ["Michelle", "Rayne"]}
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
+            input_files:
+              - path: "data18.txt"
+                content: !path "data/data18.txt"
           - expression: 'descendants("Clarissa", 2, relations18)'
             return: !object {"mormor": ["Deja", "Josie", "Selena"], "farmor": ["Amira", "Elisabeth", "Tyson"]}
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
+            input_files:
+              - path: "data19.txt"
+                content: !path "data/data19.txt"
           - expression: 'descendants("Lilah", 1, relations19)'
             return: !object {"mor": ["Clara", "Jenna", "Mason"]}
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
+            input_files:
+              - path: "data20.txt"
+                content: !path "data/data20.txt"
           - expression: 'descendants("Dalton", 1, relations20)'
             return: !object {"far": ["Kenya"]}
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
+            input_files:
+              - path: "data21.txt"
+                content: !path "data/data21.txt"
           - expression: 'descendants("Deborah", 1, relations21)'
             return: !object {"mor": ["Kyler"]}
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
+            input_files:
+              - path: "data22.txt"
+                content: !path "data/data22.txt"
           - expression: 'descendants("Nikhil", 1, relations22)'
             return: !object {"far": ["Alannah", "Deangelo"]}
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
+            input_files:
+              - path: "data23.txt"
+                content: !path "data/data23.txt"
           - expression: 'descendants("Magdalena", 1, relations23)'
             return: !object {"mor": ["Alisson"]}
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
+            input_files:
+              - path: "data24.txt"
+                content: !path "data/data24.txt"
           - expression: 'descendants("Clarissa", 1, relations24)'
             return: !object {"mor": ["Brendon", "Keagan", "Lindsay"]}
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
+            input_files:
+              - path: "data25.txt"
+                content: !path "data/data25.txt"
           - expression: 'descendants("Amina", 2, relations25)'
             return: !object {"mormor": ["Jayvion"]}
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
+            input_files:
+              - path: "data26.txt"
+                content: !path "data/data26.txt"
           - expression: 'descendants("Reese", 2, relations26)'
             return: !object {"mormor": ["Adalynn", "Lukas", "Monique"]}
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
+            input_files:
+              - path: "data27.txt"
+                content: !path "data/data27.txt"
           - expression: 'descendants("Lana", 1, relations27)'
             return: !object {"mor": ["Jaden"]}
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
+            input_files:
+              - path: "data28.txt"
+                content: !path "data/data28.txt"
           - expression: 'descendants("Hayley", 2, relations28)'
             return: !object {"mormor": ["Alec", "Nina"]}
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
+            input_files:
+              - path: "data29.txt"
+                content: !path "data/data29.txt"
           - expression: 'descendants("Ali", 1, relations29)'
             return: !object {"mor": ["Genevieve", "Jasmine", "Morgan"]}
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
+            input_files:
+              - path: "data30.txt"
+                content: !path "data/data30.txt"
           - expression: 'descendants("Keely", 1, relations30)'
             return: !object {"mor": ["Derick"]}
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
+            input_files:
+              - path: "data31.txt"
+                content: !path "data/data31.txt"
           - expression: 'descendants("Alisa", 2, relations31)'
             return: !object {"mormor": ["Aliana", "Anahi", "Gordon"]}
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
+            input_files:
+              - path: "data32.txt"
+                content: !path "data/data32.txt"
           - expression: 'descendants("Freddy", 2, relations32)'
             return: !object {"farfar": ["Rohan", "Zion"]}
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
+            input_files:
+              - path: "data33.txt"
+                content: !path "data/data33.txt"
           - expression: 'descendants("Quincy", 2, relations33)'
             return: !object {"morfar": ["Eden", "Halle"]}
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
+            input_files:
+              - path: "data34.txt"
+                content: !path "data/data34.txt"
           - expression: 'descendants("Leonidas", 1, relations34)'
             return: !object {"far": ["Laurel", "Paulina"]}
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
+            input_files:
+              - path: "data35.txt"
+                content: !path "data/data35.txt"
           - expression: 'descendants("Rigoberto", 2, relations35)'
             return: !object {"farfar": ["Madelyn", "Melany"], "morfar": ["Ashlee", "Hannah"]}
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
+            input_files:
+              - path: "data36.txt"
+                content: !path "data/data36.txt"
           - expression: 'descendants("Deshawn", 1, relations36)'
             return: !object {"far": ["Janiya", "Laura"]}
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
+            input_files:
+              - path: "data37.txt"
+                content: !path "data/data37.txt"
           - expression: 'descendants("Caitlyn", 1, relations37)'
             return: !object {"mor": ["Hezekiah", "Kylan", "Lea"]}
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
+            input_files:
+              - path: "data38.txt"
+                content: !path "data/data38.txt"
           - expression: 'descendants("Diamond", 1, relations38)'
             return: !object {"mor": ["Jaqueline"]}
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
+            input_files:
+              - path: "data39.txt"
+                content: !path "data/data39.txt"
           - expression: 'descendants("Jaylan", 1, relations39)'
             return: !object {"far": ["Miracle"]}
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
+            input_files:
+              - path: "data40.txt"
+                content: !path "data/data40.txt"
           - expression: 'descendants("Adyson", 1, relations40)'
             return: !object {"mor": ["Kyler"]}
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
+            input_files:
+              - path: "data41.txt"
+                content: !path "data/data41.txt"
           - expression: 'descendants("Greyson", 2, relations41)'
             return: !object {"farfar": ["Jerry"]}
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
+            input_files:
+              - path: "data42.txt"
+                content: !path "data/data42.txt"
           - expression: 'descendants("Kassandra", 1, relations42)'
             return: !object {"mor": ["Bruno", "Lizeth"]}
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
+            input_files:
+              - path: "data43.txt"
+                content: !path "data/data43.txt"
           - expression: 'descendants("Memphis", 1, relations43)'
             return: !object {"far": ["Ethen"]}
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
+            input_files:
+              - path: "data44.txt"
+                content: !path "data/data44.txt"
           - expression: 'descendants("Lilly", 1, relations44)'
             return: !object {"mor": ["Ahmad", "Reese"]}
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
+            input_files:
+              - path: "data45.txt"
+                content: !path "data/data45.txt"
           - expression: 'descendants("Bryce", 1, relations45)'
             return: !object {"far": ["Alice", "Sabrina"]}
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
+            input_files:
+              - path: "data46.txt"
+                content: !path "data/data46.txt"
           - expression: 'descendants("Enzo", 1, relations46)'
             return: !object {"far": ["Angelica", "Paola"]}
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
+            input_files:
+              - path: "data47.txt"
+                content: !path "data/data47.txt"
           - expression: 'descendants("Cohen", 1, relations47)'
             return: !object {"far": ["Leila"]}
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
+            input_files:
+              - path: "data48.txt"
+                content: !path "data/data48.txt"
           - expression: 'descendants("Ryker", 2, relations48)'
             return: !object {"morfar": ["Alexa"]}
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
+            input_files:
+              - path: "data49.txt"
+                content: !path "data/data49.txt"
           - expression: 'descendants("Tyshawn", 1, relations49)'
             return: !object {"far": ["Rubi"]}
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
+            input_files:
+              - path: "data50.txt"
+                content: !path "data/data50.txt"
           - expression: 'descendants("Lucy", 1, relations50)'
             return: !object {"mor": ["Malik"]}
