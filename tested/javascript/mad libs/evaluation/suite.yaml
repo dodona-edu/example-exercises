@@ -1,0 +1,184 @@
+definitions:
+  vocabulary_1: &vocabulary_1 !object
+    thing: ["war"]
+    discipline: ["geography"]
+    inhabitants: ["americans"]
+    name: ["god"]
+  vocabulary_2: &vocabulary_2 !object
+    thing: ["war", "maps", "coordinates"]
+    discipline: ["geography", "navigation", "colonisation"]
+    inhabitants: ["americans", "belgians", "martians", "germans"]
+    name: ["god", "mercator", "caesar"]
+  vocabulary_01: &vocabulary_01 !object
+    skill: ["cars", "programming", "imagination", "logic", "mathematics", "physics"]
+  vocabulary_02: &vocabulary_02 !object
+    adjective: ["clever", "wise", "skillful", "witty", "clumsy", "stupid", "dull", "smart"]
+  vocabulary_03: &vocabulary_03 !object
+    adjective: ["true", "false"]
+    noun: ["idiot", "genius", "scientist"]
+    pronoun: ["nothing", "everything", "nada", "something"]
+  vocabulary_04: &vocabulary_04 !object
+    country: ["belgium", "malaysia", "greenland", "america"]
+    direction: ["right", "left"]
+  vocabulary_05: &vocabulary_05 !object
+    adjective: ["pleasant", "nasty", "clever", "pretty"]
+    verb: ["work", "eat", "drive"]
+    noun: ["girl", "goat", "cow", "man"]
+  unknown_category: &unknown_category
+    message: "unknown category"
+    types:
+      javascript: "MadLibsError"
+tabs:
+  - tab: "MadLibs (1)"
+    contexts:
+      - testcases:
+          - statement: "madlib = MadLibs()"
+          - expression:
+              javascript: "({...madlib})"
+            description:
+              description: "madlib"
+              format: "javascript"
+            return: !object {"vocabulary": !object {}}
+          - expression: 'madlib.learn("name", "god")'
+          - expression: 'madlib.learn("thing", "war")'
+          - expression: 'madlib.learn("inhabitants", "Americans")'
+          - expression: 'madlib.learn("discipline", "geography")'
+          - expression: "madlib.vocabulary"
+            return: *vocabulary_1
+          - expression: 'madlib.suggest("name")'
+            return: "god"
+          - expression: 'madlib.suggest("NAME")'
+            return: "GOD"
+          - expression: 'madlib.suggest("Name")'
+            return: "God"
+          - expression: 'madlib.suggest("NaMe")'
+            return: "god"
+          - expression: 'madlib.fill("_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.")'
+            return: !oracle
+              value: "God created war so that AMERICANS would learn geography."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.", *vocabulary_1]
+          - expression: 'madlib.learn("name", ["Mercator", "Caesar"])'
+          - expression: 'madlib.learn("thing", ["maps", "coordinates"])'
+          - expression: 'madlib.learn("inhabitants", ["Belgians", "Martians", "Germans"])'
+          - expression: 'madlib.learn("discipline", "navigation")'
+          - expression: 'madlib.learn("discipline", "colonisation")'
+          - expression: "madlib.vocabulary"
+            return: *vocabulary_2
+          - expression: 'madlib.suggest("name")'
+            return: !oracle
+              value: "god"
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_name_", *vocabulary_2]
+          - expression: 'madlib.suggest("NAME")'
+            return: !oracle
+              value: "GOD"
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_NAME_", *vocabulary_2]
+          - expression: 'madlib.suggest("Name")'
+            return: !oracle
+              value: "God"
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_Name_", *vocabulary_2]
+          - expression: 'madlib.suggest("NaMe")'
+            return: !oracle
+              value: "god"
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_NaMe_", *vocabulary_2]
+          - expression: 'madlib.fill("_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.")'
+            return: !oracle
+              value: "Caesar created coordinates so that AMERICANS would learn geography."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.", *vocabulary_2]
+          - expression: 'madlib.fill("_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.")'
+            return: !oracle
+              value: "Caesar created coordinates so that AMERICANS would learn geography."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_Name_ created _thing_ so that _INHABITANTS_ would learn _DIScipline_.", *vocabulary_2]
+          - expression: "madlib.vocabulary"
+            return: *vocabulary_2
+          - expression: 'madlib.suggest("country")'
+            exception: *unknown_category
+          - expression: 'madlib.fill("_INHABITANTS_ live in _Country_.")'
+            exception: *unknown_category
+  - tab: "MadLibs (2)"
+    contexts:
+      - testcases:
+          - statement: "madlib01 = MadLibs()"
+          - expression: 'madlib01.learn("skill", ["cars", "programming", "imagination", "logic", "mathematics", "physics"])'
+          - expression: "madlib01.vocabulary"
+            return: *vocabulary_01
+          - expression: 'madlib01.fill("_Skill_ will get you from A to Z; _skill_ will get you everywhere.")'
+            return: !oracle
+              value: "Cars will get you from A to Z; programming will get you everywhere."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["_Skill_ will get you from A to Z; _skill_ will get you everywhere.", *vocabulary_01]
+      - testcases:
+          - statement: "madlib02 = MadLibs()"
+          - expression: 'madlib02.learn("adjective", ["clever", "wise", "skillful", "witty", "clumsy", "stupid", "dull", "smart"])'
+          - expression: "madlib02.vocabulary"
+            return: *vocabulary_02
+          - expression: 'madlib02.fill("A _adjective_ person solves a problem. A _adjective_ person avoids it.")'
+            return: !oracle
+              value: "A clumsy person solves a problem. A stupid person avoids it."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["A _adjective_ person solves a problem. A _adjective_ person avoids it.", *vocabulary_02]
+      - testcases:
+          - statement: "madlib03 = MadLibs()"
+          - expression: 'madlib03.learn("adjective", ["True", "FALSE"])'
+          - expression: 'madlib03.learn("NOUN", ["iDioT", "GENIUS", "Scientist"])'
+          - expression: 'madlib03.learn("Pronoun", ["Nothing", "Everything", "nAdA", "SoMeThInG"])'
+          - expression: "madlib03.vocabulary"
+            return: *vocabulary_03
+          - expression: 'madlib03.fill("A _ADJECTIVE_ _noun_ admits that he knows _PROnoun_.")'
+            return: !oracle
+              value: "A TRUE idiot admits that he knows something."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["A _ADJECTIVE_ _noun_ admits that he knows _PROnoun_.", *vocabulary_03]
+      - testcases:
+          - statement: "madlib04 = MadLibs()"
+          - expression: 'madlib04.learn("country", ["belgium", "malaysia", "greenland", "america"])'
+          - expression: 'madlib04.learn("direction", ["right", "left"])'
+          - expression: "madlib04.vocabulary"
+            return: *vocabulary_04
+          - expression: 'madlib04.fill("How do you find _Country_? Turn _direction_ at _Country_.")'
+            return: !oracle
+              value: "How do you find Greenland? Turn right at America."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["How do you find _Country_? Turn _direction_ at _Country_.", *vocabulary_04]
+      - testcases:
+          - statement: "madlib05 = MadLibs()"
+          - expression: 'madlib05.learn("adjective", ["pleasant", "nasty", "clever", "pretty"])'
+          - expression: 'madlib05.learn("noun", ["girl", "goat", "cow", "man"])'
+          - expression: 'madlib05.learn("verb", ["work", "eat", "drive"])'
+          - expression: "madlib05.vocabulary"
+            return: *vocabulary_05
+          - expression: 'madlib05.fill("Any _noun_ who can _verb_ safely while kissing a _adjective_ _noun_ is simply not giving the kiss the attention it deserves.")'
+            return: !oracle
+              value: "Any goat who can eat safely while kissing a pretty cow is simply not giving the kiss the attention it deserves."
+              oracle: "custom_check"
+              file: "evaluator.py"
+              name: "check_mad_libs"
+              arguments: ["Any _noun_ who can _verb_ safely while kissing a _adjective_ _noun_ is simply not giving the kiss the attention it deserves.", *vocabulary_05]

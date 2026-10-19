@@ -1,0 +1,12 @@
+- tab: "echo"
+  testcases:
+    - expression: "echo(5)"
+      return: 5
+    - expression: "echo(4)"
+      return: 4
+    - expression: 'echo("4")'
+      return: "4"
+    - expression: "echo(True)"
+      return: true
+    - expression: 'echo("Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.")'
+      return: "Twinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky."

@@ -1,10 +1,9 @@
 {
   "description": {
     "names": {
-      "nl": "Echo",
-      "en": "Echo"
+      "en": "Mad Libs",
+      "nl": "Mad Libs"
     }
   },
-  "evaluation": {},
   "labels": []
 }
