@@ -9,1254 +9,1254 @@ tabs:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
           - expression:
-              javascript: 'relations1["Braeden"]'
-            return: !object {"children": ["Ayaan", "Bradley", "Donavan", "Ernesto"]}
+              javascript: 'relations1["Joel"]'
+            return: !object {"mother": "Paloma", "father": "Bruce"}
           - expression:
-              javascript: 'relations1["Gerardo"]'
-            return: !object {"father": "Branden", "mother": "Diego"}
+              javascript: 'relations1["Keshawn"]'
+            return: !object {"mother": "Lacey", "father": "Aidan", "children": ["Ismael", "Marquise", "Ray", "Sofia"]}
           - expression:
-              javascript: 'relations1["Gerardo"]'
-            return: !object {"father": "Branden", "mother": "Diego"}
+              javascript: 'relations1["Ray"]'
+            return: !object {"mother": "Claudia", "father": "Keshawn"}
           - expression:
-              javascript: 'relations1["Kylan"]'
-            return: !object {"children": ["Geovanni", "Glenn", "Zechariah"], "father": "Ean", "mother": "Cassius"}
+              javascript: 'relations1["Ray"]'
+            return: !object {"mother": "Claudia", "father": "Keshawn"}
           - expression:
-              javascript: 'relations1["Timothy"]'
-            return: !object {"father": "Reid", "mother": "Marquis"}
+              javascript: 'relations1["Marquise"]'
+            return: !object {"mother": "Claudia", "father": "Keshawn"}
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
           - expression:
-              javascript: 'relations2["Glenn"]'
-            return: !object {"father": "Kylan", "mother": "Julien"}
+              javascript: 'relations2["Kelsie"]'
+            return: !object {"children": ["Cortez"]}
           - expression:
-              javascript: 'relations2["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations2["Cortez"]'
+            return: !object {"children": ["Davin", "Gemma", "Talan"], "mother": "Kelsie", "father": "Nicolas"}
           - expression:
-              javascript: 'relations2["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations2["Cortez"]'
+            return: !object {"children": ["Davin", "Gemma", "Talan"], "mother": "Kelsie", "father": "Nicolas"}
           - expression:
-              javascript: 'relations2["Mohammad"]'
-            return: !object {"children": ["Zechariah"]}
+              javascript: 'relations2["Macy"]'
+            return: !object {"children": ["Davin", "Gemma", "Talan"]}
           - expression:
-              javascript: 'relations2["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations2["Kelsie"]'
+            return: !object {"children": ["Cortez"]}
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
           - expression:
-              javascript: 'relations3["Jamie"]'
-            return: !object {"children": ["Clay", "Glenn", "Lucian"]}
+              javascript: 'relations3["Janiyah"]'
+            return: !object {"mother": "Maria", "father": "Jameson", "children": ["Braylon", "Johnathon"]}
           - expression:
-              javascript: 'relations3["Jamie"]'
-            return: !object {"children": ["Clay", "Glenn", "Lucian"]}
+              javascript: 'relations3["Adrianna"]'
+            return: !object {"mother": "Aryana", "father": "Johnathon"}
           - expression:
-              javascript: 'relations3["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Jamie"}
+              javascript: 'relations3["Stanley"]'
+            return: !object {"children": ["Christine", "Jamarion"], "mother": "Alejandra", "father": "Krish"}
           - expression:
-              javascript: 'relations3["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Jamie"}
+              javascript: 'relations3["Belinda"]'
+            return: !object {"children": ["Christine", "Jamarion"]}
           - expression:
-              javascript: 'relations3["Rex"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations3["Andrew"]'
+            return: !object {"children": ["Carsen", "Kaliyah", "Mekhi"], "mother": "Alejandra", "father": "Krish"}
       - testcases:
           - statement: 'relations4: object = familyMembers("data4.txt")'
           - expression:
-              javascript: 'relations4["Nasir"]'
-            return: !object {"children": ["Donavan", "Ernesto", "Geovanni", "Zechariah"]}
+              javascript: 'relations4["Rayan"]'
+            return: !object {"mother": "Iyana", "father": "Arjun"}
           - expression:
-              javascript: 'relations4["Kylan"]'
-            return: !object {"children": ["Donavan", "Ernesto", "Geovanni", "Zechariah"], "father": "Ean", "mother": "Zane"}
+              javascript: 'relations4["Iyana"]'
+            return: !object {"children": ["Marina", "Rayan", "Rylan"], "mother": "Aliya", "father": "Deshawn"}
           - expression:
-              javascript: 'relations4["Zechariah"]'
-            return: !object {"father": "Kylan", "mother": "Nasir", "children": ["Bradley"]}
+              javascript: 'relations4["Deshawn"]'
+            return: !object {"children": ["Iyana"]}
           - expression:
-              javascript: 'relations4["Alijah"]'
-            return: !object {"father": "Titus", "mother": "Andreas"}
+              javascript: 'relations4["Rylan"]'
+            return: !object {"mother": "Iyana", "father": "Arjun"}
           - expression:
-              javascript: 'relations4["Clay"]'
-            return: !object {"children": ["Titus"], "father": "Ean", "mother": "Zane"}
+              javascript: 'relations4["Deshawn"]'
+            return: !object {"children": ["Iyana"]}
       - testcases:
           - statement: 'relations5: object = familyMembers("data5.txt")'
           - expression:
-              javascript: 'relations5["Reid"]'
-            return: !object {"father": "Lucian", "mother": "Darien", "children": ["Titus"]}
+              javascript: 'relations5["Darryl"]'
+            return: !object {"mother": "Laci", "father": "Yael", "children": ["Adrianna"]}
           - expression:
-              javascript: 'relations5["Clay"]'
-            return: !object {"children": ["Geovanni", "Zechariah"], "father": "Ean", "mother": "Kamren"}
+              javascript: 'relations5["Dario"]'
+            return: !object {"mother": "Sidney", "father": "Ethen"}
           - expression:
-              javascript: 'relations5["Lucian"]'
-            return: !object {"children": ["Jamal", "Reid"], "father": "Ean", "mother": "Kamren"}
+              javascript: 'relations5["Ethen"]'
+            return: !object {"children": ["Alessandra", "Dario", "Elianna", "Jameson"]}
           - expression:
-              javascript: 'relations5["Lucian"]'
-            return: !object {"children": ["Jamal", "Reid"], "father": "Ean", "mother": "Kamren"}
+              javascript: 'relations5["Sidney"]'
+            return: !object {"children": ["Alessandra", "Dario", "Elianna", "Jameson"], "mother": "Deborah", "father": "Max"}
           - expression:
-              javascript: 'relations5["Lucian"]'
-            return: !object {"children": ["Jamal", "Reid"], "father": "Ean", "mother": "Kamren"}
+              javascript: 'relations5["Max"]'
+            return: !object {"children": ["Lyla", "Marin", "Seth", "Sidney"]}
       - testcases:
           - statement: 'relations6: object = familyMembers("data6.txt")'
           - expression:
-              javascript: 'relations6["Geovanni"]'
-            return: !object {"father": "Clay", "mother": "Levi"}
-          - expression:
               javascript: 'relations6["Kylan"]'
-            return: !object {"children": ["Clay", "Glenn", "Lucian"], "father": "Ean", "mother": "Steve"}
+            return: !object {"children": ["Hayley", "Lauren"]}
           - expression:
-              javascript: 'relations6["Kamden"]'
-            return: !object {"children": ["Clay", "Glenn", "Lucian"]}
+              javascript: 'relations6["Lauren"]'
+            return: !object {"mother": "Natalya", "father": "Kylan", "children": ["Kennedi", "Taliyah", "Theresa"]}
           - expression:
-              javascript: 'relations6["Geovanni"]'
-            return: !object {"father": "Clay", "mother": "Levi"}
+              javascript: 'relations6["Osvaldo"]'
+            return: !object {"children": ["Alondra", "Avery", "Humberto"], "mother": "Rory", "father": "Urijah"}
           - expression:
-              javascript: 'relations6["Triston"]'
-            return: !object {"children": ["Donavan"]}
+              javascript: 'relations6["Lauren"]'
+            return: !object {"mother": "Natalya", "father": "Kylan", "children": ["Kennedi", "Taliyah", "Theresa"]}
+          - expression:
+              javascript: 'relations6["Rory"]'
+            return: !object {"children": ["Osvaldo"]}
       - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
           - expression:
-              javascript: 'relations7["Kylan"]'
-            return: !object {"children": ["Geovanni", "Glenn", "Zechariah"], "father": "Ean", "mother": "Kai"}
+              javascript: 'relations7["Ciara"]'
+            return: !object {"children": ["Willow"], "mother": "Madelynn", "father": "Trenton"}
           - expression:
-              javascript: 'relations7["Lucian"]'
-            return: !object {"children": ["Brennan", "Gerardo", "Nathanael", "Rodolfo"], "father": "Ean", "mother": "Kai"}
+              javascript: 'relations7["Carmelo"]'
+            return: !object {"children": ["Alejandra", "Kenya", "Ray"], "mother": "Madelynn", "father": "Trenton"}
           - expression:
-              javascript: 'relations7["Ayaan"]'
-            return: !object {"father": "Geovanni", "mother": "Luke"}
+              javascript: 'relations7["Kenya"]'
+            return: !object {"mother": "Kenzie", "father": "Carmelo"}
           - expression:
-              javascript: 'relations7["Gerardo"]'
-            return: !object {"father": "Lucian", "mother": "Phoenix"}
+              javascript: 'relations7["Willow"]'
+            return: !object {"mother": "Ciara", "father": "Elvis"}
           - expression:
-              javascript: 'relations7["Zechariah"]'
-            return: !object {"father": "Kylan", "mother": "Riley", "children": ["Donavan"]}
+              javascript: 'relations7["Luna"]'
+            return: !object {"children": ["Hallie", "Houston", "Virginia"]}
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
           - expression:
-              javascript: 'relations8["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Rodney"}
+              javascript: 'relations8["Jordon"]'
+            return: !object {"mother": "Ayla", "father": "Guillermo", "children": ["Joe", "Marley"]}
           - expression:
-              javascript: 'relations8["Rodney"]'
-            return: !object {"children": ["Clay"]}
+              javascript: 'relations8["Guillermo"]'
+            return: !object {"children": ["Bethany", "Jordon", "Manuel", "Mario"], "mother": "Angel", "father": "Elian"}
           - expression:
-              javascript: 'relations8["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Rodney"}
+              javascript: 'relations8["Taylor"]'
+            return: !object {"children": ["Joe", "Marley"]}
           - expression:
-              javascript: 'relations8["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations8["Ayla"]'
+            return: !object {"children": ["Bethany", "Jordon", "Manuel", "Mario"]}
           - expression:
-              javascript: 'relations8["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Marc", "children": ["Clay"]}
+              javascript: 'relations8["Cristofer"]'
+            return: !object {"mother": "Zoey", "father": "Manuel"}
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
           - expression:
-              javascript: 'relations9["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Ulises", "children": ["Clay", "Lucian"]}
+              javascript: 'relations9["Vivian"]'
+            return: !object {"mother": "Jayden", "father": "Sammy"}
           - expression:
-              javascript: 'relations9["Geovanni"]'
-            return: !object {"father": "Clay", "mother": "Quincy"}
+              javascript: 'relations9["Andreas"]'
+            return: !object {"mother": "Melanie", "father": "Ronan", "children": ["Nathanael", "Sammy"]}
           - expression:
-              javascript: 'relations9["Killian"]'
-            return: !object {"children": ["Clay", "Lucian"]}
+              javascript: 'relations9["Ronan"]'
+            return: !object {"children": ["Andreas"]}
           - expression:
-              javascript: 'relations9["Quincy"]'
-            return: !object {"children": ["Donavan", "Geovanni", "Glenn", "Zechariah"]}
+              javascript: 'relations9["Sammy"]'
+            return: !object {"children": ["Amina", "Helena", "Sierra", "Vivian"], "mother": "Sabrina", "father": "Andreas"}
           - expression:
-              javascript: 'relations9["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Ulises", "children": ["Clay", "Lucian"]}
+              javascript: 'relations9["Amina"]'
+            return: !object {"mother": "Jayden", "father": "Sammy"}
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
           - expression:
-              javascript: 'relations10["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Julien", "children": ["Ayaan", "Bradley", "Jamal"]}
+              javascript: 'relations10["Karissa"]'
+            return: !object {"mother": "Donna", "father": "Mason"}
           - expression:
-              javascript: 'relations10["Ayaan"]'
-            return: !object {"father": "Lucian", "mother": "James"}
+              javascript: 'relations10["Mason"]'
+            return: !object {"children": ["Cade", "Karissa"]}
           - expression:
-              javascript: 'relations10["Mitchell"]'
-            return: !object {"children": ["Branden", "Landin", "Reid"]}
+              javascript: 'relations10["Estrella"]'
+            return: !object {"mother": "Harley", "father": "Rene"}
           - expression:
-              javascript: 'relations10["Glenn"]'
-            return: !object {"father": "Kylan", "mother": "Julien", "children": ["Branden", "Landin", "Reid"]}
+              javascript: 'relations10["Augustus"]'
+            return: !object {"children": ["Louis", "Maryjane"], "mother": "Rosemary", "father": "Victor"}
           - expression:
-              javascript: 'relations10["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations10["Diana"]'
+            return: !object {"mother": "Nathalie", "father": "Walker"}
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
           - expression:
-              javascript: 'relations11["Donavan"]'
-            return: !object {"children": ["Donavan", "Ernesto", "Geovanni", "Zechariah"], "father": "Glenn", "mother": "Donavan"}
+              javascript: 'relations11["Mario"]'
+            return: !object {"mother": "Jamya", "father": "Gage"}
           - expression:
-              javascript: 'relations11["Clay"]'
-            return: !object {"children": ["Bradley"], "father": "Ean", "mother": "Ishaan"}
+              javascript: 'relations11["Jaqueline"]'
+            return: !object {"mother": "Noemi", "father": "Everett"}
           - expression:
-              javascript: 'relations11["Jamal"]'
-            return: !object {"father": "Lucian", "mother": "Reid"}
+              javascript: 'relations11["Noemi"]'
+            return: !object {"children": ["Clarissa", "Jaqueline"]}
           - expression:
-              javascript: 'relations11["Ayaan"]'
-            return: !object {"father": "Bradley", "mother": "Bradley"}
+              javascript: 'relations11["Jaqueline"]'
+            return: !object {"mother": "Noemi", "father": "Everett"}
           - expression:
-              javascript: 'relations11["Ishaan"]'
-            return: !object {"children": ["Clay", "Kylan", "Lucian"]}
+              javascript: 'relations11["Benjamin"]'
+            return: !object {"mother": "Ingrid", "father": "Semaj"}
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
           - expression:
-              javascript: 'relations12["Kason"]'
-            return: !object {"children": ["Ayaan", "Bradley", "Ernesto"]}
+              javascript: 'relations12["Gabriella"]'
+            return: !object {"mother": "Alana", "father": "Isiah", "children": ["Mylee", "Trevor"]}
           - expression:
-              javascript: 'relations12["Titus"]'
-            return: !object {"father": "Bradley", "mother": "Cale"}
+              javascript: 'relations12["Maxwell"]'
+            return: !object {"children": ["Alana", "Virginia"]}
           - expression:
-              javascript: 'relations12["Glenn"]'
-            return: !object {"father": "Kylan", "mother": "Winston", "children": ["Donavan", "Geovanni", "Zechariah"]}
+              javascript: 'relations12["Ramiro"]'
+            return: !object {"children": ["Darion", "Kenley"]}
           - expression:
-              javascript: 'relations12["Bradley"]'
-            return: !object {"children": ["Branden", "Landin", "Reid", "Titus"], "father": "Clay", "mother": "Kason"}
+              javascript: 'relations12["Virginia"]'
+            return: !object {"mother": "Maleah", "father": "Maxwell", "children": ["Peyton"]}
           - expression:
-              javascript: 'relations12["Bradley"]'
-            return: !object {"children": ["Branden", "Landin", "Reid", "Titus"], "father": "Clay", "mother": "Kason"}
+              javascript: 'relations12["Virginia"]'
+            return: !object {"mother": "Maleah", "father": "Maxwell", "children": ["Peyton"]}
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
           - expression:
-              javascript: 'relations13["Clay"]'
-            return: !object {"children": ["Donavan", "Geovanni", "Glenn", "Zechariah"], "father": "Ean", "mother": "Milo"}
+              javascript: 'relations13["Asa"]'
+            return: !object {"children": ["Joaquin", "Rex"], "mother": "Melany", "father": "Kaden"}
           - expression:
-              javascript: 'relations13["Dane"]'
-            return: !object {"children": ["Lucian"]}
+              javascript: 'relations13["Aaron"]'
+            return: !object {"mother": "Kate", "father": "Aarav"}
           - expression:
-              javascript: 'relations13["Donavan"]'
-            return: !object {"father": "Clay", "mother": "Jordyn"}
+              javascript: 'relations13["Kaylen"]'
+            return: !object {"children": ["Joaquin", "Rex"]}
           - expression:
-              javascript: 'relations13["Kylan"]'
-            return: !object {"children": ["Lucian"], "father": "Ean", "mother": "Milo"}
+              javascript: 'relations13["Rex"]'
+            return: !object {"mother": "Kaylen", "father": "Asa"}
           - expression:
-              javascript: 'relations13["Jamal"]'
-            return: !object {"father": "Zechariah", "mother": "Case"}
+              javascript: 'relations13["Joaquin"]'
+            return: !object {"mother": "Kaylen", "father": "Asa"}
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
           - expression:
-              javascript: 'relations14["Clay"]'
-            return: !object {"children": ["Glenn"], "father": "Ean", "mother": "Aryan"}
+              javascript: 'relations14["Amari"]'
+            return: !object {"children": ["Darius", "Heaven", "Kayleigh"]}
           - expression:
-              javascript: 'relations14["Glenn"]'
-            return: !object {"father": "Clay", "mother": "Dayton", "children": ["Geovanni", "Zechariah"]}
+              javascript: 'relations14["Emely"]'
+            return: !object {"mother": "Kristin", "father": "Maurice", "children": ["Kendrick"]}
           - expression:
-              javascript: 'relations14["Clay"]'
-            return: !object {"children": ["Glenn"], "father": "Ean", "mother": "Aryan"}
+              javascript: 'relations14["Reid"]'
+            return: !object {"mother": "Lillie", "father": "Lincoln", "children": ["Blake", "Kailey"]}
           - expression:
-              javascript: 'relations14["Dayton"]'
-            return: !object {"children": ["Glenn"]}
+              javascript: 'relations14["Emely"]'
+            return: !object {"mother": "Kristin", "father": "Maurice", "children": ["Kendrick"]}
           - expression:
-              javascript: 'relations14["Geovanni"]'
-            return: !object {"father": "Glenn", "mother": "Bronson"}
+              javascript: 'relations14["Talon"]'
+            return: !object {"children": ["Kristin", "Lillie", "Robert"]}
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
           - expression:
-              javascript: 'relations15["Misael"]'
-            return: !object {"children": ["Clay"]}
+              javascript: 'relations15["Kiana"]'
+            return: !object {"mother": "Alissa", "father": "Arnav", "children": ["Cecelia", "Taylor"]}
           - expression:
-              javascript: 'relations15["Clay"]'
-            return: !object {"children": ["Glenn", "Lucian"], "father": "Kylan", "mother": "Misael"}
+              javascript: 'relations15["Anna"]'
+            return: !object {"mother": "Neveah", "father": "Stanley"}
           - expression:
-              javascript: 'relations15["Lucian"]'
-            return: !object {"father": "Clay", "mother": "Steven"}
+              javascript: 'relations15["Ruby"]'
+            return: !object {"mother": "Alissa", "father": "Arnav"}
           - expression:
-              javascript: 'relations15["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Malachi", "children": ["Clay"]}
+              javascript: 'relations15["Ruby"]'
+            return: !object {"mother": "Alissa", "father": "Arnav"}
           - expression:
-              javascript: 'relations15["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations15["Anna"]'
+            return: !object {"mother": "Neveah", "father": "Stanley"}
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
           - expression:
-              javascript: 'relations16["Zechariah"]'
-            return: !object {"father": "Kylan", "mother": "Ezequiel"}
+              javascript: 'relations16["Declan"]'
+            return: !object {"mother": "Shaylee", "father": "Damion"}
           - expression:
-              javascript: 'relations16["Ezequiel"]'
-            return: !object {"children": ["Geovanni", "Glenn", "Lucian", "Zechariah"]}
+              javascript: 'relations16["Ignacio"]'
+            return: !object {"children": ["Aurora", "Elian"]}
           - expression:
-              javascript: 'relations16["Landin"]'
-            return: !object {"father": "Geovanni", "mother": "Quincy"}
+              javascript: 'relations16["Larry"]'
+            return: !object {"mother": "Adyson", "father": "Enrique"}
           - expression:
-              javascript: 'relations16["Bradley"]'
-            return: !object {"father": "Lucian", "mother": "Howard"}
+              javascript: 'relations16["Larry"]'
+            return: !object {"mother": "Adyson", "father": "Enrique"}
           - expression:
-              javascript: 'relations16["Geovanni"]'
-            return: !object {"father": "Kylan", "mother": "Ezequiel", "children": ["Branden", "Jamal", "Landin", "Reid"]}
+              javascript: 'relations16["Felix"]'
+            return: !object {"mother": "Krystal", "father": "Braydon"}
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
           - expression:
-              javascript: 'relations17["Brennan"]'
-            return: !object {"father": "Glenn", "mother": "Drew"}
+              javascript: 'relations17["Jasmine"]'
+            return: !object {"mother": "Johanna", "father": "Rene", "children": ["Belinda", "Dixie", "Kyra", "Noah"]}
           - expression:
-              javascript: 'relations17["Bradley"]'
-            return: !object {"father": "Geovanni", "mother": "Shane"}
+              javascript: 'relations17["Alani"]'
+            return: !object {"mother": "Jazmine", "father": "Jared", "children": ["Julissa", "Logan", "Paul"]}
           - expression:
-              javascript: 'relations17["Phillip"]'
-            return: !object {"children": ["Landin"]}
+              javascript: 'relations17["Ryder"]'
+            return: !object {"mother": "Johanna", "father": "Rene"}
           - expression:
-              javascript: 'relations17["Branden"]'
-            return: !object {"father": "Lucian", "mother": "Jaidyn", "children": ["Alijah", "Timothy"]}
+              javascript: 'relations17["Caiden"]'
+            return: !object {"children": ["Julissa", "Logan", "Paul"]}
           - expression:
-              javascript: 'relations17["Zechariah"]'
-            return: !object {"children": ["Donavan"], "father": "Kylan", "mother": "Savion"}
+              javascript: 'relations17["Paul"]'
+            return: !object {"mother": "Alani", "father": "Caiden"}
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
           - expression:
-              javascript: 'relations18["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations18["Tyson"]'
+            return: !object {"mother": "Eleanor", "father": "Trevon"}
           - expression:
-              javascript: 'relations18["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Marcelo"}
+              javascript: 'relations18["Elisabeth"]'
+            return: !object {"children": ["Alyssa", "Larry"], "mother": "Eleanor", "father": "Trevon"}
           - expression:
-              javascript: 'relations18["Geovanni"]'
-            return: !object {"father": "Glenn", "mother": "Jerimiah"}
+              javascript: 'relations18["Javier"]'
+            return: !object {"children": ["Jewel", "Trevon"]}
           - expression:
-              javascript: 'relations18["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Marcelo"}
+              javascript: 'relations18["Amira"]'
+            return: !object {"mother": "Eleanor", "father": "Trevon"}
           - expression:
-              javascript: 'relations18["Kylan"]'
-            return: !object {"children": ["Clay", "Glenn", "Lucian"], "father": "Ean", "mother": "Theodore"}
+              javascript: 'relations18["Eleanor"]'
+            return: !object {"children": ["Amira", "Elisabeth", "Tyson"]}
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
           - expression:
-              javascript: 'relations19["Zechariah"]'
-            return: !object {"father": "Kylan", "mother": "Eli", "children": ["Geovanni"]}
+              javascript: 'relations19["Tyree"]'
+            return: !object {"mother": "Amirah", "father": "Harry"}
           - expression:
-              javascript: 'relations19["Kylan"]'
-            return: !object {"children": ["Zechariah"], "father": "Ean", "mother": "Aydin"}
+              javascript: 'relations19["Jennifer"]'
+            return: !object {"mother": "Rubi", "father": "Nolan"}
           - expression:
-              javascript: 'relations19["Cruz"]'
-            return: !object {"children": ["Brennan", "Ralph", "Rodolfo"]}
+              javascript: 'relations19["Harry"]'
+            return: !object {"children": ["Dallas", "Lawrence", "Melody", "Tyree"]}
           - expression:
-              javascript: 'relations19["Aaden"]'
-            return: !object {"children": ["Ayaan", "Jamal", "Landin", "Reid"]}
+              javascript: 'relations19["Jaime"]'
+            return: !object {"children": ["Clara", "Jenna", "Mason"]}
           - expression:
-              javascript: 'relations19["Glenn"]'
-            return: !object {"children": ["Alijah", "Gerardo", "Nathanael"], "father": "Ean", "mother": "Aydin"}
+              javascript: 'relations19["Dallas"]'
+            return: !object {"mother": "Amirah", "father": "Harry"}
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
           - expression:
-              javascript: 'relations20["Glenn"]'
-            return: !object {"children": ["Donavan", "Ernesto"], "father": "Kylan", "mother": "Vincent"}
+              javascript: 'relations20["Kenya"]'
+            return: !object {"mother": "Arely", "father": "Dalton", "children": ["Meredith"]}
           - expression:
-              javascript: 'relations20["Irvin"]'
-            return: !object {"children": ["Donavan", "Ernesto"]}
+              javascript: 'relations20["Kenya"]'
+            return: !object {"mother": "Arely", "father": "Dalton", "children": ["Meredith"]}
           - expression:
-              javascript: 'relations20["Colin"]'
-            return: !object {"children": ["Clay", "Kylan", "Lucian"]}
+              javascript: 'relations20["Kenya"]'
+            return: !object {"mother": "Arely", "father": "Dalton", "children": ["Meredith"]}
           - expression:
-              javascript: 'relations20["Bradley"]'
-            return: !object {"father": "Donavan", "mother": "Colby"}
+              javascript: 'relations20["Kenya"]'
+            return: !object {"mother": "Arely", "father": "Dalton", "children": ["Meredith"]}
           - expression:
-              javascript: 'relations20["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Colin", "children": ["Geovanni", "Glenn", "Zechariah"]}
+              javascript: 'relations20["Arely"]'
+            return: !object {"children": ["Kenya"]}
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
           - expression:
-              javascript: 'relations21["Kristopher"]'
-            return: !object {"father": "Marvin", "mother": "Seamus"}
+              javascript: 'relations21["Shaun"]'
+            return: !object {"children": ["Jacoby"]}
           - expression:
-              javascript: 'relations21["Ralph"]'
-            return: !object {"children": ["Adonis", "Cruz", "Malik"], "father": "Zechariah", "mother": "Erick"}
+              javascript: 'relations21["Clara"]'
+            return: !object {"children": ["Jacoby"]}
           - expression:
-              javascript: 'relations21["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations21["Jacoby"]'
+            return: !object {"mother": "Clara", "father": "Shaun", "children": ["Kyler"]}
           - expression:
-              javascript: 'relations21["Geovanni"]'
-            return: !object {"father": "Lucian", "mother": "Quinn", "children": ["Bradley"]}
+              javascript: 'relations21["Kyler"]'
+            return: !object {"mother": "Deborah", "father": "Jacoby", "children": ["Gerald", "Giada"]}
           - expression:
-              javascript: 'relations21["Jon"]'
-            return: !object {"children": ["Devin"], "father": "Clay", "mother": "Frankie"}
+              javascript: 'relations21["Deborah"]'
+            return: !object {"children": ["Kyler"]}
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
           - expression:
-              javascript: 'relations22["Ayaan"]'
-            return: !object {"children": ["Reid"], "father": "Glenn", "mother": "Luca"}
+              javascript: 'relations22["Alannah"]'
+            return: !object {"mother": "Rhianna", "father": "Nikhil"}
           - expression:
-              javascript: 'relations22["Zechariah"]'
-            return: !object {"children": ["Timothy", "Titus"], "father": "Kylan", "mother": "Blaze"}
+              javascript: 'relations22["Jaslyn"]'
+            return: !object {"mother": "Audrey", "father": "Maximus", "children": ["Kayleigh", "Nikhil"]}
           - expression:
-              javascript: 'relations22["Lucian"]'
-            return: !object {"children": ["Geovanni"], "father": "Kylan", "mother": "Blaze"}
+              javascript: 'relations22["Steven"]'
+            return: !object {"children": ["Gregory"], "mother": "Lucia", "father": "Preston"}
           - expression:
-              javascript: 'relations22["Ayaan"]'
-            return: !object {"children": ["Reid"], "father": "Glenn", "mother": "Luca"}
+              javascript: 'relations22["Kayleigh"]'
+            return: !object {"mother": "Jaslyn", "father": "Urijah"}
           - expression:
-              javascript: 'relations22["Zechariah"]'
-            return: !object {"children": ["Timothy", "Titus"], "father": "Kylan", "mother": "Blaze"}
+              javascript: 'relations22["Tristin"]'
+            return: !object {"mother": "Audrey", "father": "Maximus", "children": ["Darion", "Franklin", "Leandro"]}
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
           - expression:
-              javascript: 'relations23["Jaime"]'
-            return: !object {"children": ["Geovanni", "Zechariah"]}
+              javascript: 'relations23["Lena"]'
+            return: !object {"children": ["Tristen"]}
           - expression:
-              javascript: 'relations23["Carlo"]'
-            return: !object {"children": ["Reid"]}
+              javascript: 'relations23["Campbell"]'
+            return: !object {"mother": "Anya", "father": "Tristen"}
           - expression:
-              javascript: 'relations23["Zechariah"]'
-            return: !object {"father": "Clay", "mother": "Jaime"}
+              javascript: 'relations23["Kailey"]'
+            return: !object {"mother": "Valentina", "father": "Bruce", "children": ["Magdalena"]}
           - expression:
-              javascript: 'relations23["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Duncan", "children": ["Donavan", "Ernesto"]}
+              javascript: 'relations23["Bruce"]'
+            return: !object {"children": ["Kailey", "Marshall", "Warren"]}
           - expression:
-              javascript: 'relations23["Carlo"]'
-            return: !object {"children": ["Reid"]}
+              javascript: 'relations23["Judah"]'
+            return: !object {"mother": "Ashly", "father": "Marshall"}
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
           - expression:
-              javascript: 'relations24["Timothy"]'
-            return: !object {"children": ["Brennan", "Marvin", "Ralph"], "father": "Lucian", "mother": "Dante"}
+              javascript: 'relations24["Keagan"]'
+            return: !object {"mother": "Clarissa", "father": "Jeremiah", "children": ["Steve"]}
           - expression:
-              javascript: 'relations24["Yosef"]'
-            return: !object {"children": ["Alijah", "Nathanael"]}
+              javascript: 'relations24["Walter"]'
+            return: !object {"children": ["Easton", "Izabelle"]}
           - expression:
-              javascript: 'relations24["Titus"]'
-            return: !object {"children": ["Alijah", "Nathanael"], "father": "Lucian", "mother": "Dante"}
+              javascript: 'relations24["Brendon"]'
+            return: !object {"mother": "Clarissa", "father": "Jeremiah", "children": ["Sydney"]}
           - expression:
-              javascript: 'relations24["Kylan"]'
-            return: !object {"children": ["Glenn", "Zechariah"], "father": "Ean", "mother": "Efrain"}
+              javascript: 'relations24["Sydney"]'
+            return: !object {"children": ["Walker"], "mother": "Edith", "father": "Brendon"}
           - expression:
-              javascript: 'relations24["Kylan"]'
-            return: !object {"children": ["Glenn", "Zechariah"], "father": "Ean", "mother": "Efrain"}
+              javascript: 'relations24["Jackson"]'
+            return: !object {"mother": "Madelynn", "father": "Easton", "children": ["Angelina", "Lewis", "Orion"]}
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
           - expression:
-              javascript: 'relations25["Kieran"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations25["Eleanor"]'
+            return: !object {"children": ["Jayvion"], "mother": "Amina", "father": "Jamarion"}
           - expression:
-              javascript: 'relations25["Zechariah"]'
-            return: !object {"children": ["Bradley", "Donavan", "Ernesto"], "father": "Clay", "mother": "Christopher"}
+              javascript: 'relations25["Amina"]'
+            return: !object {"children": ["Eleanor"]}
           - expression:
-              javascript: 'relations25["Ernesto"]'
-            return: !object {"father": "Zechariah", "mother": "Roy"}
+              javascript: 'relations25["Jamarion"]'
+            return: !object {"children": ["Eleanor"]}
           - expression:
-              javascript: 'relations25["Darren"]'
-            return: !object {"children": ["Jamal"]}
+              javascript: 'relations25["Jamarion"]'
+            return: !object {"children": ["Eleanor"]}
           - expression:
-              javascript: 'relations25["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Kieran", "children": ["Clay", "Glenn", "Lucian"]}
+              javascript: 'relations25["Jamarion"]'
+            return: !object {"children": ["Eleanor"]}
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
           - expression:
-              javascript: 'relations26["Cade"]'
-            return: !object {"children": ["Donavan"]}
+              javascript: 'relations26["Ana"]'
+            return: !object {"children": ["Audrina", "Damion", "Lesly"]}
           - expression:
-              javascript: 'relations26["Ayaan"]'
-            return: !object {"father": "Lucian", "mother": "Dorian"}
+              javascript: 'relations26["Brett"]'
+            return: !object {"children": ["Arnav", "Cora"]}
           - expression:
-              javascript: 'relations26["Fernando"]'
-            return: !object {"children": ["Geovanni", "Glenn", "Zechariah"]}
+              javascript: 'relations26["Ashlynn"]'
+            return: !object {"children": ["Lorelai", "Tate"], "mother": "Leslie", "father": "Julian"}
           - expression:
-              javascript: 'relations26["Glenn"]'
-            return: !object {"children": ["Donavan"], "father": "Clay", "mother": "Fernando"}
+              javascript: 'relations26["Michael"]'
+            return: !object {"mother": "Caitlin", "father": "Dorian", "children": ["Audrina", "Damion", "Lesly"]}
           - expression:
-              javascript: 'relations26["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Antwan", "children": ["Geovanni", "Glenn", "Zechariah"]}
+              javascript: 'relations26["Audrina"]'
+            return: !object {"children": ["Arnav", "Cora"], "mother": "Ana", "father": "Michael"}
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
           - expression:
-              javascript: 'relations27["Antoine"]'
-            return: !object {"children": ["Bradley", "Donavan", "Ernesto"]}
+              javascript: 'relations27["Alani"]'
+            return: !object {"mother": "Jaden", "father": "Jovanny", "children": ["Kade", "Nikhil"]}
           - expression:
-              javascript: 'relations27["Donavan"]'
-            return: !object {"father": "Glenn", "mother": "Antoine"}
+              javascript: 'relations27["Alani"]'
+            return: !object {"mother": "Jaden", "father": "Jovanny", "children": ["Kade", "Nikhil"]}
           - expression:
-              javascript: 'relations27["Geovanni"]'
-            return: !object {"children": ["Reid"], "father": "Lucian", "mother": "Mathew"}
+              javascript: 'relations27["Lana"]'
+            return: !object {"children": ["Jaden"]}
           - expression:
-              javascript: 'relations27["Zechariah"]'
-            return: !object {"father": "Lucian", "mother": "Mathew", "children": ["Ayaan", "Jamal"]}
+              javascript: 'relations27["Mathew"]'
+            return: !object {"children": ["Jaden"]}
           - expression:
-              javascript: 'relations27["Bradley"]'
-            return: !object {"father": "Glenn", "mother": "Antoine"}
+              javascript: 'relations27["Alani"]'
+            return: !object {"mother": "Jaden", "father": "Jovanny", "children": ["Kade", "Nikhil"]}
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
           - expression:
-              javascript: 'relations28["Kylan"]'
-            return: !object {"children": ["Lucian"], "father": "Ean", "mother": "Rex"}
+              javascript: 'relations28["Karly"]'
+            return: !object {"children": ["Isabelle", "Lee"], "mother": "Tanya", "father": "Giovanni"}
           - expression:
-              javascript: 'relations28["Glenn"]'
-            return: !object {"father": "Lucian", "mother": "Case"}
+              javascript: 'relations28["Giovanni"]'
+            return: !object {"children": ["Jackson", "Karly"]}
           - expression:
-              javascript: 'relations28["Layton"]'
-            return: !object {"children": ["Zechariah"]}
+              javascript: 'relations28["Melissa"]'
+            return: !object {"mother": "Hayley", "father": "Marquise", "children": ["Alec", "Nina"]}
           - expression:
-              javascript: 'relations28["Clay"]'
-            return: !object {"children": ["Zechariah"], "father": "Ean", "mother": "Rex"}
+              javascript: 'relations28["Marquise"]'
+            return: !object {"mother": "Alessandra", "father": "Steve", "children": ["Melissa"]}
           - expression:
-              javascript: 'relations28["William"]'
-            return: !object {"children": ["Lucian"]}
+              javascript: 'relations28["Hayley"]'
+            return: !object {"children": ["Melissa"]}
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
           - expression:
-              javascript: 'relations29["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations29["Ali"]'
+            return: !object {"children": ["Genevieve", "Jasmine", "Morgan"], "mother": "Madalyn", "father": "Brandon"}
           - expression:
-              javascript: 'relations29["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Andy", "children": ["Clay", "Glenn", "Lucian"]}
+              javascript: 'relations29["Wendy"]'
+            return: !object {"mother": "Micaela", "father": "Wesley", "children": ["Gordon", "Uriel"]}
           - expression:
-              javascript: 'relations29["Zechariah"]'
-            return: !object {"father": "Clay", "mother": "Ray", "children": ["Donavan", "Geovanni"]}
+              javascript: 'relations29["Ricardo"]'
+            return: !object {"children": ["Kinsley", "Shaniya"]}
           - expression:
-              javascript: 'relations29["Zechariah"]'
-            return: !object {"father": "Clay", "mother": "Ray", "children": ["Donavan", "Geovanni"]}
+              javascript: 'relations29["Brandon"]'
+            return: !object {"children": ["Aiyana", "Ali", "Brenden"]}
           - expression:
-              javascript: 'relations29["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Alonso"}
+              javascript: 'relations29["Jayvon"]'
+            return: !object {"children": ["Mathias", "Tessa"], "mother": "Logan", "father": "Giovanny"}
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
           - expression:
-              javascript: 'relations30["Ean"]'
-            return: !object {"children": ["Clay", "Kylan", "Lucian"]}
+              javascript: 'relations30["Allan"]'
+            return: !object {"children": ["Alexis", "Jazlyn", "Quincy"], "mother": "Paulina", "father": "Kieran"}
           - expression:
-              javascript: 'relations30["Lucian"]'
-            return: !object {"children": ["Brennan", "Gerardo", "Rodolfo"], "father": "Ean", "mother": "Kristopher"}
+              javascript: 'relations30["Keely"]'
+            return: !object {"children": ["Derick"], "mother": "Brynlee", "father": "Brogan"}
           - expression:
-              javascript: 'relations30["Cruz"]'
-            return: !object {"children": ["Izaiah", "Kristopher"], "father": "Brennan", "mother": "Adolfo"}
+              javascript: 'relations30["Christina"]'
+            return: !object {"children": ["Kash", "Presley"]}
           - expression:
-              javascript: 'relations30["Lucian"]'
-            return: !object {"children": ["Brennan", "Gerardo", "Rodolfo"], "father": "Ean", "mother": "Kristopher"}
+              javascript: 'relations30["Derick"]'
+            return: !object {"mother": "Keely", "father": "Adrian"}
           - expression:
-              javascript: 'relations30["Adonis"]'
-            return: !object {"father": "Gerardo", "mother": "Jeremiah", "children": ["Malik"]}
+              javascript: 'relations30["Skylar"]'
+            return: !object {"children": ["Danna", "Rashad"]}
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
           - expression:
-              javascript: 'relations31["Ralph"]'
-            return: !object {"father": "Gerardo", "mother": "Darryl"}
+              javascript: 'relations31["Aliana"]'
+            return: !object {"mother": "Sage", "father": "Howard"}
           - expression:
-              javascript: 'relations31["Alijah"]'
-            return: !object {"father": "Reid", "mother": "Joey"}
+              javascript: 'relations31["Karla"]'
+            return: !object {"children": ["Cohen", "Jaylan", "Semaj"]}
           - expression:
-              javascript: 'relations31["Nathanael"]'
-            return: !object {"father": "Reid", "mother": "Joey"}
+              javascript: 'relations31["Benjamin"]'
+            return: !object {"mother": "Teagan", "father": "Cohen"}
           - expression:
-              javascript: 'relations31["Landin"]'
-            return: !object {"father": "Clay", "mother": "Luis"}
+              javascript: 'relations31["Cohen"]'
+            return: !object {"children": ["Benjamin"], "mother": "Karla", "father": "Gordon"}
           - expression:
-              javascript: 'relations31["Gerardo"]'
-            return: !object {"children": ["Brennan", "Marvin", "Ralph"], "father": "Lucian", "mother": "Arjun"}
+              javascript: 'relations31["Sage"]'
+            return: !object {"mother": "Alisa", "father": "Nickolas", "children": ["Aliana", "Anahi", "Gordon"]}
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
           - expression:
-              javascript: 'relations32["Clay"]'
-            return: !object {"father": "Ean", "mother": "Derrick", "children": ["Ayaan", "Jamal"]}
+              javascript: 'relations32["Leon"]'
+            return: !object {"children": ["Asa", "Lexie", "Maddox"], "mother": "Patricia", "father": "Jakobe"}
           - expression:
-              javascript: 'relations32["Dwayne"]'
-            return: !object {"children": ["Ayaan", "Jamal"]}
+              javascript: 'relations32["Scott"]'
+            return: !object {"mother": "Janelle", "father": "Justus", "children": ["Jayda", "Rhys", "Selah"]}
           - expression:
-              javascript: 'relations32["Dwayne"]'
-            return: !object {"children": ["Ayaan", "Jamal"]}
+              javascript: 'relations32["Maddox"]'
+            return: !object {"mother": "Joanna", "father": "Leon"}
           - expression:
-              javascript: 'relations32["Donavan"]'
-            return: !object {"father": "Glenn", "mother": "Jase"}
+              javascript: 'relations32["Leon"]'
+            return: !object {"children": ["Asa", "Lexie", "Maddox"], "mother": "Patricia", "father": "Jakobe"}
           - expression:
-              javascript: 'relations32["Jase"]'
-            return: !object {"children": ["Donavan"]}
+              javascript: 'relations32["Scott"]'
+            return: !object {"mother": "Janelle", "father": "Justus", "children": ["Jayda", "Rhys", "Selah"]}
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
           - expression:
-              javascript: 'relations33["Alijah"]'
-            return: !object {"father": "Lucian", "mother": "Amir"}
+              javascript: 'relations33["Koen"]'
+            return: !object {"children": ["Eden"]}
           - expression:
-              javascript: 'relations33["Ean"]'
-            return: !object {"children": ["Clay", "Kylan", "Lucian"]}
+              javascript: 'relations33["Matias"]'
+            return: !object {"mother": "Kali", "father": "Ibrahim"}
           - expression:
-              javascript: 'relations33["Rodolfo"]'
-            return: !object {"father": "Nathanael", "mother": "Chaim"}
+              javascript: 'relations33["Raelynn"]'
+            return: !object {"mother": "Jenny", "father": "Edward"}
           - expression:
-              javascript: 'relations33["Landin"]'
-            return: !object {"children": ["Branden"], "father": "Bradley", "mother": "Martin"}
+              javascript: 'relations33["Matias"]'
+            return: !object {"mother": "Kali", "father": "Ibrahim"}
           - expression:
-              javascript: 'relations33["Ayaan"]'
-            return: !object {"children": ["Timothy", "Titus"], "father": "Clay", "mother": "Bo"}
+              javascript: 'relations33["Kali"]'
+            return: !object {"children": ["Harrison", "Matias"], "mother": "Olive", "father": "Damon"}
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
           - expression:
-              javascript: 'relations34["Alijah"]'
-            return: !object {"father": "Jamal", "mother": "Kadin", "children": ["Gerardo", "Nathanael", "Rodolfo"]}
+              javascript: 'relations34["Paulina"]'
+            return: !object {"mother": "Courtney", "father": "Leonidas"}
           - expression:
-              javascript: 'relations34["Malik"]'
-            return: !object {"children": ["Cruz", "Franco"], "father": "Ralph", "mother": "Jacoby"}
+              javascript: 'relations34["Laurel"]'
+            return: !object {"mother": "Courtney", "father": "Leonidas", "children": ["Konnor", "Malakai"]}
           - expression:
-              javascript: 'relations34["Roman"]'
-            return: !object {"children": ["Bradley"]}
+              javascript: 'relations34["Laurel"]'
+            return: !object {"mother": "Courtney", "father": "Leonidas", "children": ["Konnor", "Malakai"]}
           - expression:
-              javascript: 'relations34["Lucian"]'
-            return: !object {"father": "Ean", "mother": "Jeremiah", "children": ["Brennan", "Marvin", "Ralph"]}
+              javascript: 'relations34["Leonidas"]'
+            return: !object {"children": ["Laurel", "Paulina"], "mother": "Marisa", "father": "Felipe"}
           - expression:
-              javascript: 'relations34["Gavyn"]'
-            return: !object {"children": ["Adonis"]}
+              javascript: 'relations34["Paulina"]'
+            return: !object {"mother": "Courtney", "father": "Leonidas"}
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
           - expression:
-              javascript: 'relations35["Glenn"]'
-            return: !object {"father": "Kylan", "mother": "Kian"}
+              javascript: 'relations35["Martin"]'
+            return: !object {"children": ["Madelyn", "Melany"], "mother": "Amina", "father": "Rigoberto"}
           - expression:
-              javascript: 'relations35["Zachariah"]'
-            return: !object {"children": ["Zechariah"]}
+              javascript: 'relations35["Leon"]'
+            return: !object {"children": ["Ashlee", "Hannah"]}
           - expression:
-              javascript: 'relations35["Zechariah"]'
-            return: !object {"children": ["Donavan", "Ernesto", "Geovanni"], "father": "Clay", "mother": "Zachariah"}
+              javascript: 'relations35["Hannah"]'
+            return: !object {"children": ["Jameson", "Mohamed"], "mother": "Rachael", "father": "Leon"}
           - expression:
-              javascript: 'relations35["Bobby"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations35["Rachael"]'
+            return: !object {"mother": "Amina", "father": "Rigoberto", "children": ["Ashlee", "Hannah"]}
           - expression:
-              javascript: 'relations35["Bobby"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations35["Rigoberto"]'
+            return: !object {"children": ["Martin", "Rachael"]}
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
           - expression:
-              javascript: 'relations36["Clay"]'
-            return: !object {"children": ["Glenn"], "father": "Kylan", "mother": "Ulises"}
+              javascript: 'relations36["Deshawn"]'
+            return: !object {"mother": "Brianna", "father": "Adrien", "children": ["Janiya", "Laura"]}
           - expression:
-              javascript: 'relations36["Caden"]'
-            return: !object {"children": ["Glenn"]}
+              javascript: 'relations36["Janiya"]'
+            return: !object {"mother": "Elle", "father": "Deshawn"}
           - expression:
-              javascript: 'relations36["Damari"]'
-            return: !object {"children": ["Zechariah"]}
+              javascript: 'relations36["Janiya"]'
+            return: !object {"mother": "Elle", "father": "Deshawn"}
           - expression:
-              javascript: 'relations36["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations36["Brianna"]'
+            return: !object {"children": ["Deshawn"]}
           - expression:
-              javascript: 'relations36["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations36["Janiya"]'
+            return: !object {"mother": "Elle", "father": "Deshawn"}
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
           - expression:
-              javascript: 'relations37["Stanley"]'
-            return: !object {"children": ["Gerardo"]}
+              javascript: 'relations37["Alonso"]'
+            return: !object {"mother": "Kinley", "father": "Isaiah", "children": ["Kendal"]}
           - expression:
-              javascript: 'relations37["Ayaan"]'
-            return: !object {"father": "Donavan", "mother": "Anton"}
+              javascript: 'relations37["Kane"]'
+            return: !object {"children": ["Hezekiah", "Kylan", "Lea"]}
           - expression:
-              javascript: 'relations37["Titus"]'
-            return: !object {"father": "Lucian", "mother": "Ruben", "children": ["Alijah", "Nathanael", "Timothy"]}
+              javascript: 'relations37["Erik"]'
+            return: !object {"mother": "Nathaly", "father": "Frankie", "children": ["Ariana", "Caitlyn"]}
           - expression:
-              javascript: 'relations37["Nathanael"]'
-            return: !object {"children": ["Gerardo"], "father": "Titus", "mother": "Landen"}
+              javascript: 'relations37["Kane"]'
+            return: !object {"children": ["Hezekiah", "Kylan", "Lea"]}
           - expression:
-              javascript: 'relations37["Jaydan"]'
-            return: !object {"children": ["Glenn"]}
+              javascript: 'relations37["Ariana"]'
+            return: !object {"mother": "Chana", "father": "Erik"}
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
           - expression:
-              javascript: 'relations38["Jamal"]'
-            return: !object {"father": "Geovanni", "mother": "Lamar"}
+              javascript: 'relations38["Noe"]'
+            return: !object {"children": ["Cristofer"]}
           - expression:
-              javascript: 'relations38["Nathanael"]'
-            return: !object {"father": "Titus", "mother": "Adrian", "children": ["Brennan", "Ralph", "Rodolfo"]}
+              javascript: 'relations38["Jaime"]'
+            return: !object {"children": ["Brianna", "Nia", "Roderick"]}
           - expression:
-              javascript: 'relations38["Jamal"]'
-            return: !object {"father": "Geovanni", "mother": "Lamar"}
+              javascript: 'relations38["Jamarcus"]'
+            return: !object {"mother": "Denise", "father": "Dangelo"}
           - expression:
-              javascript: 'relations38["Kylan"]'
-            return: !object {"children": ["Glenn", "Zechariah"], "father": "Ean", "mother": "Clayton"}
+              javascript: 'relations38["Ronan"]'
+            return: !object {"mother": "Marlee", "father": "Cristofer", "children": ["Jaqueline"]}
           - expression:
-              javascript: 'relations38["Timothy"]'
-            return: !object {"father": "Branden", "mother": "Oliver"}
+              javascript: 'relations38["Nia"]'
+            return: !object {"mother": "Autumn", "father": "Jaime"}
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
           - expression:
-              javascript: 'relations39["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations39["Catalina"]'
+            return: !object {"mother": "Karina", "father": "Ricardo"}
           - expression:
-              javascript: 'relations39["Jesse"]'
-            return: !object {"children": ["Glenn", "Lucian", "Zechariah"]}
+              javascript: 'relations39["Marlon"]'
+            return: !object {"mother": "Aliya", "father": "Ronan"}
           - expression:
-              javascript: 'relations39["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations39["Laney"]'
+            return: !object {"children": ["Jaylan", "Ricardo", "Ronan"]}
           - expression:
-              javascript: 'relations39["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Dane", "children": ["Glenn", "Lucian", "Zechariah"]}
+              javascript: 'relations39["Carissa"]'
+            return: !object {"children": ["Breanna", "Kianna", "Rolando"], "mother": "Justine", "father": "Trent"}
           - expression:
-              javascript: 'relations39["Glenn"]'
-            return: !object {"father": "Clay", "mother": "Jesse"}
+              javascript: 'relations39["Marlon"]'
+            return: !object {"mother": "Aliya", "father": "Ronan"}
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
           - expression:
-              javascript: 'relations40["Zechariah"]'
-            return: !object {"father": "Clay", "mother": "Issac"}
+              javascript: 'relations40["Emmett"]'
+            return: !object {"children": ["Marc"]}
           - expression:
-              javascript: 'relations40["Issac"]'
-            return: !object {"children": ["Glenn", "Zechariah"]}
+              javascript: 'relations40["Case"]'
+            return: !object {"children": ["Adyson", "Brent"], "mother": "Nicole", "father": "Jeremiah"}
           - expression:
-              javascript: 'relations40["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Isaias", "children": ["Clay", "Lucian"]}
+              javascript: 'relations40["Nicole"]'
+            return: !object {"mother": "Carlee", "father": "Marc", "children": ["Case", "Siena"]}
           - expression:
-              javascript: 'relations40["Issac"]'
-            return: !object {"children": ["Glenn", "Zechariah"]}
+              javascript: 'relations40["Adyson"]'
+            return: !object {"mother": "Jaida", "father": "Case", "children": ["Kyler"]}
           - expression:
-              javascript: 'relations40["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Isaias", "children": ["Clay", "Lucian"]}
+              javascript: 'relations40["Carlee"]'
+            return: !object {"children": ["Haylie", "Nicole"]}
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
           - expression:
-              javascript: 'relations41["Lawrence"]'
-            return: !object {"children": ["Donavan"]}
+              javascript: 'relations41["Jerry"]'
+            return: !object {"children": ["Heath", "Nadia"], "mother": "Skye", "father": "Ronald"}
           - expression:
-              javascript: 'relations41["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Anton", "children": ["Clay"]}
+              javascript: 'relations41["Sincere"]'
+            return: !object {"mother": "Cecelia", "father": "Aiden", "children": ["Lucian", "Semaj"]}
           - expression:
-              javascript: 'relations41["Glenn"]'
-            return: !object {"father": "Clay", "mother": "Elijah", "children": ["Ernesto"]}
+              javascript: 'relations41["Heath"]'
+            return: !object {"mother": "Cadence", "father": "Jerry"}
           - expression:
-              javascript: 'relations41["Ernesto"]'
-            return: !object {"father": "Glenn", "mother": "Jesse", "children": ["Bradley"]}
+              javascript: 'relations41["Jerry"]'
+            return: !object {"children": ["Heath", "Nadia"], "mother": "Skye", "father": "Ronald"}
           - expression:
-              javascript: 'relations41["Donavan"]'
-            return: !object {"father": "Geovanni", "mother": "Lawrence"}
+              javascript: 'relations41["Ronald"]'
+            return: !object {"children": ["Jerry"], "mother": "Presley", "father": "Greyson"}
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
           - expression:
-              javascript: 'relations42["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Cole", "children": ["Clay", "Lucian"]}
+              javascript: 'relations42["Talan"]'
+            return: !object {"mother": "Edith", "father": "Roman", "children": ["Bruno", "Lizeth"]}
           - expression:
-              javascript: 'relations42["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations42["Bruno"]'
+            return: !object {"children": ["Cedric"], "mother": "Kassandra", "father": "Talan"}
           - expression:
-              javascript: 'relations42["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations42["Edith"]'
+            return: !object {"children": ["Talan"]}
           - expression:
-              javascript: 'relations42["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Cole", "children": ["Clay", "Lucian"]}
+              javascript: 'relations42["Cedric"]'
+            return: !object {"mother": "Heather", "father": "Bruno"}
           - expression:
-              javascript: 'relations42["Joaquin"]'
-            return: !object {"children": ["Clay", "Lucian"]}
+              javascript: 'relations42["Talan"]'
+            return: !object {"mother": "Edith", "father": "Roman", "children": ["Bruno", "Lizeth"]}
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
           - expression:
-              javascript: 'relations43["Fletcher"]'
-            return: !object {"children": ["Glenn", "Lucian"]}
+              javascript: 'relations43["Cali"]'
+            return: !object {"children": ["Hayden"], "mother": "Josephine", "father": "Ethen"}
           - expression:
-              javascript: 'relations43["Geovanni"]'
-            return: !object {"children": ["Donavan"], "father": "Glenn", "mother": "Colin"}
+              javascript: 'relations43["Lydia"]'
+            return: !object {"children": ["Memphis"]}
           - expression:
-              javascript: 'relations43["Geovanni"]'
-            return: !object {"children": ["Donavan"], "father": "Glenn", "mother": "Colin"}
+              javascript: 'relations43["Cali"]'
+            return: !object {"children": ["Hayden"], "mother": "Josephine", "father": "Ethen"}
           - expression:
-              javascript: 'relations43["Geovanni"]'
-            return: !object {"children": ["Donavan"], "father": "Glenn", "mother": "Colin"}
+              javascript: 'relations43["Lydia"]'
+            return: !object {"children": ["Memphis"]}
           - expression:
-              javascript: 'relations43["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Fletcher", "children": ["Zechariah"]}
+              javascript: 'relations43["Ethen"]'
+            return: !object {"mother": "Adelyn", "father": "Memphis", "children": ["Cali"]}
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
           - expression:
-              javascript: 'relations44["Clay"]'
-            return: !object {"children": ["Glenn", "Lucian"], "father": "Kylan", "mother": "Dexter"}
+              javascript: 'relations44["Elsa"]'
+            return: !object {"children": ["Trevon"], "mother": "Arabella", "father": "Wayne"}
           - expression:
-              javascript: 'relations44["Kylan"]'
-            return: !object {"children": ["Clay"], "father": "Ean", "mother": "Chris"}
+              javascript: 'relations44["Ahmad"]'
+            return: !object {"children": ["Danica", "Roberto"], "mother": "Lilly", "father": "Jon"}
           - expression:
-              javascript: 'relations44["Chris"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations44["Ahmad"]'
+            return: !object {"children": ["Danica", "Roberto"], "mother": "Lilly", "father": "Jon"}
           - expression:
-              javascript: 'relations44["Dexter"]'
-            return: !object {"children": ["Clay"]}
+              javascript: 'relations44["Reese"]'
+            return: !object {"children": ["Gael", "Teagan"], "mother": "Lilly", "father": "Jon"}
           - expression:
-              javascript: 'relations44["Clay"]'
-            return: !object {"children": ["Glenn", "Lucian"], "father": "Kylan", "mother": "Dexter"}
+              javascript: 'relations44["Reese"]'
+            return: !object {"children": ["Gael", "Teagan"], "mother": "Lilly", "father": "Jon"}
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
           - expression:
-              javascript: 'relations45["Zechariah"]'
-            return: !object {"father": "Lucian", "mother": "Nick", "children": ["Geovanni"]}
+              javascript: 'relations45["Bryce"]'
+            return: !object {"children": ["Alice", "Sabrina"]}
           - expression:
-              javascript: 'relations45["Kylan"]'
-            return: !object {"father": "Ean", "mother": "Henry", "children": ["Clay"]}
+              javascript: 'relations45["Tania"]'
+            return: !object {"mother": "Kinley", "father": "Zaid"}
           - expression:
-              javascript: 'relations45["Lucian"]'
-            return: !object {"children": ["Zechariah"], "father": "Clay", "mother": "Beau"}
+              javascript: 'relations45["Sabrina"]'
+            return: !object {"mother": "Cristal", "father": "Bryce"}
           - expression:
-              javascript: 'relations45["Cory"]'
-            return: !object {"children": ["Donavan"]}
+              javascript: 'relations45["Abbie"]'
+            return: !object {"mother": "Lizeth", "father": "Rocco", "children": ["Kinley", "Mariela"]}
           - expression:
-              javascript: 'relations45["Henry"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations45["Bryce"]'
+            return: !object {"children": ["Alice", "Sabrina"]}
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
           - expression:
-              javascript: 'relations46["Kylan"]'
-            return: !object {"children": ["Clay"], "father": "Ean", "mother": "Giovanny"}
+              javascript: 'relations46["Paola"]'
+            return: !object {"mother": "Paris", "father": "Enzo"}
           - expression:
-              javascript: 'relations46["Giovanny"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations46["Veronica"]'
+            return: !object {"children": ["Enzo"]}
           - expression:
-              javascript: 'relations46["Kylan"]'
-            return: !object {"children": ["Clay"], "father": "Ean", "mother": "Giovanny"}
+              javascript: 'relations46["Paris"]'
+            return: !object {"children": ["Angelica", "Paola"]}
           - expression:
-              javascript: 'relations46["Clay"]'
-            return: !object {"father": "Kylan", "mother": "Xzavier"}
+              javascript: 'relations46["Paris"]'
+            return: !object {"children": ["Angelica", "Paola"]}
           - expression:
-              javascript: 'relations46["Ean"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations46["Enzo"]'
+            return: !object {"children": ["Angelica", "Paola"], "mother": "Veronica", "father": "Justus"}
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
           - expression:
-              javascript: 'relations47["Ernesto"]'
-            return: !object {"father": "Geovanni", "mother": "Quinn"}
+              javascript: 'relations47["Marilyn"]'
+            return: !object {"children": ["Desirae", "Lauryn"], "mother": "Evelin", "father": "Seamus"}
           - expression:
-              javascript: 'relations47["Clay"]'
-            return: !object {"children": ["Glenn", "Zechariah"], "father": "Kylan", "mother": "Elliot"}
+              javascript: 'relations47["Cohen"]'
+            return: !object {"children": ["Leila"]}
           - expression:
-              javascript: 'relations47["Reid"]'
-            return: !object {"father": "Ayaan", "mother": "Melvin"}
+              javascript: 'relations47["Gregory"]'
+            return: !object {"mother": "Desirae", "father": "Jaydin", "children": ["Kamden"]}
           - expression:
-              javascript: 'relations47["Ryker"]'
-            return: !object {"children": ["Kylan"]}
+              javascript: 'relations47["Kamden"]'
+            return: !object {"mother": "Eliza", "father": "Gregory"}
           - expression:
-              javascript: 'relations47["Landin"]'
-            return: !object {"father": "Ayaan", "mother": "Melvin"}
+              javascript: 'relations47["Marilyn"]'
+            return: !object {"children": ["Desirae", "Lauryn"], "mother": "Evelin", "father": "Seamus"}
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
           - expression:
-              javascript: 'relations48["Aden"]'
-            return: !object {"children": ["Lucian"]}
+              javascript: 'relations48["Addisyn"]'
+            return: !object {"children": ["Alexa"], "mother": "Juliet", "father": "Ryker"}
           - expression:
-              javascript: 'relations48["Moises"]'
-            return: !object {"children": ["Donavan", "Geovanni"]}
+              javascript: 'relations48["Carter"]'
+            return: !object {"mother": "Ashlee", "father": "Reece", "children": ["Zara"]}
           - expression:
-              javascript: 'relations48["Aden"]'
-            return: !object {"children": ["Lucian"]}
+              javascript: 'relations48["Alexa"]'
+            return: !object {"mother": "Addisyn", "father": "Arjun"}
           - expression:
-              javascript: 'relations48["Jamal"]'
-            return: !object {"father": "Donavan", "mother": "Walker"}
+              javascript: 'relations48["Reece"]'
+            return: !object {"children": ["Carter", "Jaqueline"], "mother": "Brylee", "father": "Hudson"}
           - expression:
-              javascript: 'relations48["Ernesto"]'
-            return: !object {"father": "Geovanni", "mother": "Terrell"}
+              javascript: 'relations48["Carter"]'
+            return: !object {"mother": "Ashlee", "father": "Reece", "children": ["Zara"]}
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
           - expression:
-              javascript: 'relations49["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations49["Gisselle"]'
+            return: !object {"children": ["Rubi"]}
           - expression:
-              javascript: 'relations49["Clay"]'
-            return: !object {"children": ["Glenn"], "father": "Ean", "mother": "Noel"}
+              javascript: 'relations49["Ashlee"]'
+            return: !object {"mother": "Rubi", "father": "Raiden", "children": ["Brennan", "Cory"]}
           - expression:
-              javascript: 'relations49["Ean"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations49["Tyshawn"]'
+            return: !object {"children": ["Rubi"]}
           - expression:
-              javascript: 'relations49["Noel"]'
-            return: !object {"children": ["Clay", "Kylan"]}
+              javascript: 'relations49["Raiden"]'
+            return: !object {"children": ["Ashlee", "Azaria"]}
           - expression:
-              javascript: 'relations49["Clay"]'
-            return: !object {"children": ["Glenn"], "father": "Ean", "mother": "Noel"}
+              javascript: 'relations49["Rubi"]'
+            return: !object {"children": ["Ashlee", "Azaria"], "mother": "Gisselle", "father": "Tyshawn"}
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
           - expression:
-              javascript: 'relations50["Lucian"]'
-            return: !object {"father": "Kylan", "mother": "Tobias"}
+              javascript: 'relations50["Derrick"]'
+            return: !object {"children": ["Koen"], "mother": "Jenny", "father": "Kellen"}
           - expression:
-              javascript: 'relations50["Glenn"]'
-            return: !object {"father": "Clay", "mother": "Kyle", "children": ["Geovanni"]}
+              javascript: 'relations50["Arielle"]'
+            return: !object {"children": ["Alicia", "Joe"], "mother": "Mariah", "father": "Demarcus"}
           - expression:
-              javascript: 'relations50["Glenn"]'
-            return: !object {"father": "Clay", "mother": "Kyle", "children": ["Geovanni"]}
+              javascript: 'relations50["Marques"]'
+            return: !object {"children": ["Malik"]}
           - expression:
-              javascript: 'relations50["Zechariah"]'
-            return: !object {"father": "Clay", "mother": "Kyle"}
+              javascript: 'relations50["Kellen"]'
+            return: !object {"children": ["Austin", "Derrick"]}
           - expression:
-              javascript: 'relations50["Brycen"]'
-            return: !object {"children": ["Geovanni"]}
+              javascript: 'relations50["Alicia"]'
+            return: !object {"mother": "Arielle", "father": "Ahmad"}
   - tab: "ancestor"
     contexts:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
-          - expression: 'ancestor("Lucian", "far", relations1)'
-            return: "Ean"
+          - expression: 'ancestor("Aidan", "mor", relations1)'
+            return: "Belinda"
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
-          - expression: 'ancestor("Kylan", "far", relations2)'
-            return: "Ean"
+          - expression: 'ancestor("Cortez", "far", relations2)'
+            return: "Nicolas"
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
-          - expression: 'ancestor("Clay", "far", relations3)'
-            return: "Kylan"
-      - testcases:
-          - statement: 'relations4: object = familyMembers("data4.txt")'
-          - expression: 'ancestor("Marvin", "mor", relations4)'
-            return: "Wilson"
-      - testcases:
-          - statement: 'relations5: object = familyMembers("data5.txt")'
-          - expression: 'ancestor("Jamal", "mor", relations5)'
-            return: "Darien"
-      - testcases:
-          - statement: 'relations6: object = familyMembers("data6.txt")'
-          - expression: 'ancestor("Triston", "mor", relations6)'
+          - expression: 'ancestor("Alejandra", "far", relations3)'
             exception: *unknown_ancestor
       - testcases:
+          - statement: 'relations4: object = familyMembers("data4.txt")'
+          - expression: 'ancestor("Aliya", "far", relations4)'
+            exception: *unknown_ancestor
+      - testcases:
+          - statement: 'relations5: object = familyMembers("data5.txt")'
+          - expression: 'ancestor("Landyn", "mor", relations5)'
+            exception: *unknown_ancestor
+      - testcases:
+          - statement: 'relations6: object = familyMembers("data6.txt")'
+          - expression: 'ancestor("Lillianna", "mor", relations6)'
+            return: "Valerie"
+      - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
-          - expression: 'ancestor("Ean", "mor", relations7)'
+          - expression: 'ancestor("Zaid", "far", relations7)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
-          - expression: 'ancestor("Clay", "mor", relations8)'
-            return: "Rodney"
+          - expression: 'ancestor("Pierce", "mor", relations8)'
+            return: "Zoey"
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
-          - expression: 'ancestor("Glenn", "far", relations9)'
-            return: "Clay"
+          - expression: 'ancestor("Vivian", "mor", relations9)'
+            return: "Jayden"
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
-          - expression: 'ancestor("Lucian", "far", relations10)'
-            return: "Kylan"
+          - expression: 'ancestor("Shamar", "far", relations10)'
+            return: "Connor"
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
-          - expression: 'ancestor("Clay", "far", relations11)'
-            return: "Ean"
+          - expression: 'ancestor("Gage", "mor", relations11)'
+            return: "Yamilet"
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
-          - expression: 'ancestor("Geovanni", "mor", relations12)'
-            return: "Karson"
+          - expression: 'ancestor("Ramiro", "mor", relations12)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
-          - expression: 'ancestor("Glenn", "mor", relations13)'
-            return: "Jordyn"
+          - expression: 'ancestor("Asa", "far", relations13)'
+            return: "Kaden"
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
-          - expression: 'ancestor("Lucian", "mor", relations14)'
-            return: "Dane"
+          - expression: 'ancestor("Talon", "mor", relations14)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
-          - expression: 'ancestor("Kylan", "mor", relations15)'
-            return: "Malachi"
+          - expression: 'ancestor("Cristofer", "far", relations15)'
+            return: "Arnav"
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
-          - expression: 'ancestor("Nathanael", "mor", relations16)'
-            return: "Jeramiah"
+          - expression: 'ancestor("Giovanna", "mor", relations16)'
+            return: "Leslie"
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
-          - expression: 'ancestor("Ralph", "far", relations17)'
-            return: "Gerardo"
+          - expression: 'ancestor("Jasmine", "mor", relations17)'
+            return: "Johanna"
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
-          - expression: 'ancestor("Ean", "mor", relations18)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Elisabeth", "mor", relations18)'
+            return: "Eleanor"
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
-          - expression: 'ancestor("Ernesto", "mor", relations19)'
-            return: "Salvatore"
+          - expression: 'ancestor("Brent", "far", relations19)'
+            return: "Nolan"
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
-          - expression: 'ancestor("Clay", "farmor", relations20)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Kenya", "mor", relations20)'
+            return: "Arely"
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
-          - expression: 'ancestor("Jovan", "farfar", relations21)'
-            return: "Ean"
+          - expression: 'ancestor("Roselyn", "mormor", relations21)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
-          - expression: 'ancestor("Alijah", "mor", relations22)'
-            return: "Dario"
+          - expression: 'ancestor("Preston", "far", relations22)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
-          - expression: 'ancestor("Geovanni", "mormor", relations23)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Kylie", "far", relations23)'
+            return: "Brooks"
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
-          - expression: 'ancestor("Byron", "farfar", relations24)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Angelina", "far", relations24)'
+            return: "Jackson"
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
-          - expression: 'ancestor("Darren", "far", relations25)'
+          - expression: 'ancestor("Jayvion", "farmor", relations25)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
-          - expression: 'ancestor("Geovanni", "mormor", relations26)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Liana", "morfar", relations26)'
+            return: "Irvin"
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
-          - expression: 'ancestor("Ayaan", "mor", relations27)'
-            return: "Silas"
+          - expression: 'ancestor("Giana", "mor", relations27)'
+            return: "Willow"
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
-          - expression: 'ancestor("Ean", "farmor", relations28)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Malakai", "mor", relations28)'
+            return: "Penelope"
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
-          - expression: 'ancestor("Alonso", "mor", relations29)'
+          - expression: 'ancestor("Jayvon", "farfar", relations29)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
-          - expression: 'ancestor("Reid", "morfar", relations30)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Rashad", "mor", relations30)'
+            return: "Skylar"
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
-          - expression: 'ancestor("Adonis", "mor", relations31)'
-            return: "Curtis"
+          - expression: 'ancestor("Teagan", "mor", relations31)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
-          - expression: 'ancestor("Branden", "far", relations32)'
-            return: "Landin"
+          - expression: 'ancestor("Asa", "morfar", relations32)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
-          - expression: 'ancestor("Koen", "morfar", relations33)'
+          - expression: 'ancestor("Zachariah", "farfar", relations33)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
-          - expression: 'ancestor("Maximilian", "mor", relations34)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Laurel", "far", relations34)'
+            return: "Leonidas"
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
-          - expression: 'ancestor("Zechariah", "mor", relations35)'
-            return: "Zachariah"
+          - expression: 'ancestor("Melany", "morfar", relations35)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
-          - expression: 'ancestor("Lucian", "mor", relations36)'
-            return: "Ulises"
+          - expression: 'ancestor("Adrien", "far", relations36)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
-          - expression: 'ancestor("Clay", "morfar", relations37)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Sophie", "mor", relations37)'
+            return: "Azul"
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
-          - expression: 'ancestor("Ralph", "far", relations38)'
-            return: "Nathanael"
+          - expression: 'ancestor("Shawn", "far", relations38)'
+            return: "Dangelo"
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
-          - expression: 'ancestor("Ean", "mormor", relations39)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Nehemiah", "mormor", relations39)'
+            return: "Adelaide"
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
-          - expression: 'ancestor("Issac", "farmormor", relations40)'
-            exception: *unknown_ancestor
+          - expression: 'ancestor("Adyson", "mor", relations40)'
+            return: "Jaida"
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
-          - expression: 'ancestor("Glenn", "far", relations41)'
-            return: "Clay"
+          - expression: 'ancestor("Greyson", "far", relations41)'
+            return: "Brenton"
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
-          - expression: 'ancestor("Cole", "farmor", relations42)'
+          - expression: 'ancestor("Edith", "morfarfar", relations42)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
-          - expression: 'ancestor("Shaun", "farfarfar", relations43)'
+          - expression: 'ancestor("Rhett", "far", relations43)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
-          - expression: 'ancestor("Chris", "farfar", relations44)'
+          - expression: 'ancestor("Kailee", "farmormor", relations44)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
-          - expression: 'ancestor("Cory", "farmormor", relations45)'
+          - expression: 'ancestor("Rocco", "mor", relations45)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
-          - expression: 'ancestor("Kylan", "farfarfar", relations46)'
+          - expression: 'ancestor("Paris", "farfar", relations46)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
-          - expression: 'ancestor("Zechariah", "farfar", relations47)'
-            return: "Kylan"
+          - expression: 'ancestor("Eliza", "morfar", relations47)'
+            exception: *unknown_ancestor
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
-          - expression: 'ancestor("Allen", "mormorfar", relations48)'
+          - expression: 'ancestor("Addisyn", "farfar", relations48)'
             exception: *unknown_ancestor
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
-          - expression: 'ancestor("Geovanni", "mormor", relations49)'
-            return: "Melvin"
+          - expression: 'ancestor("Ashlee", "far", relations49)'
+            return: "Raiden"
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
-          - expression: 'ancestor("Glenn", "far", relations50)'
-            return: "Clay"
+          - expression: 'ancestor("Joe", "mor", relations50)'
+            return: "Arielle"
   - tab: "descendants"
     contexts:
       - testcases:
           - statement: 'relations1: object = familyMembers("data1.txt")'
-          - expression: 'descendants("Kylan", 1, relations1)'
-            return: !object {"far": ["Geovanni", "Glenn", "Zechariah"]}
+          - expression: 'descendants("Ainsley", 2, relations1)'
+            return: !object {"farmor": ["Joel", "Kadence", "Mikayla", "Zain"]}
       - testcases:
           - statement: 'relations2: object = familyMembers("data2.txt")'
-          - expression: 'descendants("Ean", 2, relations2)'
-            return: !object {"farfar": ["Glenn", "Lucian", "Zechariah"]}
+          - expression: 'descendants("Cortez", 1, relations2)'
+            return: !object {"far": ["Davin", "Gemma", "Talan"]}
       - testcases:
           - statement: 'relations3: object = familyMembers("data3.txt")'
-          - expression: 'descendants("Kylan", 1, relations3)'
-            return: !object {"far": ["Clay", "Glenn", "Lucian"]}
+          - expression: 'descendants("Steven", 1, relations3)'
+            return: !object {"far": ["Alan", "Chandler"]}
       - testcases:
           - statement: 'relations4: object = familyMembers("data4.txt")'
-          - expression: 'descendants("Glenn", 1, relations4)'
-            return: !object {"far": ["Ralph"]}
+          - expression: 'descendants("Aliya", 1, relations4)'
+            return: !object {"mor": ["Iyana"]}
       - testcases:
           - statement: 'relations5: object = familyMembers("data5.txt")'
-          - expression: 'descendants("Geovanni", 1, relations5)'
-            return: !object {"far": ["Ayaan"]}
+          - expression: 'descendants("Marin", 1, relations5)'
+            return: !object {"mor": ["Joanna"]}
       - testcases:
           - statement: 'relations6: object = familyMembers("data6.txt")'
-          - expression: 'descendants("Steve", 1, relations6)'
-            return: !object {"mor": ["Kylan"]}
+          - expression: 'descendants("Nasir", 1, relations6)'
+            return: !object {"far": ["Lillianna"]}
       - testcases:
           - statement: 'relations7: object = familyMembers("data7.txt")'
-          - expression: 'descendants("Riley", 1, relations7)'
-            return: !object {"mor": ["Geovanni", "Glenn", "Zechariah"]}
+          - expression: 'descendants("Carmelo", 1, relations7)'
+            return: !object {"far": ["Alejandra", "Kenya", "Ray"]}
       - testcases:
           - statement: 'relations8: object = familyMembers("data8.txt")'
-          - expression: 'descendants("Ean", 1, relations8)'
-            return: !object {"far": ["Kylan"]}
+          - expression: 'descendants("Guillermo", 1, relations8)'
+            return: !object {"far": ["Bethany", "Jordon", "Manuel", "Mario"]}
       - testcases:
           - statement: 'relations9: object = familyMembers("data9.txt")'
-          - expression: 'descendants("Kylan", 1, relations9)'
-            return: !object {"far": ["Clay", "Lucian"]}
+          - expression: 'descendants("Andreas", 1, relations9)'
+            return: !object {"far": ["Nathanael", "Sammy"]}
       - testcases:
           - statement: 'relations10: object = familyMembers("data10.txt")'
-          - expression: 'descendants("Ean", 1, relations10)'
-            return: !object {"far": ["Kylan"]}
+          - expression: 'descendants("Victor", 1, relations10)'
+            return: !object {"far": ["Augustus", "Donna", "Geovanni", "Nathalie"]}
       - testcases:
           - statement: 'relations11: object = familyMembers("data11.txt")'
-          - expression: 'descendants("Ean", 2, relations11)'
-            return: !object {"farfar": ["Bradley", "Glenn", "Jamal", "Reid"]}
+          - expression: 'descendants("Yamilet", 2, relations11)'
+            return: !object {"farmor": ["Aiden", "Everett", "Mario", "Semaj"]}
       - testcases:
           - statement: 'relations12: object = familyMembers("data12.txt")'
-          - expression: 'descendants("Easton", 1, relations12)'
-            return: !object {"mor": ["Clay", "Kylan"]}
+          - expression: 'descendants("Ramiro", 1, relations12)'
+            return: !object {"far": ["Darion", "Kenley"]}
       - testcases:
           - statement: 'relations13: object = familyMembers("data13.txt")'
-          - expression: 'descendants("Clay", 1, relations13)'
-            return: !object {"far": ["Donavan", "Geovanni", "Glenn", "Zechariah"]}
+          - expression: 'descendants("Dorian", 1, relations13)'
+            return: !object {"far": ["Cameron", "Cyrus", "Houston", "Travis"]}
       - testcases:
           - statement: 'relations14: object = familyMembers("data14.txt")'
-          - expression: 'descendants("Clay", 2, relations14)'
-            return: !object {"farfar": ["Geovanni", "Zechariah"]}
+          - expression: 'descendants("Steven", 1, relations14)'
+            return: !object {"far": ["Paige", "Zaire"]}
       - testcases:
           - statement: 'relations15: object = familyMembers("data15.txt")'
-          - expression: 'descendants("Clay", 1, relations15)'
-            return: !object {"far": ["Glenn", "Lucian"]}
+          - expression: 'descendants("Peyton", 2, relations15)'
+            return: !object {"mormor": ["Cristofer", "Elaine", "Kiana", "Ruby"], "farmor": ["Anna"]}
       - testcases:
           - statement: 'relations16: object = familyMembers("data16.txt")'
-          - expression: 'descendants("Clay", 2, relations16)'
-            return: !object {"farfar": ["Brennan", "Gerardo", "Ralph", "Rodolfo"]}
+          - expression: 'descendants("Holden", 2, relations16)'
+            return: !object {"farfar": ["Alfred", "Eliza", "Ishaan", "Korbin", "Larry", "Nina"], "morfar": ["Felix", "Giovanna", "Kathy", "Shannon", "Xavier", "Xzavier"]}
       - testcases:
           - statement: 'relations17: object = familyMembers("data17.txt")'
-          - expression: 'descendants("Glenn", 1, relations17)'
-            return: !object {"far": ["Brennan", "Gerardo", "Nathanael", "Rodolfo"]}
+          - expression: 'descendants("Alani", 2, relations17)'
+            return: !object {"mormor": ["Michelle", "Rayne"]}
       - testcases:
           - statement: 'relations18: object = familyMembers("data18.txt")'
-          - expression: 'descendants("Kylan", 1, relations18)'
-            return: !object {"far": ["Clay", "Glenn", "Lucian"]}
+          - expression: 'descendants("Clarissa", 2, relations18)'
+            return: !object {"mormor": ["Deja", "Josie", "Selena"], "farmor": ["Amira", "Elisabeth", "Tyson"]}
       - testcases:
           - statement: 'relations19: object = familyMembers("data19.txt")'
-          - expression: 'descendants("Eli", 2, relations19)'
-            return: !object {"farmor": ["Geovanni"]}
+          - expression: 'descendants("Lilah", 1, relations19)'
+            return: !object {"mor": ["Clara", "Jenna", "Mason"]}
       - testcases:
           - statement: 'relations20: object = familyMembers("data20.txt")'
-          - expression: 'descendants("Glenn", 1, relations20)'
-            return: !object {"far": ["Donavan", "Ernesto"]}
+          - expression: 'descendants("Dalton", 1, relations20)'
+            return: !object {"far": ["Kenya"]}
       - testcases:
           - statement: 'relations21: object = familyMembers("data21.txt")'
-          - expression: 'descendants("Lucian", 2, relations21)'
-            return: !object {"farfar": ["Ayaan", "Bradley", "Branden", "Jamal", "Landin", "Reid", "Titus"]}
+          - expression: 'descendants("Deborah", 1, relations21)'
+            return: !object {"mor": ["Kyler"]}
       - testcases:
           - statement: 'relations22: object = familyMembers("data22.txt")'
-          - expression: 'descendants("Clay", 2, relations22)'
-            return: !object {"farfar": ["Brennan", "Marvin", "Ralph", "Rodolfo"]}
+          - expression: 'descendants("Nikhil", 1, relations22)'
+            return: !object {"far": ["Alannah", "Deangelo"]}
       - testcases:
           - statement: 'relations23: object = familyMembers("data23.txt")'
-          - expression: 'descendants("Ean", 1, relations23)'
-            return: !object {"far": ["Kylan"]}
+          - expression: 'descendants("Magdalena", 1, relations23)'
+            return: !object {"mor": ["Alisson"]}
       - testcases:
           - statement: 'relations24: object = familyMembers("data24.txt")'
-          - expression: 'descendants("Byron", 1, relations24)'
-            return: !object {"mor": ["Glenn", "Zechariah"]}
+          - expression: 'descendants("Clarissa", 1, relations24)'
+            return: !object {"mor": ["Brendon", "Keagan", "Lindsay"]}
       - testcases:
           - statement: 'relations25: object = familyMembers("data25.txt")'
-          - expression: 'descendants("Philip", 2, relations25)'
-            return: !object {"farmor": ["Jamal"]}
+          - expression: 'descendants("Amina", 2, relations25)'
+            return: !object {"mormor": ["Jayvion"]}
       - testcases:
           - statement: 'relations26: object = familyMembers("data26.txt")'
-          - expression: 'descendants("Kylan", 2, relations26)'
-            return: !object {"farfar": ["Ayaan", "Bradley", "Geovanni", "Glenn", "Zechariah"]}
+          - expression: 'descendants("Reese", 2, relations26)'
+            return: !object {"mormor": ["Adalynn", "Lukas", "Monique"]}
       - testcases:
           - statement: 'relations27: object = familyMembers("data27.txt")'
-          - expression: 'descendants("Lucian", 1, relations27)'
-            return: !object {"far": ["Geovanni", "Glenn", "Zechariah"]}
+          - expression: 'descendants("Lana", 1, relations27)'
+            return: !object {"mor": ["Jaden"]}
       - testcases:
           - statement: 'relations28: object = familyMembers("data28.txt")'
-          - expression: 'descendants("Lucian", 1, relations28)'
-            return: !object {"far": ["Glenn"]}
+          - expression: 'descendants("Hayley", 2, relations28)'
+            return: !object {"mormor": ["Alec", "Nina"]}
       - testcases:
           - statement: 'relations29: object = familyMembers("data29.txt")'
-          - expression: 'descendants("Clay", 2, relations29)'
-            return: !object {"farfar": ["Donavan", "Geovanni"]}
+          - expression: 'descendants("Ali", 1, relations29)'
+            return: !object {"mor": ["Genevieve", "Jasmine", "Morgan"]}
       - testcases:
           - statement: 'relations30: object = familyMembers("data30.txt")'
-          - expression: 'descendants("Jeremiah", 1, relations30)'
-            return: !object {"mor": ["Adonis", "Marvin", "Ralph"]}
+          - expression: 'descendants("Keely", 1, relations30)'
+            return: !object {"mor": ["Derick"]}
       - testcases:
           - statement: 'relations31: object = familyMembers("data31.txt")'
-          - expression: 'descendants("Darryl", 1, relations31)'
-            return: !object {"mor": ["Brennan", "Marvin", "Ralph"]}
+          - expression: 'descendants("Alisa", 2, relations31)'
+            return: !object {"mormor": ["Aliana", "Anahi", "Gordon"]}
       - testcases:
           - statement: 'relations32: object = familyMembers("data32.txt")'
-          - expression: 'descendants("Alijah", 2, relations32)'
-            return: !object {"farfar": ["Adonis", "Malik", "Marvin", "Ralph"]}
+          - expression: 'descendants("Freddy", 2, relations32)'
+            return: !object {"farfar": ["Rohan", "Zion"]}
       - testcases:
           - statement: 'relations33: object = familyMembers("data33.txt")'
-          - expression: 'descendants("Jonas", 1, relations33)'
-            return: !object {"mor": ["Donavan", "Geovanni", "Zechariah"]}
+          - expression: 'descendants("Quincy", 2, relations33)'
+            return: !object {"morfar": ["Eden", "Halle"]}
       - testcases:
           - statement: 'relations34: object = familyMembers("data34.txt")'
-          - expression: 'descendants("Raiden", 1, relations34)'
-            return: !object {"mor": ["Cruz", "Franco"]}
+          - expression: 'descendants("Leonidas", 1, relations34)'
+            return: !object {"far": ["Laurel", "Paulina"]}
       - testcases:
           - statement: 'relations35: object = familyMembers("data35.txt")'
-          - expression: 'descendants("Clay", 1, relations35)'
-            return: !object {"far": ["Zechariah"]}
+          - expression: 'descendants("Rigoberto", 2, relations35)'
+            return: !object {"farfar": ["Madelyn", "Melany"], "morfar": ["Ashlee", "Hannah"]}
       - testcases:
           - statement: 'relations36: object = familyMembers("data36.txt")'
-          - expression: 'descendants("Ulises", 1, relations36)'
-            return: !object {"mor": ["Clay", "Lucian"]}
+          - expression: 'descendants("Deshawn", 1, relations36)'
+            return: !object {"far": ["Janiya", "Laura"]}
       - testcases:
           - statement: 'relations37: object = familyMembers("data37.txt")'
-          - expression: 'descendants("Lucian", 1, relations37)'
-            return: !object {"far": ["Branden", "Titus"]}
+          - expression: 'descendants("Caitlyn", 1, relations37)'
+            return: !object {"mor": ["Hezekiah", "Kylan", "Lea"]}
       - testcases:
           - statement: 'relations38: object = familyMembers("data38.txt")'
-          - expression: 'descendants("Cristian", 2, relations38)'
-            return: !object {"farmor": ["Franco"]}
+          - expression: 'descendants("Diamond", 1, relations38)'
+            return: !object {"mor": ["Jaqueline"]}
       - testcases:
           - statement: 'relations39: object = familyMembers("data39.txt")'
-          - expression: 'descendants("Dane", 2, relations39)'
-            return: !object {"farmor": ["Glenn", "Lucian", "Zechariah"]}
+          - expression: 'descendants("Jaylan", 1, relations39)'
+            return: !object {"far": ["Miracle"]}
       - testcases:
           - statement: 'relations40: object = familyMembers("data40.txt")'
-          - expression: 'descendants("Kylan", 1, relations40)'
-            return: !object {"far": ["Clay", "Lucian"]}
+          - expression: 'descendants("Adyson", 1, relations40)'
+            return: !object {"mor": ["Kyler"]}
       - testcases:
           - statement: 'relations41: object = familyMembers("data41.txt")'
-          - expression: 'descendants("Glenn", 2, relations41)'
-            return: !object {"farfar": ["Bradley"]}
+          - expression: 'descendants("Greyson", 2, relations41)'
+            return: !object {"farfar": ["Jerry"]}
       - testcases:
           - statement: 'relations42: object = familyMembers("data42.txt")'
-          - expression: 'descendants("Joaquin", 1, relations42)'
-            return: !object {"mor": ["Clay", "Lucian"]}
+          - expression: 'descendants("Kassandra", 1, relations42)'
+            return: !object {"mor": ["Bruno", "Lizeth"]}
       - testcases:
           - statement: 'relations43: object = familyMembers("data43.txt")'
-          - expression: 'descendants("Shaun", 1, relations43)'
-            return: !object {"mor": ["Zechariah"]}
+          - expression: 'descendants("Memphis", 1, relations43)'
+            return: !object {"far": ["Ethen"]}
       - testcases:
           - statement: 'relations44: object = familyMembers("data44.txt")'
-          - expression: 'descendants("Dexter", 1, relations44)'
-            return: !object {"mor": ["Clay"]}
+          - expression: 'descendants("Lilly", 1, relations44)'
+            return: !object {"mor": ["Ahmad", "Reese"]}
       - testcases:
           - statement: 'relations45: object = familyMembers("data45.txt")'
-          - expression: 'descendants("Mohamed", 2, relations45)'
-            return: !object {"farmor": ["Glenn", "Lucian"]}
+          - expression: 'descendants("Bryce", 1, relations45)'
+            return: !object {"far": ["Alice", "Sabrina"]}
       - testcases:
           - statement: 'relations46: object = familyMembers("data46.txt")'
-          - expression: 'descendants("Kylan", 1, relations46)'
-            return: !object {"far": ["Clay"]}
+          - expression: 'descendants("Enzo", 1, relations46)'
+            return: !object {"far": ["Angelica", "Paola"]}
       - testcases:
           - statement: 'relations47: object = familyMembers("data47.txt")'
-          - expression: 'descendants("Clay", 1, relations47)'
-            return: !object {"far": ["Glenn", "Zechariah"]}
+          - expression: 'descendants("Cohen", 1, relations47)'
+            return: !object {"far": ["Leila"]}
       - testcases:
           - statement: 'relations48: object = familyMembers("data48.txt")'
-          - expression: 'descendants("Geovanni", 1, relations48)'
-            return: !object {"far": ["Bradley", "Ernesto"]}
+          - expression: 'descendants("Ryker", 2, relations48)'
+            return: !object {"morfar": ["Alexa"]}
       - testcases:
           - statement: 'relations49: object = familyMembers("data49.txt")'
-          - expression: 'descendants("Zechariah", 1, relations49)'
-            return: !object {"far": ["Geovanni"]}
+          - expression: 'descendants("Tyshawn", 1, relations49)'
+            return: !object {"far": ["Rubi"]}
       - testcases:
           - statement: 'relations50: object = familyMembers("data50.txt")'
-          - expression: 'descendants("Glenn", 1, relations50)'
-            return: !object {"far": ["Geovanni"]}
+          - expression: 'descendants("Lucy", 1, relations50)'
+            return: !object {"mor": ["Malik"]}
