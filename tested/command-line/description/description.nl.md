@@ -11,6 +11,6 @@ $ ./sum -1 -23 72 84 -38 -61 49 45
 127
 $ ./sum
 0
-$ ./sum spam eggs beacon
+$ ./sum spam eggs bacon
 invalid arguments
 ```

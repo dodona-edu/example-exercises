@@ -6,7 +6,7 @@ for getal in sys.argv[1:]:
     try:
         som += int(getal)
     except ValueError:
-        sys.stderr.write("invalid arguments")
+        sys.stderr.write("invalid arguments\n")
         sys.exit(1)
 
 print(som)
