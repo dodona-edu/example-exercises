@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Leap year",
+      "nl": "Schrikkeljaar"
+    }
+  },
+  "access": "private"
+}

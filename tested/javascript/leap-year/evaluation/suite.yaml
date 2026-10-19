@@ -1,0 +1,10 @@
+- tab: "is_leap_year"
+  testcases:
+    - expression: "is_leap_year(2023)"
+      return: false
+    - expression: "is_leap_year(2024)"
+      return: true
+    - expression: "is_leap_year(1900)"
+      return: false
+    - expression: "is_leap_year(2000)"
+      return: true
