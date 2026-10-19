@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Count vowels",
+      "nl": "Klinkers tellen"
+    }
+  },
+  "access": "private"
+}
