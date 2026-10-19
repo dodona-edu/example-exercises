@@ -1,0 +1,21 @@
+- tab: "Stack"
+  contexts:
+    - testcases:
+        - statement: "stack = Stack()"
+        - expression: "stack.size()"
+          return: 0
+        - statement: "stack.push(1)"
+        - statement: "stack.push(2)"
+        - statement: "stack.push(3)"
+        - expression: "stack.size()"
+          return: 3
+        - expression: "stack.peek()"
+          return: 3
+        - expression: "stack.pop()"
+          return: 3
+        - expression: "stack.pop()"
+          return: 2
+        - expression: "stack.size()"
+          return: 1
+        - expression: "stack.peek()"
+          return: 1

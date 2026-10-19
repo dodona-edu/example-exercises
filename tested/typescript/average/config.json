@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Average",
+      "nl": "Gemiddelde"
+    }
+  },
+  "access": "private"
+}

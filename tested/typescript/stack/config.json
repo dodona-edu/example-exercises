@@ -1,0 +1,9 @@
+{
+  "description": {
+    "names": {
+      "en": "Stack",
+      "nl": "Stapel"
+    }
+  },
+  "access": "private"
+}
