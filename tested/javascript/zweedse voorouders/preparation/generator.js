@@ -1,7 +1,7 @@
 const fs = require('fs');
 const {familyMembers, ancestor, descendants} = require('../solution/solution.js');
 
-const workdir = '../workdir';
+const dataDirs = ['../evaluation/data', '../description/media/data'];
 
 function randint(start, end) {
     return Math.floor(Math.random() * (end - start)) + start;
@@ -95,16 +95,20 @@ const naContexts = [];
     const maxGenerations = 2 + Math.floor(i / 20);
     const maxChildren = 5 - Math.floor(i / 20);
     const family = familyGenerator(males, females, maxChildren, maxGenerations);
-    fs.writeFileSync(`${workdir}/data${i}.txt`, family.map(a => a.join(' ')).join('\n'));
+    const data = family.map(a => a.join(' ')).join('\n');
+    dataDirs.forEach(dir => fs.writeFileSync(`${dir}/data${i}.txt`, data));
 
     const allNames = family.flat(2);
     const load = [
         '      - testcases:',
-        `          - statement: 'relations${i}: object = familyMembers("data${i}.txt")'`
+        `          - statement: 'relations${i}: object = familyMembers("data${i}.txt")'`,
+        '            input_files:',
+        `              - path: "data${i}.txt"`,
+        `                content: !path "data/data${i}.txt"`
     ];
 
     famContexts.push(...load);
-    const famOpl = familyMembers(`${workdir}/data${i}.txt`);
+    const famOpl = familyMembers(`${dataDirs[0]}/data${i}.txt`);
     [...Array(5).keys()].forEach(() => {
         const person = choice(allNames);
         famContexts.push(
