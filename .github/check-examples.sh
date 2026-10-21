@@ -6,15 +6,6 @@
 
 JUDGE=${JUDGE:-/judge}
 
-# Exercise/language pairs that must fail until fixed; they fail the check once they pass.
-# smallest/haskell: TESTed generates `smallest 5 :: Int 6 :: Int`, https://github.com/dodona-edu/universal-judge/issues/568
-expected_failure() {
-  case $1 in
-    smallest/haskell) return 0 ;;
-  esac
-  return 1
-}
-
 # Per exercise (a directory under tested/ with a config.json): <exercise>\t<suite>\t<solution or empty>.
 LIST='
 import json, os, sys
@@ -150,13 +141,8 @@ while IFS=$tab read -r exercise suite solution; do
     passed=false
   fi
 
-  if $passed && expected_failure "$exercise/$language"; then
-    echo "UNEXPECTED PASS $exercise ($language): remove \"$exercise/$language\" from expected_failure in .github/check-examples.sh"
-    exit_code=1
-  elif $passed; then
+  if $passed; then
     echo "ok $exercise ($language)"
-  elif expected_failure "$exercise/$language"; then
-    echo "expected failure $exercise ($language)"
   else
     echo "FAIL $exercise ($language)"
     cat "$details"
