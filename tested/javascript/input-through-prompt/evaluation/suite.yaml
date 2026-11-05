@@ -1,0 +1,22 @@
+definitions:
+  prompt_shim: &prompt_shim
+    javascript: |-
+      const _fs = require('fs');
+      const _lines = _fs.readFileSync(0, 'utf8').trim().split('\n');
+      let _i = 0;
+      globalThis.prompt = function(msg) { return _lines[_i++]; };
+tabs:
+  - tab: "Tests"
+    contexts:
+      - before: *prompt_shim
+        testcases:
+          - stdin: "World"
+            stdout: "Hello, World!\n"
+      - before: *prompt_shim
+        testcases:
+          - stdin: "Dodona"
+            stdout: "Hello, Dodona!\n"
+      - before: *prompt_shim
+        testcases:
+          - stdin: "Alice"
+            stdout: "Hello, Alice!\n"
