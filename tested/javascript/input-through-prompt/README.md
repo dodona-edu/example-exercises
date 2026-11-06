@@ -8,7 +8,7 @@ TESTed runs JavaScript in Node.js, where `prompt()` does not exist. However, man
 
 ## The shim
 
-Each test context in `evaluation/suite.json` contains a `before.javascript.data` block with the following code:
+Each test context in `evaluation/suite.yaml` runs the following code as its `before` (defined once under `definitions`):
 
 ```javascript
 const _fs = require('fs');
@@ -25,14 +25,14 @@ globalThis.prompt = function(msg) { return _lines[_i++]; };
 
 ## Why each test case needs its own context
 
-Each context in TESTed is a fresh execution of the student's program. Because this exercise tests different inputs to the same program, each test case represents a separate run — and TESTed only allows one `main_call: true` per context. That constraint is why each test case lives in its own context.
+Each context in TESTed is a fresh execution of the student's program. Because this exercise tests different inputs to the same program, each test case represents a separate run — and TESTed only allows one main call per context. That constraint is why each test case lives in its own context.
 
 ## Suite structure
 
 ```
-before.javascript.data  ← installs the prompt() shim
+before: *prompt_shim  ← installs the prompt() shim
 testcases[0]
-  input.main_call       ← runs the student's script as a program
-  input.stdin           ← the value that prompt() will return
-  output.stdout         ← expected console.log() output
+  stdin              ← the value that prompt() will return
+  stdout             ← expected console.log() output
+                       (a testcase without statement or expression runs the student's script as a program)
 ```
