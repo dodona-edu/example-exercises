@@ -10,7 +10,7 @@
     "options": {
       "language": {
         "javascript": {
-          "eslint_config": "eslintrc.yaml"
+          "eslint_config": "eslint.config.mjs"
         }
       }
     }
