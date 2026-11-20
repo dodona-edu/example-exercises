@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "en": "Star",
+      "nl": "Ster"
+    }
+  },
+  "programming_language": "turtle",
+  "evaluation": {
+    "handler": "turtle",
+    "canvas_width": 400,
+    "canvas_height": 400
+  },
+  "labels": ["example", "voorbeeld", "turtle", "star"]
+}
